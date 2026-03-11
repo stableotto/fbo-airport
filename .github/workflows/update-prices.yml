@@ -1,0 +1,62 @@
+name: Update Fuel Prices
+
+on:
+  schedule:
+    # Run daily at 6:00 AM UTC (10:00 PM PST)
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    # Allow manual triggering from GitHub Actions UI
+
+jobs:
+  scrape-prices:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    timeout-minutes: 120
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Puppeteer
+        run: npx puppeteer browsers install chrome
+
+      - name: Build airport database (if needed)
+        run: node scripts/build-airport-list.mjs
+
+      - name: Run fuel price scraper
+        run: node scripts/scrape-prices.mjs
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: 'false'
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet src/data/fuel-prices.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No price changes detected"
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "Price changes detected!"
+            # Show summary
+            node -e "const d=require('./src/data/fuel-prices.json');const m=d._meta;console.log('Airports:',m.totalAirports,'FBOs:',m.totalFBOs,'With Prices:',m.fbosWithPrices)"
+          fi
+
+      - name: Commit and push updated prices
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add src/data/fuel-prices.json
+          STATS=$(node -e "const d=require('./src/data/fuel-prices.json');console.log(d._meta?.totalFBOs||0,'FBOs at',d._meta?.totalAirports||0,'airports')")
+          git commit -m "chore: update fuel prices ($STATS) [skip ci]"
+          git push
