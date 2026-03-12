@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { getStats, getAllFBOs, getAllAirports, getRankedFBOs, getPriceStats, getStatesWithPrices } from '@/lib/data';
 import SearchBar from '@/components/SearchBar';
 import LeaderboardTable from '@/components/LeaderboardTable';
-import PriceStatsBar from '@/components/PriceStatsBar';
 
 export default function HomePage() {
   const stats = getStats();
@@ -65,7 +64,6 @@ export default function HomePage() {
           <h2>National Fuel Price Leaderboard</h2>
           <span className="result-count">{rankedFBOs.length} FBOs ranked by Jet-A price</span>
         </div>
-        <PriceStatsBar stats={priceStats} />
         <LeaderboardTable fbos={rankedFBOs} showState={true} showAirport={true} />
       </section>
 
