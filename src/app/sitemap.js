@@ -9,6 +9,9 @@ export default function sitemap() {
         { url: baseUrl, lastModified: new Date(), changeFrequency: 'weekly', priority: 1 },
         { url: `${baseUrl}/states/`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
         { url: `${baseUrl}/cheapest-jet-a/`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+        { url: `${baseUrl}/cheapest-100ll/`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+        { url: `${baseUrl}/fuel-prices/`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+        { url: `${baseUrl}/self-serve-fuel/`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
         { url: `${baseUrl}/about/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
     ];
 
@@ -21,6 +24,27 @@ export default function sitemap() {
 
     const cheapestJetAPages = getAllStates().map(s => ({
         url: `${baseUrl}/cheapest-jet-a/${s.slug}/`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+    }));
+
+    const cheapest100LLPages = getAllStates().map(s => ({
+        url: `${baseUrl}/cheapest-100ll/${s.slug}/`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+    }));
+
+    const selfServePages = getAllStates().map(s => ({
+        url: `${baseUrl}/self-serve-fuel/${s.slug}/`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+    }));
+
+    const fuelPricesPages = getAllAirports().map(a => ({
+        url: `${baseUrl}/fuel-prices/${a.icao}/`,
         lastModified: new Date(),
         changeFrequency: 'weekly',
         priority: 0.8,
@@ -40,5 +64,14 @@ export default function sitemap() {
         priority: 0.6,
     }));
 
-    return [...staticPages, ...statePages, ...cheapestJetAPages, ...airportPages, ...fboPages];
+    return [
+        ...staticPages,
+        ...statePages,
+        ...cheapestJetAPages,
+        ...cheapest100LLPages,
+        ...selfServePages,
+        ...fuelPricesPages,
+        ...airportPages,
+        ...fboPages,
+    ];
 }
