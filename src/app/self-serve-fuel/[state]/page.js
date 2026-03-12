@@ -3,6 +3,7 @@ import { states } from '@/data/seed';
 import { getAllFBOs } from '@/lib/data';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeaderboardTable from '@/components/LeaderboardTable';
+import RelatedLinks from '@/components/RelatedLinks';
 
 export function generateStaticParams() {
     return states.map(state => ({ state: state.slug }));
@@ -121,6 +122,16 @@ export default async function SelfServeFuelStatePage({ params }) {
                         and aviation fuel cards.
                     </p>
                 </div>
+
+                <RelatedLinks
+                    title="More Fuel Prices"
+                    links={[
+                        { label: 'Jet-A', title: `Cheapest Jet-A in ${stateData.name}`, href: `/cheapest-jet-a/${stateData.slug}/` },
+                        { label: '100LL', title: `Cheapest 100LL in ${stateData.name}`, href: `/cheapest-100ll/${stateData.slug}/` },
+                        { label: 'State', title: `All FBOs in ${stateData.name}`, href: `/state/${stateData.slug}/` },
+                        { label: 'All States', title: 'Self-Serve Fuel by State', href: '/self-serve-fuel/' },
+                    ]}
+                />
 
                 <div className="claim-banner" style={{ marginTop: 'var(--space-2xl)' }}>
                     <div>

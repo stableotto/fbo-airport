@@ -3,6 +3,7 @@ import { getAllStates, getStateBySlug, getAirportsByState, getRankedFBOsByState,
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeaderboardTable from '@/components/LeaderboardTable';
 import PriceStatsBar from '@/components/PriceStatsBar';
+import RelatedLinks from '@/components/RelatedLinks';
 
 export function generateStaticParams() {
     return getAllStates().map(s => ({ slug: s.slug }));
@@ -67,6 +68,16 @@ export default async function StatePage({ params }) {
                     </div>
                     <LeaderboardTable fbos={rankedFBOs} showState={false} showAirport={true} />
                 </div>
+
+                <RelatedLinks
+                    title="Compare Fuel Prices"
+                    links={[
+                        { label: 'Jet-A', title: `Cheapest Jet-A in ${state.name}`, href: `/cheapest-jet-a/${state.slug}/` },
+                        { label: '100LL', title: `Cheapest 100LL in ${state.name}`, href: `/cheapest-100ll/${state.slug}/` },
+                        { label: 'Self-Serve', title: `Self-Serve Fuel in ${state.name}`, href: `/self-serve-fuel/${state.slug}/` },
+                        { label: 'All States', title: 'Browse All States', href: '/states/' },
+                    ]}
+                />
 
                 <div className="claim-banner">
                     <div>

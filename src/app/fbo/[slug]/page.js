@@ -3,6 +3,7 @@ import { states } from '@/data/seed';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import InfoSidebar from '@/components/InfoSidebar';
 import FuelPriceSection from '@/components/FuelPriceSection';
+import RelatedLinks from '@/components/RelatedLinks';
 
 export function generateStaticParams() {
     return getAllFBOs().map(f => ({ slug: f.slug }));
@@ -123,7 +124,17 @@ export default async function FBOPage({ params }) {
                             </div>
                         </div>
 
-                        <div className="claim-banner">
+                        <RelatedLinks
+                            title="Compare Fuel Prices"
+                            links={[
+                                { label: 'Airport', title: `All FBOs at ${fbo.airportCode}`, href: `/airport/${fbo.airportCode}/` },
+                                { label: 'Fuel Prices', title: `Fuel Prices at ${fbo.airportCode}`, href: `/fuel-prices/${fbo.airportCode}/` },
+                                { label: 'State', title: `Cheapest Jet-A in ${fbo.state}`, href: `/cheapest-jet-a/${stateData?.slug || 'states'}/` },
+                                { label: 'Self-Serve', title: `Self-Serve Fuel in ${fbo.state}`, href: `/self-serve-fuel/${stateData?.slug || 'states'}/` },
+                            ]}
+                        />
+
+                        <div className="claim-banner" style={{ marginTop: 'var(--space-xl)' }}>
                             <div>
                                 <h3>Is this your FBO?</h3>
                                 <p>Claim this listing to update your information, add photos, and respond to reviews.</p>

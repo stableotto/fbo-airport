@@ -4,6 +4,7 @@ import { states } from '@/data/seed';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeaderboardTable from '@/components/LeaderboardTable';
 import PriceStatsBar from '@/components/PriceStatsBar';
+import RelatedLinks from '@/components/RelatedLinks';
 
 export function generateStaticParams() {
     return getAllAirports().map(a => ({ icao: a.icao }));
@@ -67,6 +68,16 @@ export default async function AirportPage({ params }) {
                         </div>
                     )}
                 </div>
+
+                <RelatedLinks
+                    title="Related Fuel Prices"
+                    links={[
+                        { label: 'Fuel Prices', title: `Fuel Prices at ${airport.icao}`, href: `/fuel-prices/${airport.icao}/` },
+                        { label: 'State', title: `Cheapest Jet-A in ${airport.state}`, href: `/cheapest-jet-a/${stateData?.slug || 'states'}/` },
+                        { label: '100LL', title: `Cheapest 100LL in ${airport.state}`, href: `/cheapest-100ll/${stateData?.slug || 'states'}/` },
+                        { label: 'Self-Serve', title: `Self-Serve Fuel in ${airport.state}`, href: `/self-serve-fuel/${stateData?.slug || 'states'}/` },
+                    ]}
+                />
 
                 <div className="claim-banner">
                     <div>

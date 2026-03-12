@@ -58,5 +58,5 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add src/data/fuel-prices.json
           STATS=$(node -e "const d=require('./src/data/fuel-prices.json');console.log(d._meta?.totalFBOs||0,'FBOs at',d._meta?.totalAirports||0,'airports')")
-          git commit -m "chore: update fuel prices ($STATS) [skip ci]"
+          git commit -m "chore: update fuel prices ($STATS)"
           git push

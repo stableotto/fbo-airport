@@ -3,6 +3,7 @@ import { states } from '@/data/seed';
 import { getAllFBOs } from '@/lib/data';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeaderboardTable from '@/components/LeaderboardTable';
+import RelatedLinks from '@/components/RelatedLinks';
 
 export function generateStaticParams() {
     return states.map(state => ({ state: state.slug }));
@@ -89,6 +90,16 @@ export default async function CheapestJetAStatePage({ params }) {
                         Prices are updated daily from FBO reports and may vary based on current market conditions.
                     </p>
                 </div>
+
+                <RelatedLinks
+                    title="More Fuel Prices"
+                    links={[
+                        { label: '100LL', title: `Cheapest 100LL in ${stateData.name}`, href: `/cheapest-100ll/${stateData.slug}/` },
+                        { label: 'Self-Serve', title: `Self-Serve Fuel in ${stateData.name}`, href: `/self-serve-fuel/${stateData.slug}/` },
+                        { label: 'State', title: `All FBOs in ${stateData.name}`, href: `/state/${stateData.slug}/` },
+                        { label: 'All States', title: 'Cheapest Jet-A by State', href: '/cheapest-jet-a/' },
+                    ]}
+                />
 
                 <div className="claim-banner" style={{ marginTop: 'var(--space-2xl)' }}>
                     <div>

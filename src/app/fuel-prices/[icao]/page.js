@@ -3,6 +3,7 @@ import { getAllAirports, getAllFBOs, getAirportByCode } from '@/lib/data';
 import { states } from '@/data/seed';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeaderboardTable from '@/components/LeaderboardTable';
+import RelatedLinks from '@/components/RelatedLinks';
 
 export function generateStaticParams() {
     return getAllAirports().map(airport => ({ icao: airport.icao }));
@@ -106,6 +107,16 @@ export default async function FuelPricesAirportPage({ params }) {
                         Prices are updated daily and may vary.
                     </p>
                 </div>
+
+                <RelatedLinks
+                    title="Compare Prices"
+                    links={[
+                        { label: 'Airport', title: `All FBOs at ${icao}`, href: `/airport/${icao}/` },
+                        { label: 'Jet-A', title: `Cheapest Jet-A in ${airport.state}`, href: `/cheapest-jet-a/${stateData?.slug || 'states'}/` },
+                        { label: '100LL', title: `Cheapest 100LL in ${airport.state}`, href: `/cheapest-100ll/${stateData?.slug || 'states'}/` },
+                        { label: 'Self-Serve', title: `Self-Serve Fuel in ${airport.state}`, href: `/self-serve-fuel/${stateData?.slug || 'states'}/` },
+                    ]}
+                />
 
                 <div className="claim-banner" style={{ marginTop: 'var(--space-2xl)' }}>
                     <div>

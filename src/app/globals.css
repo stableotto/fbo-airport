@@ -1475,6 +1475,60 @@ p {
   font-size: 0.8rem;
 }
 
+/* --- Related Links --- */
+.related-links {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--color-border);
+}
+
+.related-links h3 {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-lg);
+  color: var(--color-text-secondary);
+}
+
+.related-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+}
+
+.related-link-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.related-link-card:hover {
+  border-color: var(--color-accent);
+  background: var(--color-accent-bg);
+}
+
+.related-link-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-tertiary);
+}
+
+.related-link-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.related-link-card:hover .related-link-title {
+  color: var(--color-accent);
+}
+
 /* --- Responsive --- */
 @media (max-width: 900px) {
   .two-column {
