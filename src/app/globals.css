@@ -1202,7 +1202,8 @@ p {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-lg);
-  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .leaderboard-table {
@@ -1583,9 +1584,8 @@ p {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .leaderboard-table th.th-price:nth-child(n+3),
-  .leaderboard-table td.td-price:nth-child(n+3) {
-    display: none;
+  .leaderboard-table {
+    min-width: 600px;
   }
 
   .leaderboard-table th,
@@ -1618,10 +1618,5 @@ p {
 
   .price-stat-value {
     font-size: 1.3rem;
-  }
-
-  .leaderboard-table .td-location,
-  .leaderboard-table th:has(+ .td-location) {
-    display: none;
   }
 }
