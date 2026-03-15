@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    timeout-minutes: 120
+    timeout-minutes: 90
 
     steps:
       - name: Checkout repository
@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
 
       - name: Install dependencies
@@ -34,21 +34,32 @@ jobs:
         run: node scripts/build-airport-list.mjs
 
       - name: Run fuel price scraper
-        run: node scripts/scrape-prices.mjs
+        run: node scripts/scrape-prices.mjs --limit 200 --resume
         env:
           PUPPETEER_SKIP_DOWNLOAD: 'false'
 
       - name: Check for changes
         id: check_changes
         run: |
-          if git diff --quiet src/data/fuel-prices.json; then
+          if git diff --quiet src/data/fuel-prices.json && git diff --quiet scripts/.scrape-progress.json 2>/dev/null; then
             echo "changed=false" >> $GITHUB_OUTPUT
-            echo "No price changes detected"
+            echo "No changes detected"
           else
             echo "changed=true" >> $GITHUB_OUTPUT
-            echo "Price changes detected!"
+            echo "Changes detected!"
             # Show summary
             node -e "const d=require('./src/data/fuel-prices.json');const m=d._meta;console.log('Airports:',m.totalAirports,'FBOs:',m.totalFBOs,'With Prices:',m.fbosWithPrices)"
+          fi
+
+      - name: Reset progress if cycle complete
+        run: |
+          if [ -f scripts/.scrape-progress.json ]; then
+            TOTAL=$(node -e "const a=require('./scripts/us-airports.json');console.log(a.length)")
+            LAST=$(node -e "const p=require('./scripts/.scrape-progress.json');console.log(p.lastIndex||0)")
+            if [ "$LAST" -ge "$TOTAL" ]; then
+              echo "Scrape cycle complete ($LAST >= $TOTAL airports). Resetting progress."
+              echo '{"lastIndex":0}' > scripts/.scrape-progress.json
+            fi
           fi
 
       - name: Commit and push updated prices
@@ -57,6 +68,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add src/data/fuel-prices.json
+          git add scripts/.scrape-progress.json || true
           STATS=$(node -e "const d=require('./src/data/fuel-prices.json');console.log(d._meta?.totalFBOs||0,'FBOs at',d._meta?.totalAirports||0,'airports')")
           git commit -m "chore: update fuel prices ($STATS)"
           git push
