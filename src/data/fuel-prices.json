@@ -8162,14 +8162,125 @@
     ],
     "updated": "2026-03-16"
   },
+  "PHKO": {
+    "name": "Ellison Onizuka Kona International Airport at Keahole",
+    "city": "Ellison Onizuka Kona",
+    "state": "",
+    "fbos": [
+      {
+        "name": "Signature Aviation",
+        "jetA": 7.1,
+        "hundredLL": null,
+        "jetASelfServe": null,
+        "hundredLLSelfServe": null,
+        "serviceType": "FS",
+        "priceDate": "13-Mar-2026"
+      }
+    ],
+    "updated": "2026-03-18"
+  },
+  "PHLI": {
+    "name": "Lihue Airport",
+    "city": "",
+    "state": "",
+    "fbos": [
+      {
+        "name": "Signature Aviation",
+        "jetA": 7.23,
+        "hundredLL": null,
+        "jetASelfServe": null,
+        "hundredLLSelfServe": null,
+        "serviceType": "FS",
+        "priceDate": "13-Mar-2026"
+      }
+    ],
+    "updated": "2026-03-18"
+  },
+  "PHNL": {
+    "name": "Daniel K Inouye International Airport",
+    "city": "Daniel K Inouye",
+    "state": "",
+    "fbos": [
+      {
+        "name": "Signature Aviation",
+        "jetA": 7.36,
+        "hundredLL": null,
+        "jetASelfServe": null,
+        "hundredLLSelfServe": null,
+        "serviceType": "FS",
+        "priceDate": "13-Mar-2026"
+      }
+    ],
+    "updated": "2026-03-18"
+  },
+  "PHNY": {
+    "name": "Lanai Airport",
+    "city": "",
+    "state": "",
+    "fbos": [
+      {
+        "name": "Signature Aviation",
+        "jetA": null,
+        "hundredLL": null,
+        "jetASelfServe": null,
+        "hundredLLSelfServe": null,
+        "serviceType": null,
+        "priceDate": null
+      }
+    ],
+    "updated": "2026-03-18"
+  },
+  "PHOG": {
+    "name": "Kahului Airport",
+    "city": "",
+    "state": "",
+    "fbos": [
+      {
+        "name": "Signature Aviation",
+        "jetA": 8.64,
+        "hundredLL": null,
+        "jetASelfServe": null,
+        "hundredLLSelfServe": null,
+        "serviceType": "FS",
+        "priceDate": "13-Mar-2026"
+      },
+      {
+        "name": "Maui Aviators",
+        "jetA": null,
+        "hundredLL": null,
+        "jetASelfServe": null,
+        "hundredLLSelfServe": null,
+        "serviceType": null,
+        "priceDate": null
+      }
+    ],
+    "updated": "2026-03-18"
+  },
+  "PHTO": {
+    "name": "Hilo International Airport",
+    "city": "Hilo",
+    "state": "",
+    "fbos": [
+      {
+        "name": "Signature Aviation",
+        "jetA": 7,
+        "hundredLL": null,
+        "jetASelfServe": null,
+        "hundredLLSelfServe": null,
+        "serviceType": "FS",
+        "priceDate": "13-Mar-2026"
+      }
+    ],
+    "updated": "2026-03-18"
+  },
   "_meta": {
-    "lastUpdated": "2026-03-17",
-    "lastUpdatedISO": "2026-03-17T07:32:56.014Z",
+    "lastUpdated": "2026-03-18",
+    "lastUpdatedISO": "2026-03-18T07:10:41.851Z",
     "source": "airnav.com",
-    "totalAirports": 405,
-    "totalFBOs": 547,
-    "fbosWithPrices": 335,
-    "errors": 200,
-    "thisRunNew": 0
+    "totalAirports": 411,
+    "totalFBOs": 554,
+    "fbosWithPrices": 340,
+    "errors": 0,
+    "thisRunNew": 7
   }
 }
