@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:cloudflare": "next build && find out -type f | wc -l && rm -rf .next node_modules",
+    "build:cloudflare": "next build && find out -name '*.txt' -delete && rm -rf .next node_modules",
     "start": "next start",
     "lint": "eslint"
   },
