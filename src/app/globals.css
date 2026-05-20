@@ -1198,6 +1198,12 @@ p {
 }
 
 /* --- Leaderboard Table --- */
+.leaderboard-updated {
+  font-size: 0.85rem;
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--space-sm);
+}
+
 .leaderboard-wrapper {
   background: var(--color-surface);
   border: 1px solid var(--color-border);

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getStats, getAllFBOs, getAllAirports, getRankedFBOs, getPriceStats, getStatesWithPrices } from '@/lib/data';
+import { getStats, getAllFBOs, getAllAirports, getRankedFBOs, getPriceStats, getStatesWithPrices, getLastUpdated } from '@/lib/data';
 import SearchBar from '@/components/SearchBar';
 import LeaderboardTable from '@/components/LeaderboardTable';
 
@@ -10,6 +10,7 @@ export default function HomePage() {
   const rankedFBOs = getRankedFBOs();
   const priceStats = getPriceStats(allFBOs);
   const statesWithPrices = getStatesWithPrices();
+  const lastUpdated = getLastUpdated();
 
   return (
     <div className="page-content">
@@ -64,6 +65,7 @@ export default function HomePage() {
           <h2>National Fuel Price Leaderboard</h2>
           <span className="result-count">{rankedFBOs.length} FBOs ranked by Jet-A price</span>
         </div>
+        <p className="leaderboard-updated">Prices updated daily · Last updated {new Date(lastUpdated + 'T00:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
         <LeaderboardTable fbos={rankedFBOs} showState={true} showAirport={true} />
       </section>
 

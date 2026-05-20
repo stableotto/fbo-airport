@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getAllStates, getStateBySlug, getAirportsByState, getRankedFBOsByState, getPriceStats } from '@/lib/data';
+import { getAllStates, getStateBySlug, getAirportsByState, getRankedFBOsByState, getPriceStats, getLastUpdated } from '@/lib/data';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeaderboardTable from '@/components/LeaderboardTable';
 import PriceStatsBar from '@/components/PriceStatsBar';
@@ -66,6 +66,7 @@ export default async function StatePage({ params }) {
                         <h2>Fuel Price Leaderboard</h2>
                         <span className="result-count">{rankedFBOs.length} FBOs in {state.name}</span>
                     </div>
+                    <p className="leaderboard-updated">Prices updated daily · Last updated {new Date(getLastUpdated() + 'T00:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
                     <LeaderboardTable fbos={rankedFBOs} showState={false} showAirport={true} />
                 </div>
 

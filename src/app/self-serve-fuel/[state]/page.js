@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { states } from '@/data/seed';
-import { getAllFBOs } from '@/lib/data';
+import { getAllFBOs, getLastUpdated } from '@/lib/data';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeaderboardTable from '@/components/LeaderboardTable';
 import RelatedLinks from '@/components/RelatedLinks';
@@ -103,7 +103,10 @@ export default async function SelfServeFuelStatePage({ params }) {
                 </p>
 
                 {selfServeFBOs.length > 0 ? (
-                    <LeaderboardTable fbos={selfServeFBOs} showState={false} showAirport={true} />
+                    <>
+                        <p className="leaderboard-updated">Prices updated daily · Last updated {new Date(getLastUpdated() + 'T00:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+                        <LeaderboardTable fbos={selfServeFBOs} showState={false} showAirport={true} />
+                    </>
                 ) : (
                     <div className="card" style={{ padding: 'var(--space-xl)', textAlign: 'center' }}>
                         <p>No FBOs with self-serve fuel pricing found in {stateData.name}.</p>

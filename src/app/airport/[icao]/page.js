@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getAllAirports, getAirportByCode, getRankedFBOsByAirport, getPriceStats } from '@/lib/data';
+import { getAllAirports, getAirportByCode, getRankedFBOsByAirport, getPriceStats, getLastUpdated } from '@/lib/data';
 import { states } from '@/data/seed';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeaderboardTable from '@/components/LeaderboardTable';
@@ -59,6 +59,7 @@ export default async function AirportPage({ params }) {
                         <h2>Fuel Price Leaderboard</h2>
                         <span className="result-count">{rankedFBOs.length} {rankedFBOs.length === 1 ? 'FBO' : 'FBOs'} at {airport.icao}</span>
                     </div>
+                    <p className="leaderboard-updated">Prices updated daily · Last updated {new Date(getLastUpdated() + 'T00:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
 
                     {rankedFBOs.length > 0 ? (
                         <LeaderboardTable fbos={rankedFBOs} showState={false} showAirport={false} />

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getAllAirports, getAllFBOs, getAirportByCode } from '@/lib/data';
+import { getAllAirports, getAllFBOs, getAirportByCode, getLastUpdated } from '@/lib/data';
 import { states } from '@/data/seed';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeaderboardTable from '@/components/LeaderboardTable';
@@ -91,6 +91,7 @@ export default async function FuelPricesAirportPage({ params }) {
                 </div>
 
                 <h2 style={{ marginBottom: 'var(--space-lg)' }}>All FBOs at {icao}</h2>
+                <p className="leaderboard-updated">Prices updated daily · Last updated {new Date(getLastUpdated() + 'T00:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
 
                 {airportFBOs.length > 0 ? (
                     <LeaderboardTable fbos={airportFBOs} showState={false} showAirport={false} />

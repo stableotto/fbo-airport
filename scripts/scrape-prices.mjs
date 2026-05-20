@@ -136,21 +136,29 @@ async function scrapeAirport(page, icao) {
 
             const fboLinks = document.querySelectorAll('a[href*="/airport/"][href*="/"]');
             const fbos = [];
-            const seenNames = new Set();
+            const seenCodes = new Set();
             for (const link of fboLinks) {
                 const href = link.getAttribute('href') || '';
                 const text = link.textContent.trim();
-                if (text.startsWith('More info')) continue;
                 const parts = href.split('/').filter(Boolean);
                 if (parts.length >= 3 && parts[0] === 'airport' && parts[1].toUpperCase() === airportCode) {
                     const fboCode = parts[2];
                     if (fboCode.startsWith('#') || fboCode === 'link' || fboCode === 'comment' ||
-                        fboCode.includes('.') || fboCode === 'submitphoto') continue;
-                    if (!text || text.length < 2 || seenNames.has(text)) continue;
-                    if (text.includes('read') || text.includes('write') ||
-                        text.includes('photo') || text === 'web site' || text === 'email') continue;
-                    seenNames.add(text);
-                    fbos.push({ name: text, fboCode });
+                        fboCode.includes('.') || fboCode === 'submitphoto' || fboCode === 'update-fuel' ||
+                        fboCode === 'reportlinks') continue;
+                    if (seenCodes.has(fboCode)) continue;
+                    // Get name from "More info" link or direct text
+                    let name = '';
+                    if (text.startsWith('More info')) {
+                        name = text.replace(/^More info(?:\s+and photos)?\s+(?:of|about)\s+/i, '').trim();
+                    } else if (text && text.length >= 2 &&
+                        !text.includes('read') && !text.includes('write') &&
+                        !text.includes('photo') && text !== 'web site' && text !== 'email') {
+                        name = text;
+                    }
+                    if (!name || name.length < 2) continue;
+                    seenCodes.add(fboCode);
+                    fbos.push({ name, fboCode });
                 }
             }
 
@@ -165,7 +173,12 @@ async function scrapeAirport(page, icao) {
                 const namePos = fboText.indexOf(fbo.name);
                 if (namePos === -1) continue;
                 while (priceIdx < allPrices.length && allPrices[priceIdx].index < namePos) priceIdx++;
-                const nextPos = i + 1 < fbos.length ? fboText.indexOf(fbos[i + 1].name) : fboText.length;
+                // Find next FBO that actually exists in the text
+                let nextPos = fboText.length;
+                for (let j = i + 1; j < fbos.length; j++) {
+                    const np = fboText.indexOf(fbos[j].name);
+                    if (np > namePos) { nextPos = np; break; }
+                }
                 while (priceIdx < allPrices.length && allPrices[priceIdx].index < nextPos) {
                     const m = allPrices[priceIdx];
                     const p1 = m[2] ? parseFloat(m[2]) : null;
