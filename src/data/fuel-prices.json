@@ -11812,10 +11812,10 @@
         "jetASelfServe": 6.85,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "08-May-2026"
+        "priceDate": "18-May-2026"
       }
     ],
-    "updated": "2026-05-10"
+    "updated": "2026-05-21"
   },
   "KWST": {
     "name": "Westerly State Airport",
@@ -11826,7 +11826,7 @@
         "name": "FlightLevel Rhode Island",
         "jetA": null,
         "hundredLL": null,
-        "jetASelfServe": 6.68,
+        "jetASelfServe": 6.98,
         "hundredLLSelfServe": null,
         "serviceType": null,
         "priceDate": null
@@ -11838,10 +11838,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "04-May-2026"
+        "priceDate": "15-May-2026"
       }
     ],
-    "updated": "2026-05-10"
+    "updated": "2026-05-21"
   },
   "KWYS": {
     "name": "Yellowstone Airport",
@@ -15282,12 +15282,12 @@
   },
   "_meta": {
     "lastUpdated": "2026-05-21",
-    "lastUpdatedISO": "2026-05-21T10:14:48.212Z",
+    "lastUpdatedISO": "2026-05-21T13:11:25.297Z",
     "source": "airnav.com",
     "totalAirports": 640,
     "totalFBOs": 1129,
     "fbosWithPrices": 839,
-    "errors": 0,
-    "thisRunNew": 293
+    "errors": 108,
+    "thisRunNew": 3
   }
 }
