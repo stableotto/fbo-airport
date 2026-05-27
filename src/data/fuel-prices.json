@@ -8313,7 +8313,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KPGD": {
     "name": "Punta Gorda Airport",
@@ -8322,12 +8322,12 @@
     "fbos": [
       {
         "name": "PGD Air Center",
-        "jetA": 7.83,
-        "hundredLL": 7.64,
-        "jetASelfServe": 6.54,
+        "jetA": 7.45,
+        "hundredLL": 7.51,
+        "jetASelfServe": 6.41,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "RealClean Aircraft Detailing",
@@ -8339,7 +8339,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KPGV": {
     "name": "Pitt-Greenville Airport",
@@ -8356,7 +8356,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPHF": {
     "name": "Newport News/Williamsburg International Airport",
@@ -8379,10 +8379,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPHL": {
     "name": "Philadelphia International Airport",
@@ -8396,10 +8396,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "20-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KPIA": {
     "name": "General Downing - Peoria International Airport",
@@ -8408,15 +8408,15 @@
     "fbos": [
       {
         "name": "Byerly Aviation",
-        "jetA": 7.83,
-        "hundredLL": 8.68,
+        "jetA": 7.69,
+        "hundredLL": 8.55,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPIB": {
     "name": "Hattiesburg/Laurel Regional Airport",
@@ -8425,15 +8425,15 @@
     "fbos": [
       {
         "name": "Avflight Hattiesburg",
-        "jetA": 7.93,
+        "jetA": 7.9,
         "hundredLL": 7.72,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "12-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KPIE": {
     "name": "St Pete-Clearwater International Airport",
@@ -8442,24 +8442,24 @@
     "fbos": [
       {
         "name": "Sheltair",
-        "jetA": 8.3,
-        "hundredLL": 10.38,
+        "jetA": 8.17,
+        "hundredLL": 10.26,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Signature Aviation",
         "jetA": 8.45,
-        "hundredLL": 8.5,
+        "hundredLL": 10,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "20-May-2026"
+        "priceDate": "22-May-2026"
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KPIH": {
     "name": "Pocatello Regional Airport",
@@ -8476,7 +8476,7 @@
         "priceDate": "20-May-2026"
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KPIR": {
     "name": "Pierre Regional Airport",
@@ -8486,14 +8486,14 @@
       {
         "name": "Mustang Aviation",
         "jetA": 7.09,
-        "hundredLL": 6.45,
+        "hundredLL": 7.34,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "15-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KPIT": {
     "name": "Pittsburgh International Airport",
@@ -8507,10 +8507,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPKB": {
     "name": "Mid-Ohio Valley Regional Airport",
@@ -8536,7 +8536,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPNE": {
     "name": "Northeast Philadelphia Airport",
@@ -8550,10 +8550,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPNS": {
     "name": "Pensacola International Airport",
@@ -8597,7 +8597,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPOU": {
     "name": "Hudson Valley Regional Airport",
@@ -8623,7 +8623,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPRB": {
     "name": "Paso Robles Municipal Airport",
@@ -8640,7 +8640,7 @@
         "priceDate": "19-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPRX": {
     "name": "Cox Field Airport",
@@ -8657,7 +8657,7 @@
         "priceDate": "19-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPSM": {
     "name": "Portsmouth International Airport at Pease",
@@ -8666,15 +8666,15 @@
     "fbos": [
       {
         "name": "Port City Air, Inc.",
-        "jetA": 7.75,
-        "hundredLL": 8.35,
+        "jetA": 7.65,
+        "hundredLL": 8.25,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPSP": {
     "name": "Palm Springs International Airport",
@@ -8683,12 +8683,12 @@
     "fbos": [
       {
         "name": "Atlantic Aviation",
-        "jetA": 10.43,
+        "jetA": 9.96,
         "hundredLL": 9.69,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Signature Aviation",
@@ -8718,7 +8718,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPTK": {
     "name": "Oakland County International Airport",
@@ -8727,17 +8727,17 @@
     "fbos": [
       {
         "name": "PremierFBO",
-        "jetA": 6.8,
+        "jetA": 6.68,
         "hundredLL": 7.01,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "20-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Michigan Aviation",
-        "jetA": 6.47,
-        "hundredLL": 7.71,
+        "jetA": 6.44,
+        "hundredLL": 7.67,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
@@ -8750,11 +8750,11 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Maven Aviation",
-        "jetA": 6.43,
+        "jetA": 6.31,
         "hundredLL": 7.91,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
@@ -8763,12 +8763,12 @@
       },
       {
         "name": "Elite Jet Center at Contact",
-        "jetA": 5.55,
+        "jetA": 5.56,
         "hundredLL": 6.02,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Michigan Helicopters",
@@ -8780,7 +8780,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPUB": {
     "name": "Pueblo Memorial Airport",
@@ -8789,12 +8789,12 @@
     "fbos": [
       {
         "name": "Freeman Jet Center Pueblo",
-        "jetA": 8.18,
-        "hundredLL": 9.18,
+        "jetA": 7.94,
+        "hundredLL": 9.06,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Sibran - Pueblo",
@@ -8803,10 +8803,10 @@
         "jetASelfServe": 5.99,
         "hundredLLSelfServe": null,
         "serviceType": null,
-        "priceDate": "21-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPUW": {
     "name": "Pullman/Moscow Regional Airport",
@@ -8817,13 +8817,13 @@
         "name": "Inter-State Aviation",
         "jetA": null,
         "hundredLL": null,
-        "jetASelfServe": 7.93,
-        "hundredLLSelfServe": 8.69,
+        "jetASelfServe": 7.64,
+        "hundredLLSelfServe": 8.65,
         "serviceType": null,
-        "priceDate": "19-May-2026"
+        "priceDate": "25-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPVD": {
     "name": "Rhode Island TF Green International Airport",
@@ -8832,15 +8832,15 @@
     "fbos": [
       {
         "name": "Atlantic Aviation",
-        "jetA": 10.55,
+        "jetA": 10.4,
         "hundredLL": 9,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPWK": {
     "name": "Chicago Executive Airport",
@@ -8854,7 +8854,16 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
+      },
+      {
+        "name": "Ascension FBO Network",
+        "jetA": 10.44,
+        "hundredLL": 8.39,
+        "jetASelfServe": null,
+        "hundredLLSelfServe": null,
+        "serviceType": "FS",
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Signature Aviation",
@@ -8864,18 +8873,9 @@
         "hundredLLSelfServe": null,
         "serviceType": "FS",
         "priceDate": "22-May-2026"
-      },
-      {
-        "name": "Ascension FBO Network",
-        "jetA": 10.44,
-        "hundredLL": 8.39,
-        "jetASelfServe": null,
-        "hundredLLSelfServe": null,
-        "serviceType": "FS",
-        "priceDate": "18-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPWT": {
     "name": "Bremerton National Airport",
@@ -8892,7 +8892,7 @@
         "priceDate": "19-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRAL": {
     "name": "Riverside Airport",
@@ -8927,7 +8927,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRAP": {
     "name": "Rapid City Regional Airport",
@@ -8953,7 +8953,7 @@
         "priceDate": "15-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRBL": {
     "name": "Red Bluff Municipal Airport",
@@ -8970,7 +8970,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRDU": {
     "name": "Raleigh-Durham International Airport",
@@ -8984,7 +8984,7 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Signature Aviation",
@@ -9014,7 +9014,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRIC": {
     "name": "Richmond International Airport",
@@ -9023,8 +9023,8 @@
     "fbos": [
       {
         "name": "Richmond Jet Center",
-        "jetA": 7.2,
-        "hundredLL": 9.08,
+        "jetA": 7.08,
+        "hundredLL": 8.96,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
@@ -9032,15 +9032,15 @@
       },
       {
         "name": "Million Air Richmond",
-        "jetA": 7.66,
+        "jetA": 7.55,
         "hundredLL": 10.57,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRKD": {
     "name": "Knox County Regional Airport",
@@ -9057,7 +9057,7 @@
         "priceDate": "15-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRMG": {
     "name": "Richard B. Russell Regional Airport - J.H. Towers Field",
@@ -9074,7 +9074,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRNO": {
     "name": "Reno/Tahoe International Airport",
@@ -9097,10 +9097,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KROA": {
     "name": "Roanoke-Blacksburg Regional Airport/Woodrum Field",
@@ -9117,7 +9117,7 @@
         "priceDate": "22-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KROW": {
     "name": "Roswell Air Center Airport",
@@ -9126,15 +9126,15 @@
     "fbos": [
       {
         "name": "Avflight Roswell",
-        "jetA": 8.52,
+        "jetA": 8.33,
         "hundredLL": 5.99,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRSL": {
     "name": "Russell Municipal Airport",
@@ -9151,7 +9151,7 @@
         "priceDate": "28-Apr-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRST": {
     "name": "Rochester International Airport",
@@ -9168,7 +9168,7 @@
         "priceDate": "22-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRUT": {
     "name": "Rutland/Southern Vermont Regional Airport",
@@ -9177,15 +9177,15 @@
     "fbos": [
       {
         "name": "Modern Aviation",
-        "jetA": 8.72,
-        "hundredLL": 8.64,
-        "jetASelfServe": 8.4,
-        "hundredLLSelfServe": 8.04,
+        "jetA": 8.57,
+        "hundredLL": 8.52,
+        "jetASelfServe": 8.26,
+        "hundredLLSelfServe": 7.92,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRVS": {
     "name": "Tulsa Riverside Airport",
@@ -9203,7 +9203,7 @@
       },
       {
         "name": "Riverside Jet Center",
-        "jetA": 4.99,
+        "jetA": 4.76,
         "hundredLL": 6.9,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
@@ -9211,7 +9211,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRWF": {
     "name": "Redwood Falls Municipal Airport",
@@ -9228,7 +9228,7 @@
         "priceDate": "20-Apr-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRWI": {
     "name": "Rocky Mount/Wilson Regional Airport",
@@ -9245,7 +9245,7 @@
         "priceDate": "18-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRYY": {
     "name": "Cobb County International Airport-McCollum Field",
@@ -9259,7 +9259,7 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Aero Atlanta Flight Center",
@@ -9271,7 +9271,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSAC": {
     "name": "Sacramento Executive Airport",
@@ -9280,12 +9280,12 @@
     "fbos": [
       {
         "name": "Modern Aviation Executive",
-        "jetA": 9.45,
-        "hundredLL": 8.08,
-        "jetASelfServe": 7.07,
+        "jetA": 9.38,
+        "hundredLL": 7.99,
+        "jetASelfServe": 6.99,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "20-May-2026"
+        "priceDate": "25-May-2026"
       },
       {
         "name": "no comments",
@@ -9297,7 +9297,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSAF": {
     "name": "Santa Fe Regional Airport",
@@ -9306,12 +9306,12 @@
     "fbos": [
       {
         "name": "Atlantic Aviation",
-        "jetA": 8.86,
+        "jetA": 8.68,
         "hundredLL": 7.72,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Signature Aviation",
@@ -9332,7 +9332,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSAV": {
     "name": "Savannah/Hilton Head International Airport",
@@ -9350,24 +9350,15 @@
       },
       {
         "name": "Sheltair",
-        "jetA": 7.72,
-        "hundredLL": 9.45,
+        "jetA": 7.6,
+        "hundredLL": 9.32,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
-      },
-      {
-        "name": "RealClean Aircraft Detailing Lowcountry",
-        "jetA": null,
-        "hundredLL": null,
-        "jetASelfServe": null,
-        "hundredLLSelfServe": null,
-        "serviceType": null,
-        "priceDate": null
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSAW": {
     "name": "Marquette/Sawyer Regional Airport",
@@ -9384,7 +9375,7 @@
         "priceDate": "22-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSBA": {
     "name": "Santa Barbara Municipal Airport",
@@ -9393,12 +9384,12 @@
     "fbos": [
       {
         "name": "Atlantic Aviation",
-        "jetA": 10.97,
+        "jetA": 10.5,
         "hundredLL": 7.95,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Signature Aviation",
@@ -9410,7 +9401,7 @@
         "priceDate": "22-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSBD": {
     "name": "San Bernardino International Airport",
@@ -9436,7 +9427,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSBN": {
     "name": "South Bend International Airport",
@@ -9459,7 +9450,7 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "TOGS Aircraft, LLC",
@@ -9471,7 +9462,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSCH": {
     "name": "Schenectady County Airport",
@@ -9485,10 +9476,10 @@
         "jetASelfServe": 6.49,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "21-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSCK": {
     "name": "Stockton Metro Airport",
@@ -9502,7 +9493,7 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Wolfe Aviation",
@@ -9514,7 +9505,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSDF": {
     "name": "Louisville Muhammad Ali International Airport",
@@ -9523,15 +9514,15 @@
     "fbos": [
       {
         "name": "Atlantic Aviation",
-        "jetA": 9.77,
+        "jetA": 9.64,
         "hundredLL": 8.25,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSDM": {
     "name": "Brown Field Municipal Airport",
@@ -9557,7 +9548,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSEA": {
     "name": "Seattle-Tacoma International Airport",
@@ -9574,7 +9565,7 @@
         "priceDate": "20-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSFB": {
     "name": "Orlando Sanford International Airport",
@@ -9584,11 +9575,11 @@
       {
         "name": "Million Air - SFB",
         "jetA": 8.24,
-        "hundredLL": 8.26,
+        "hundredLL": 8.15,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "South East Ramp",
@@ -9600,7 +9591,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSFF": {
     "name": "Felts Field Airport",
@@ -9609,10 +9600,10 @@
     "fbos": [
       {
         "name": "Aero Center Felts Field",
-        "jetA": 9.38,
-        "hundredLL": 9.85,
-        "jetASelfServe": 9.33,
-        "hundredLLSelfServe": 9.65,
+        "jetA": 9.05,
+        "hundredLL": 9.73,
+        "jetASelfServe": 9,
+        "hundredLLSelfServe": 9.53,
         "serviceType": "FS",
         "priceDate": null
       },
@@ -9635,7 +9626,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSFO": {
     "name": "San Francisco International Airport",
@@ -9649,10 +9640,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "22-May-2026"
+        "priceDate": "27-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSGH": {
     "name": "Springfield/Beckley Municipal Airport",
@@ -9669,7 +9660,7 @@
         "priceDate": "22-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSGJ": {
     "name": "St Augustine Airport",
@@ -9679,11 +9670,11 @@
       {
         "name": "Atlantic Aviation",
         "jetA": 9.93,
-        "hundredLL": 9.26,
+        "hundredLL": 9.14,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "St Augustine Airport",
@@ -9695,7 +9686,7 @@
         "priceDate": "14-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSGR": {
     "name": "Sugar Land Regional Airport",
@@ -9704,7 +9695,7 @@
     "fbos": [
       {
         "name": "GlobalSelect",
-        "jetA": 7.47,
+        "jetA": 7.36,
         "hundredLL": 8.15,
         "jetASelfServe": 7.15,
         "hundredLLSelfServe": null,
@@ -9730,7 +9721,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSGU": {
     "name": "St George Regional Airport",
@@ -9739,7 +9730,7 @@
     "fbos": [
       {
         "name": "Million Air St. George",
-        "jetA": 6.37,
+        "jetA": 6.19,
         "hundredLL": 6.97,
         "jetASelfServe": 6.62,
         "hundredLLSelfServe": null,
@@ -9765,7 +9756,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSHD": {
     "name": "Shenandoah Valley Regional Airport",
@@ -9779,10 +9770,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "21-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSHR": {
     "name": "Sheridan County Airport",
@@ -9808,7 +9799,7 @@
         "priceDate": "06-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSJC": {
     "name": "Norman Y Mineta San Jose International Airport",
@@ -9818,11 +9809,11 @@
       {
         "name": "Atlantic Aviation",
         "jetA": 12.3,
-        "hundredLL": 13.56,
+        "hundredLL": 14.61,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Signature Aviation",
@@ -9831,10 +9822,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "22-May-2026"
+        "priceDate": "27-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "PHKO": {
     "name": "Ellison Onizuka Kona International Airport at Keahole",
@@ -10198,7 +10189,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSKF": {
     "name": "Kelly Field Airport",
@@ -10212,7 +10203,7 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Port San Antonio",
@@ -10224,7 +10215,7 @@
         "priceDate": "22-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSKX": {
     "name": "Taos Regional Airport",
@@ -10241,7 +10232,7 @@
         "priceDate": "20-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSLC": {
     "name": "Salt Lake City International Airport",
@@ -10255,7 +10246,7 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "22-May-2026"
+        "priceDate": "27-May-2026"
       },
       {
         "name": "Atlantic Aviation - SLC",
@@ -10264,7 +10255,7 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Cornerstone Aviation",
@@ -10276,7 +10267,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSLE": {
     "name": "McNary Field Airport",
@@ -10293,7 +10284,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSLN": {
     "name": "Salina Regional Airport",
@@ -10302,15 +10293,15 @@
     "fbos": [
       {
         "name": "Avflight Salina",
-        "jetA": 7.21,
-        "hundredLL": 6.93,
-        "jetASelfServe": 5.75,
+        "jetA": 6.96,
+        "hundredLL": 7.05,
+        "jetASelfServe": 6,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSMF": {
     "name": "Sacramento International Airport",
@@ -10319,12 +10310,12 @@
     "fbos": [
       {
         "name": "Modern Aviation International",
-        "jetA": 9.56,
-        "hundredLL": 8.26,
+        "jetA": 9.38,
+        "hundredLL": 8.18,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "20-May-2026"
+        "priceDate": "25-May-2026"
       },
       {
         "name": "no comments",
@@ -10336,7 +10327,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSMN": {
     "name": "Lemhi County Airport",
@@ -10371,7 +10362,7 @@
         "priceDate": "14-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSMO": {
     "name": "Santa Monica Municipal Airport",
@@ -10385,7 +10376,7 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Ascension Group Partners",
@@ -10397,7 +10388,7 @@
         "priceDate": "18-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSNA": {
     "name": "John Wayne/Orange County Airport",
@@ -10406,8 +10397,8 @@
     "fbos": [
       {
         "name": "ACI Jet North",
-        "jetA": 8.05,
-        "hundredLL": 8.34,
+        "jetA": 7.66,
+        "hundredLL": 8.17,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
@@ -10415,8 +10406,8 @@
       },
       {
         "name": "ACI Jet South",
-        "jetA": 8.05,
-        "hundredLL": 8.34,
+        "jetA": 7.66,
+        "hundredLL": 8.17,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
@@ -10424,8 +10415,8 @@
       },
       {
         "name": "Clay Lacy Aviation",
-        "jetA": 7.53,
-        "hundredLL": 8.2,
+        "jetA": 7.15,
+        "hundredLL": 8.07,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
@@ -10468,7 +10459,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSNS": {
     "name": "Salinas Municipal Airport",
@@ -10477,15 +10468,15 @@
     "fbos": [
       {
         "name": "Jet West GateOne",
-        "jetA": 8,
-        "hundredLL": 7.84,
-        "jetASelfServe": 8,
-        "hundredLLSelfServe": 7.34,
+        "jetA": 7.65,
+        "hundredLL": 8.35,
+        "jetASelfServe": 7.65,
+        "hundredLLSelfServe": 7.85,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSNY": {
     "name": "Sidney Municipal Airport/Lloyd W. Carr Field",
@@ -10502,7 +10493,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSOA": {
     "name": "Sonora Municipal Airport",
@@ -10519,7 +10510,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSOW": {
     "name": "Show Low Regional Airport",
@@ -10545,7 +10536,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSPS": {
     "name": "Sheppard Air Force Base/Wichita Falls Municipal Airport",
@@ -10562,7 +10553,7 @@
         "priceDate": "21-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSRQ": {
     "name": "Sarasota/Bradenton International Airport",
@@ -10571,21 +10562,12 @@
     "fbos": [
       {
         "name": "Sheltair",
-        "jetA": 8.55,
-        "hundredLL": 8.1,
+        "jetA": 8.43,
+        "hundredLL": 8.98,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "20-May-2026"
-      },
-      {
-        "name": "Atlantic Aviation - South",
-        "jetA": 9.66,
-        "hundredLL": 9.11,
-        "jetASelfServe": null,
-        "hundredLLSelfServe": null,
-        "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Ascension FBO",
@@ -10594,7 +10576,16 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
+      },
+      {
+        "name": "Atlantic Aviation - South",
+        "jetA": 9.66,
+        "hundredLL": 9,
+        "jetASelfServe": null,
+        "hundredLLSelfServe": null,
+        "serviceType": "FS",
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Aero Maintenance",
@@ -10615,7 +10606,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSRR": {
     "name": "Sierra Blanca Regional Airport",
@@ -10632,7 +10623,7 @@
         "priceDate": "14-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSTL": {
     "name": "St Louis Lambert International Airport",
@@ -10646,7 +10637,7 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "22-May-2026"
+        "priceDate": "27-May-2026"
       },
       {
         "name": "On Site Aircraft Service",
@@ -10658,7 +10649,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSTP": {
     "name": "St Paul Downtown Airport Holman Field",
@@ -10672,7 +10663,7 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "22-May-2026"
+        "priceDate": "27-May-2026"
       },
       {
         "name": "St. Paul Flight Center",
@@ -10693,7 +10684,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSUN": {
     "name": "Friedman Memorial Airport",
@@ -10707,10 +10698,10 @@
         "jetASelfServe": 6.04,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSUS": {
     "name": "Spirit of St Louis Airport",
@@ -10724,7 +10715,7 @@
         "jetASelfServe": 7.16,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "22-May-2026"
+        "priceDate": "27-May-2026"
       },
       {
         "name": "Aero Charter, Inc.",
@@ -10745,7 +10736,7 @@
         "priceDate": "19-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSUX": {
     "name": "Sioux Gateway Airport/Brigadier General Bud Day Field",
@@ -10759,10 +10750,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "18-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSVC": {
     "name": "Grant County Airport",
@@ -10779,7 +10770,7 @@
         "priceDate": "21-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSWF": {
     "name": "New York Stewart International Airport",
@@ -10788,12 +10779,12 @@
     "fbos": [
       {
         "name": "Atlantic Aviation",
-        "jetA": 9.32,
+        "jetA": 9.17,
         "hundredLL": null,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Signature Aviation",
@@ -10802,10 +10793,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "22-May-2026"
+        "priceDate": "27-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSYR": {
     "name": "Syracuse Hancock International Airport",
@@ -10814,21 +10805,21 @@
     "fbos": [
       {
         "name": "Million Air Syracuse",
-        "jetA": 8.62,
-        "hundredLL": 8.85,
+        "jetA": 8.46,
+        "hundredLL": 8.72,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Freeman Jet Center Syracuse",
-        "jetA": 8.62,
-        "hundredLL": 8.85,
+        "jetA": 8.46,
+        "hundredLL": 8.72,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Syracuse Regional Airport Authority",
@@ -10840,7 +10831,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KTCC": {
     "name": "Tucumcari Municipal Airport",
@@ -10857,7 +10848,7 @@
         "priceDate": "20-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KTCL": {
     "name": "Tuscaloosa National Airport",
@@ -10871,10 +10862,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "18-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KTEB": {
     "name": "Teterboro Airport",
@@ -10883,8 +10874,8 @@
     "fbos": [
       {
         "name": "Jet Aviation",
-        "jetA": 11.57,
-        "hundredLL": 9.73,
+        "jetA": 11.5,
+        "hundredLL": 9.66,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
@@ -10892,12 +10883,12 @@
       },
       {
         "name": "Signature Aviation East",
-        "jetA": 10.15,
-        "hundredLL": 8.8,
+        "jetA": 12.13,
+        "hundredLL": 10.15,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "22-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Atlantic Aviation",
@@ -10906,7 +10897,7 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Signature Aviation West",
@@ -10945,7 +10936,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KTIW": {
     "name": "Tacoma Narrows Airport",
@@ -10998,7 +10989,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KTIX": {
     "name": "Space Coast Regional Airport",
@@ -11015,7 +11006,7 @@
         "priceDate": "21-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KTMB": {
     "name": "Miami Executive Airport",
@@ -11056,7 +11047,7 @@
         "jetASelfServe": 8.25,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "22-May-2026"
+        "priceDate": "27-May-2026"
       },
       {
         "name": "Prime Appearance",
@@ -11068,7 +11059,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KTOL": {
     "name": "Eugene F Kranz Toledo Express Airport",
@@ -11077,8 +11068,8 @@
     "fbos": [
       {
         "name": "Grand Aire, Inc.",
-        "jetA": 7.53,
-        "hundredLL": 7.6,
+        "jetA": 7.45,
+        "hundredLL": 7.5,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
@@ -11094,7 +11085,7 @@
         "priceDate": "18-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KTOP": {
     "name": "Philip Billard Municipal Airport",
@@ -11103,15 +11094,15 @@
     "fbos": [
       {
         "name": "TOP Fuel Service",
-        "jetA": 6.27,
+        "jetA": 6.03,
         "hundredLL": 6.76,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KTPH": {
     "name": "Tonopah Airport",
@@ -11128,7 +11119,7 @@
         "priceDate": "15-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KTPL": {
     "name": "Draughon-Miller Central Texas Regional Airport",
@@ -11137,15 +11128,15 @@
     "fbos": [
       {
         "name": "Temple Executive Air Center",
-        "jetA": 7.25,
+        "jetA": 7.15,
         "hundredLL": 6.95,
-        "jetASelfServe": 6.87,
+        "jetASelfServe": 6.77,
         "hundredLLSelfServe": 6.57,
         "serviceType": "FS",
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KTRI": {
     "name": "Tri-Cities Airport",
@@ -11162,7 +11153,7 @@
         "priceDate": "22-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KTRM": {
     "name": "Jacqueline Cochran Regional Airport",
@@ -11180,7 +11171,7 @@
       },
       {
         "name": "Desert Jet Center",
-        "jetA": 9.99,
+        "jetA": 9.55,
         "hundredLL": 9.81,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
@@ -11189,12 +11180,12 @@
       },
       {
         "name": "Atlantic Aviation",
-        "jetA": 10.36,
+        "jetA": 10.23,
         "hundredLL": 8.45,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "20-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Desert Jet Detailing",
@@ -11215,7 +11206,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KTTD": {
     "name": "Portland-Troutdale Airport",
@@ -11232,7 +11223,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KTTN": {
     "name": "Trenton Mercer Airport",
@@ -11251,14 +11242,14 @@
       {
         "name": "Signature Aviation",
         "jetA": 8.51,
-        "hundredLL": 9.3,
-        "jetASelfServe": 8.55,
+        "hundredLL": 9.42,
+        "jetASelfServe": 8.67,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "20-May-2026"
+        "priceDate": "27-May-2026"
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KTUL": {
     "name": "Tulsa International Airport",
@@ -11272,16 +11263,16 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "20-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "United States Aviation",
-        "jetA": 6.05,
+        "jetA": 5.95,
         "hundredLL": 7.1,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Omni Aircraft Maintenance",
@@ -11293,7 +11284,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KTUP": {
     "name": "Tupelo Regional Airport",
@@ -11310,7 +11301,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KTUS": {
     "name": "Tucson International Airport",
@@ -11360,10 +11351,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "20-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KTVC": {
     "name": "Cherry Capital Airport",
@@ -11372,15 +11363,15 @@
     "fbos": [
       {
         "name": "Avflight Traverse City",
-        "jetA": 9.7,
+        "jetA": 9.53,
         "hundredLL": 6.99,
         "jetASelfServe": 6.69,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "18-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KTVL": {
     "name": "Lake Tahoe Airport",
@@ -11406,7 +11397,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KTWF": {
     "name": "Joslin Field/Magic Valley Regional Airport",
@@ -11432,7 +11423,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KTXK": {
     "name": "Texarkana Regional Airport-Webb Field",
@@ -11446,10 +11437,10 @@
         "jetASelfServe": 6.3,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "20-May-2026"
+        "priceDate": "27-May-2026"
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KTYR": {
     "name": "Tyler Pounds Regional Airport",
@@ -11458,24 +11449,24 @@
     "fbos": [
       {
         "name": "Jet Center of Tyler",
-        "jetA": 5.88,
-        "hundredLL": 7.34,
+        "jetA": 5.76,
+        "hundredLL": 7.22,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Johnson Aviation",
-        "jetA": 5.9,
-        "hundredLL": 7.36,
+        "jetA": 5.81,
+        "hundredLL": 7.21,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KUAO": {
     "name": "Aurora State Airport",
@@ -11484,24 +11475,24 @@
     "fbos": [
       {
         "name": "Atlantic Aviation",
-        "jetA": 9.81,
+        "jetA": 9.29,
         "hundredLL": 9.1,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "20-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Pacific Flight LLC",
-        "jetA": 7.06,
+        "jetA": 6.96,
         "hundredLL": 7.9,
         "jetASelfServe": 6.9,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "21-May-2026"
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KUNV": {
     "name": "State College Regional Airport",
@@ -11518,7 +11509,7 @@
         "priceDate": "19-May-2026"
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KVEL": {
     "name": "Vernal Regional Airport",
@@ -11528,15 +11519,15 @@
       {
         "name": "Dinaland Aviation",
         "jetA": 5.66,
-        "hundredLL": 5.4,
+        "hundredLL": 7.57,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "20-May-2026"
+        "priceDate": "22-May-2026"
       },
       {
         "name": "Classic Aviation",
-        "jetA": 5.95,
+        "jetA": 6.2,
         "hundredLL": 5.75,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
@@ -11544,7 +11535,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KVGT": {
     "name": "North Las Vegas Airport",
@@ -11579,7 +11570,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KVIS": {
     "name": "Visalia Municipal Airport",
@@ -11596,7 +11587,7 @@
         "priceDate": "15-May-2026"
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KVLD": {
     "name": "Valdosta Regional Airport",
@@ -11610,10 +11601,10 @@
         "jetASelfServe": 6.37,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "13-May-2026"
+        "priceDate": "22-May-2026"
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KVNY": {
     "name": "Van Nuys Airport",
@@ -11627,11 +11618,11 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Castle & Cooke Aviation Services",
-        "jetA": 8.86,
+        "jetA": 8.51,
         "hundredLL": 8.32,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
@@ -11640,7 +11631,7 @@
       },
       {
         "name": "Jet Aviation Van Nuys",
-        "jetA": 8.81,
+        "jetA": 8.43,
         "hundredLL": 8.63,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
@@ -11649,8 +11640,8 @@
       },
       {
         "name": "Clay Lacy Aviation",
-        "jetA": 11.15,
-        "hundredLL": 8.76,
+        "jetA": 10.77,
+        "hundredLL": 8.36,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
@@ -11663,16 +11654,16 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "The Park VNY",
         "jetA": null,
         "hundredLL": null,
-        "jetASelfServe": 7.88,
+        "jetASelfServe": 7.89,
         "hundredLLSelfServe": null,
         "serviceType": null,
-        "priceDate": "15-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Prime Appearance",
@@ -11684,7 +11675,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KVQQ": {
     "name": "Cecil Airport",
@@ -11693,15 +11684,15 @@
     "fbos": [
       {
         "name": "Million Air Jacksonville-Cecil",
-        "jetA": 9.78,
-        "hundredLL": 8.54,
+        "jetA": 9.65,
+        "hundredLL": 8.4,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KVRB": {
     "name": "Vero Beach Regional Airport",
@@ -11710,18 +11701,18 @@
     "fbos": [
       {
         "name": "Sun Aviation, Inc.",
-        "jetA": 7.81,
-        "hundredLL": 7.54,
-        "jetASelfServe": 6.84,
+        "jetA": 7.76,
+        "hundredLL": 7.55,
+        "jetASelfServe": 6.85,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
         "priceDate": null
       },
       {
         "name": "Corporate Air, Inc.",
-        "jetA": 7.76,
-        "hundredLL": 7.63,
-        "jetASelfServe": 6.78,
+        "jetA": 7.84,
+        "hundredLL": 7.76,
+        "jetASelfServe": 6.93,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
         "priceDate": null
@@ -11763,7 +11754,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KWJF": {
     "name": "General Wm J Fox Airfield",
@@ -12384,7 +12375,7 @@
         "priceDate": "20-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KTYS": {
     "name": "Mc Ghee Tyson Airport",
@@ -12393,15 +12384,15 @@
     "fbos": [
       {
         "name": "Signature Aviation",
-        "jetA": 8.7,
+        "jetA": 8.63,
         "hundredLL": 9.31,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "20-May-2026"
+        "priceDate": "27-May-2026"
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KMMH": {
     "name": "Mammoth Yosemite Airport",
@@ -14482,8 +14473,8 @@
     "fbos": [
       {
         "name": "Cutter Aviation",
-        "jetA": 9.98,
-        "hundredLL": 8.39,
+        "jetA": 9.88,
+        "hundredLL": 8.34,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
@@ -14499,7 +14490,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPNA": {
     "name": "Ralph Wenz Field Airport",
@@ -14516,7 +14507,7 @@
         "priceDate": "21-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPNC": {
     "name": "Ponca City Regional Airport",
@@ -14533,7 +14524,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPRC": {
     "name": "Prescott Regional/Ernest A Love Field Airport",
@@ -14543,14 +14534,14 @@
       {
         "name": "Cutter Aviation",
         "jetA": 9.32,
-        "hundredLL": 8.95,
-        "jetASelfServe": 8.1,
+        "hundredLL": 8.91,
+        "jetASelfServe": 8.06,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPSC": {
     "name": "Tri-Cities Airport",
@@ -14567,7 +14558,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPVU": {
     "name": "Provo Municipal Airport",
@@ -14576,7 +14567,7 @@
     "fbos": [
       {
         "name": "Signature Aviation",
-        "jetA": 9.22,
+        "jetA": 8.72,
         "hundredLL": null,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
@@ -14593,7 +14584,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KPWM": {
     "name": "Portland International Jetport",
@@ -14602,7 +14593,7 @@
     "fbos": [
       {
         "name": "Northeast Air",
-        "jetA": 6.33,
+        "jetA": 6.19,
         "hundredLL": 8.28,
         "jetASelfServe": 7.89,
         "hundredLLSelfServe": null,
@@ -14611,7 +14602,7 @@
       },
       {
         "name": "MAC Jets",
-        "jetA": 6.23,
+        "jetA": 6.09,
         "hundredLL": 8.28,
         "jetASelfServe": 7.9,
         "hundredLLSelfServe": null,
@@ -14619,7 +14610,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRDD": {
     "name": "Redding Regional Airport",
@@ -14645,7 +14636,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRDG": {
     "name": "Reading Regional Airport/Carl A Spaatz Field",
@@ -14654,7 +14645,7 @@
     "fbos": [
       {
         "name": "Reading Aviation",
-        "jetA": 7.41,
+        "jetA": 7.27,
         "hundredLL": 7.6,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
@@ -14662,7 +14653,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRFD": {
     "name": "Chicago/Rockford International Airport",
@@ -14671,7 +14662,7 @@
     "fbos": [
       {
         "name": "Emery Air",
-        "jetA": 7.72,
+        "jetA": 7.59,
         "hundredLL": 7.19,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
@@ -14679,7 +14670,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRIL": {
     "name": "Rifle Garfield County Airport",
@@ -14693,10 +14684,10 @@
         "jetASelfServe": 5.99,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "23-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRIV": {
     "name": "March Air Reserve Base",
@@ -14705,15 +14696,15 @@
     "fbos": [
       {
         "name": "Million Air",
-        "jetA": 8.48,
-        "hundredLL": 8.78,
+        "jetA": 8.14,
+        "hundredLL": 8.8,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRIW": {
     "name": "Central Wyoming Regional Airport",
@@ -14730,7 +14721,7 @@
         "priceDate": "14-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRKS": {
     "name": "Southwest Wyoming Regional Airport",
@@ -14739,7 +14730,7 @@
     "fbos": [
       {
         "name": "Sweetwater Aviation",
-        "jetA": 7.05,
+        "jetA": 6.98,
         "hundredLL": 6.88,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
@@ -14747,7 +14738,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KROC": {
     "name": "Frederick Douglass/Greater Rochester International Airport",
@@ -14756,12 +14747,12 @@
     "fbos": [
       {
         "name": "Avflight Rochester",
-        "jetA": 7.85,
+        "jetA": 7.75,
         "hundredLL": 8.9,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "USAirports",
@@ -14773,7 +14764,7 @@
         "priceDate": "20-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRWL": {
     "name": "Rawlins Municipal Airport/Harvey Field",
@@ -14790,7 +14781,7 @@
         "priceDate": "08-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSAN": {
     "name": "San Diego International Airport",
@@ -14807,7 +14798,7 @@
         "priceDate": "22-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSAT": {
     "name": "San Antonio International Airport",
@@ -14851,7 +14842,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSBP": {
     "name": "San Luis Obispo County Regional Airport",
@@ -14860,15 +14851,15 @@
     "fbos": [
       {
         "name": "ACI Jet - San Luis Obispo",
-        "jetA": 8.17,
-        "hundredLL": 8.4,
-        "jetASelfServe": 6.87,
+        "jetA": 7.83,
+        "hundredLL": 8.32,
+        "jetASelfServe": 6.79,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSBY": {
     "name": "Salisbury-Ocean City Wicomico Regional Airport",
@@ -14877,15 +14868,15 @@
     "fbos": [
       {
         "name": "Azure Flight Support",
-        "jetA": 8.05,
-        "hundredLL": 8.25,
+        "jetA": 7.92,
+        "hundredLL": 7.99,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSDY": {
     "name": "Sidney-Richland Regional Airport",
@@ -14899,10 +14890,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "24-Apr-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSGF": {
     "name": "Springfield-Branson National Airport",
@@ -14919,7 +14910,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSME": {
     "name": "Lake Cumberland Regional Airport",
@@ -14936,7 +14927,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSMX": {
     "name": "Santa Maria Public Airport/Capt G Allan Hancock Field",
@@ -14953,7 +14944,7 @@
         "priceDate": "08-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSPI": {
     "name": "Abraham Lincoln Capital Airport",
@@ -14970,7 +14961,7 @@
         "priceDate": "19-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSSF": {
     "name": "Stinson Municipal Airport",
@@ -14987,7 +14978,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSSI": {
     "name": "St Simons Island Airport",
@@ -14996,15 +14987,15 @@
     "fbos": [
       {
         "name": "Velocity Aviation - Golden Isles",
-        "jetA": 8.73,
+        "jetA": 8.63,
         "hundredLL": 8.47,
         "jetASelfServe": 7.47,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSTS": {
     "name": "Charles M Schulz/Sonoma County Airport",
@@ -15014,15 +15005,15 @@
       {
         "name": "KAISERAIR, INC - Santa Rosa Jet Center",
         "jetA": 7.76,
-        "hundredLL": 8.49,
-        "jetASelfServe": 6.99,
+        "hundredLL": 8.65,
+        "jetASelfServe": 7.15,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
         "priceDate": null
       },
       {
         "name": "Sonoma Jet Center",
-        "jetA": 8.44,
+        "jetA": 8.12,
         "hundredLL": 8.64,
         "jetASelfServe": 7.19,
         "hundredLLSelfServe": null,
@@ -15030,7 +15021,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KSWO": {
     "name": "Stillwater Regional Airport",
@@ -15040,14 +15031,14 @@
       {
         "name": "Stillwater Flight Center",
         "jetA": 6.49,
-        "hundredLL": 6.49,
+        "hundredLL": 6.79,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KTEX": {
     "name": "Telluride Regional Airport",
@@ -15064,7 +15055,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KTLH": {
     "name": "Tallahassee International Airport",
@@ -15082,15 +15073,15 @@
       },
       {
         "name": "Million Air Tallahassee",
-        "jetA": 7.36,
-        "hundredLL": 7.25,
-        "jetASelfServe": 6.1,
+        "jetA": 7.24,
+        "hundredLL": 7.13,
+        "jetASelfServe": 5.98,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
         "priceDate": null
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KTPA": {
     "name": "Tampa International Airport",
@@ -15099,12 +15090,12 @@
     "fbos": [
       {
         "name": "Sheltair",
-        "jetA": 9.05,
-        "hundredLL": 9.32,
+        "jetA": 8.93,
+        "hundredLL": 9.2,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-May-2026"
+        "priceDate": "26-May-2026"
       },
       {
         "name": "Signature Aviation",
@@ -15113,10 +15104,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "22-May-2026"
+        "priceDate": "27-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KUIN": {
     "name": "Quincy Regional Airport-Baldwin Field",
@@ -15133,7 +15124,7 @@
         "priceDate": "13-May-2026"
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KUUU": {
     "name": "Newport State Airport",
@@ -15150,7 +15141,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KVCT": {
     "name": "Victoria Regional Airport",
@@ -15159,15 +15150,15 @@
     "fbos": [
       {
         "name": "Victoria Jet Center",
-        "jetA": 7.73,
-        "hundredLL": 7.76,
-        "jetASelfServe": 7.73,
-        "hundredLLSelfServe": 7.56,
+        "jetA": 7.83,
+        "hundredLL": 7.86,
+        "jetASelfServe": 7.83,
+        "hundredLLSelfServe": 7.66,
         "serviceType": "FS",
         "priceDate": null
       }
     ],
-    "updated": "2026-05-21"
+    "updated": "2026-05-27"
   },
   "KWWD": {
     "name": "Cape May County Airport",
@@ -15261,7 +15252,7 @@
         "priceDate": "19-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "KRNH": {
     "name": "New Richmond Regional Airport",
@@ -15271,23 +15262,23 @@
       {
         "name": "East Metro Aviation",
         "jetA": 7.19,
-        "hundredLL": 6.29,
-        "jetASelfServe": 5.89,
+        "hundredLL": 6.49,
+        "jetASelfServe": 6.09,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "18-May-2026"
+        "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-23"
+    "updated": "2026-05-27"
   },
   "_meta": {
-    "lastUpdated": "2026-05-26",
-    "lastUpdatedISO": "2026-05-26T10:27:39.504Z",
+    "lastUpdated": "2026-05-27",
+    "lastUpdatedISO": "2026-05-27T10:25:20.239Z",
     "source": "airnav.com",
     "totalAirports": 640,
-    "totalFBOs": 1129,
+    "totalFBOs": 1128,
     "fbosWithPrices": 839,
     "errors": 0,
-    "thisRunNew": 237
+    "thisRunNew": 292
   }
 }
