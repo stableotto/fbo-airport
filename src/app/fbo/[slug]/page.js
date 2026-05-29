@@ -67,7 +67,7 @@ export default async function FBOPage({ params }) {
                             <a>Services</a>
                             {fbo.website && (
                                 <a href={fbo.website} target="_blank" rel="noopener noreferrer" style={{ marginLeft: 'auto', color: 'var(--color-accent)' }}>
-                                    🔗 {fbo.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+                                    {fbo.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}
                                 </a>
                             )}
                         </div>
@@ -96,19 +96,19 @@ export default async function FBOPage({ params }) {
                             <div className="services-grid">
                                 {fbo.phone && (
                                     <div className="service-item">
-                                        <span>📞</span>
+                                        <span className="contact-label">Phone</span>
                                         <a href={`tel:${fbo.phone}`}>{fbo.phone}</a>
                                     </div>
                                 )}
                                 {fbo.website && (
                                     <div className="service-item">
-                                        <span>🌐</span>
+                                        <span className="contact-label">Website</span>
                                         <a href={fbo.website} target="_blank" rel="noopener noreferrer">{fbo.website.replace(/^https?:\/\//, '')}</a>
                                     </div>
                                 )}
                                 <div className="service-item">
-                                    <span>🕐</span>
-                                    Hours: {fbo.hours}
+                                    <span className="contact-label">Hours</span>
+                                    {fbo.hours}
                                 </div>
                             </div>
                         </div>

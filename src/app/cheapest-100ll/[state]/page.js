@@ -75,7 +75,7 @@ export default async function Cheapest100LLStatePage({ params }) {
                 <Breadcrumbs items={crumbs} />
 
                 <div className="detail-header" style={{ marginBottom: 'var(--space-xl)' }}>
-                    <div className="detail-icon">⛽</div>
+                    <div className="detail-icon">LL</div>
                     <div className="detail-header-text">
                         <h1>Cheapest 100LL Avgas in {stateData.name}</h1>
                         <p className="detail-header-subtitle">

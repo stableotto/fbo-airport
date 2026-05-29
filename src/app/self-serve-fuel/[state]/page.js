@@ -91,7 +91,7 @@ export default async function SelfServeFuelStatePage({ params }) {
                 <Breadcrumbs items={crumbs} />
 
                 <div className="detail-header" style={{ marginBottom: 'var(--space-xl)' }}>
-                    <div className="detail-icon">⛽</div>
+                    <div className="detail-icon">SS</div>
                     <div className="detail-header-text">
                         <h1>Self-Serve Fuel in {stateData.name}</h1>
                         <p className="detail-header-subtitle">

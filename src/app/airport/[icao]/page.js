@@ -65,7 +65,7 @@ export default async function AirportPage({ params }) {
                 <Breadcrumbs items={crumbs} />
 
                 <div className="detail-header">
-                    <div className="detail-icon">✈️</div>
+                    <div className="detail-icon">{airport.icao.slice(1, 3)}</div>
                     <div className="detail-header-text">
                         <h1>{airport.icao}</h1>
                         <div className="detail-header-subtitle">{airport.name}</div>
