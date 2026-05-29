@@ -4,6 +4,8 @@ import { getAllFBOs, getLastUpdated } from '@/lib/data';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeaderboardTable from '@/components/LeaderboardTable';
 import RelatedLinks from '@/components/RelatedLinks';
+import JsonLd from '@/components/JsonLd';
+import { breadcrumbList, fboItemList, fuelProducts } from '@/lib/structured-data';
 
 export function generateStaticParams() {
     return states.map(state => ({ state: state.slug }));
@@ -17,9 +19,12 @@ export async function generateMetadata({ params }) {
     return {
         title: `Cheapest 100LL Fuel in ${stateData.name} — Avgas Prices ${new Date().getFullYear()}`,
         description: `Find the cheapest 100LL avgas prices in ${stateData.name}. Compare FBO fuel prices at airports across ${stateData.name} and save money on aviation fuel.`,
+        alternates: { canonical: `/cheapest-100ll/${stateData.slug}/` },
         openGraph: {
             title: `Cheapest 100LL Avgas in ${stateData.name}`,
             description: `Compare 100LL prices at FBOs across ${stateData.name}. Updated daily.`,
+            url: `/cheapest-100ll/${stateData.slug}/`,
+            type: 'website',
         },
     };
 }
@@ -43,14 +48,31 @@ export default async function Cheapest100LLStatePage({ params }) {
         ? (stateFBOs.reduce((sum, f) => sum + (f.fuelPrices?.hundredLL || 0), 0) / stateFBOs.length).toFixed(2)
         : null;
 
+    const crumbs = [
+        { label: 'Home', href: '/' },
+        { label: 'Cheapest 100LL by State', href: '/cheapest-100ll/' },
+        { label: stateData.name },
+    ];
+
+    const structuredData = [
+        breadcrumbList(crumbs),
+        ...(stateFBOs.length
+            ? [
+                  fboItemList({
+                      name: `Cheapest 100LL in ${stateData.name}`,
+                      url: `/cheapest-100ll/${stateData.slug}/`,
+                      fbos: stateFBOs,
+                  }),
+                  ...fuelProducts({ contextName: `${stateData.name} (100LL)`, url: `/cheapest-100ll/${stateData.slug}/`, fbos: stateFBOs }),
+              ]
+            : []),
+    ];
+
     return (
         <div className="page-content">
+            <JsonLd data={structuredData} />
             <div className="container">
-                <Breadcrumbs items={[
-                    { label: 'Home', href: '/' },
-                    { label: 'Cheapest 100LL by State', href: '/cheapest-100ll/' },
-                    { label: stateData.name },
-                ]} />
+                <Breadcrumbs items={crumbs} />
 
                 <div className="detail-header" style={{ marginBottom: 'var(--space-xl)' }}>
                     <div className="detail-icon">⛽</div>

@@ -4,6 +4,8 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import LeaderboardTable from '@/components/LeaderboardTable';
 import PriceStatsBar from '@/components/PriceStatsBar';
 import RelatedLinks from '@/components/RelatedLinks';
+import JsonLd from '@/components/JsonLd';
+import { breadcrumbList, fboItemList, fuelProducts } from '@/lib/structured-data';
 
 export function generateStaticParams() {
     return getAllStates().map(s => ({ slug: s.slug }));
@@ -13,9 +15,13 @@ export async function generateMetadata({ params }) {
     const { slug } = await params;
     const state = getStateBySlug(slug);
     if (!state) return {};
+    const title = `Fuel Prices in ${state.name} — Cheapest Jet-A & 100LL`;
+    const description = `Compare fuel prices at every FBO in ${state.name}. Find the cheapest Jet-A and 100LL across ${state.name} airports.`;
     return {
-        title: `Fuel Prices in ${state.name} — Cheapest Jet-A & 100LL`,
-        description: `Compare fuel prices at every FBO in ${state.name}. Find the cheapest Jet-A and 100LL across ${state.name} airports.`,
+        title,
+        description,
+        alternates: { canonical: `/state/${state.slug}/` },
+        openGraph: { title, description, url: `/state/${state.slug}/`, type: 'website' },
     };
 }
 
@@ -28,14 +34,31 @@ export default async function StatePage({ params }) {
     const airports = getAirportsByState(state.name);
     const priceStats = getPriceStats(rankedFBOs);
 
+    const crumbs = [
+        { label: 'Home', href: '/' },
+        { label: 'States', href: '/states/' },
+        { label: state.name },
+    ];
+
+    const structuredData = [
+        breadcrumbList(crumbs),
+        ...(rankedFBOs.length
+            ? [
+                  fboItemList({
+                      name: `FBOs in ${state.name} ranked by fuel price`,
+                      url: `/state/${state.slug}/`,
+                      fbos: rankedFBOs,
+                  }),
+                  ...fuelProducts({ contextName: state.name, url: `/state/${state.slug}/`, fbos: rankedFBOs }),
+              ]
+            : []),
+    ];
+
     return (
         <div className="page-content">
+            <JsonLd data={structuredData} />
             <div className="container">
-                <Breadcrumbs items={[
-                    { label: 'Home', href: '/' },
-                    { label: 'States', href: '/states/' },
-                    { label: state.name },
-                ]} />
+                <Breadcrumbs items={crumbs} />
 
                 <div className="section-header">
                     <h1 style={{ fontStyle: 'italic' }}>Fuel Prices in {state.name}</h1>

@@ -2,8 +2,10 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+import CloudflareAnalytics from '@/components/CloudflareAnalytics';
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+const CF_BEACON_TOKEN = process.env.NEXT_PUBLIC_CF_BEACON_TOKEN;
 
 export const metadata = {
   title: {
@@ -32,6 +34,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <GoogleAnalytics gaId={GA_ID} />
+        <CloudflareAnalytics token={CF_BEACON_TOKEN} />
         <Navbar />
         <main>{children}</main>
         <Footer />

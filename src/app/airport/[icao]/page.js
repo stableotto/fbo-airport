@@ -5,6 +5,8 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import LeaderboardTable from '@/components/LeaderboardTable';
 import PriceStatsBar from '@/components/PriceStatsBar';
 import RelatedLinks from '@/components/RelatedLinks';
+import JsonLd from '@/components/JsonLd';
+import { breadcrumbList, fboItemList, fuelProducts, airportSchema } from '@/lib/structured-data';
 
 export function generateStaticParams() {
     return getAllAirports().map(a => ({ icao: a.icao }));
@@ -16,9 +18,13 @@ export async function generateMetadata({ params }) {
     if (!airport) return {};
     const rankedFBOs = getRankedFBOsByAirport(airport.icao);
     const cheapest = rankedFBOs.find(f => f.rank === 1);
+    const title = `Fuel Prices at ${airport.icao} — ${airport.name}${cheapest ? ` | Jet-A from $${cheapest.fuelPrices.jetA.toFixed(2)}` : ''}`;
+    const description = `Compare fuel prices at ${rankedFBOs.length} FBOs at ${airport.name} (${airport.icao}) in ${airport.city}, ${airport.state}. Find the cheapest Jet-A and 100LL.`;
     return {
-        title: `Fuel Prices at ${airport.icao} — ${airport.name}${cheapest ? ` | Jet-A from $${cheapest.fuelPrices.jetA.toFixed(2)}` : ''}`,
-        description: `Compare fuel prices at ${rankedFBOs.length} FBOs at ${airport.name} (${airport.icao}) in ${airport.city}, ${airport.state}. Find the cheapest Jet-A and 100LL.`,
+        title,
+        description,
+        alternates: { canonical: `/airport/${airport.icao}/` },
+        openGraph: { title, description, url: `/airport/${airport.icao}/`, type: 'website' },
     };
 }
 
@@ -31,14 +37,32 @@ export default async function AirportPage({ params }) {
     const stateData = states.find(s => s.name === airport.state);
     const priceStats = getPriceStats(rankedFBOs);
 
+    const crumbs = [
+        { label: 'Home', href: '/' },
+        { label: airport.state, href: stateData ? `/state/${stateData.slug}/` : '/states/' },
+        { label: airport.icao },
+    ];
+
+    const structuredData = [
+        breadcrumbList(crumbs),
+        airportSchema(airport),
+        ...(rankedFBOs.length
+            ? [
+                  fboItemList({
+                      name: `FBOs at ${airport.icao} ranked by fuel price`,
+                      url: `/airport/${airport.icao}/`,
+                      fbos: rankedFBOs,
+                  }),
+                  ...fuelProducts({ contextName: `${airport.icao} (${airport.name})`, url: `/airport/${airport.icao}/`, fbos: rankedFBOs }),
+              ]
+            : []),
+    ];
+
     return (
         <div className="page-content">
+            <JsonLd data={structuredData} />
             <div className="container">
-                <Breadcrumbs items={[
-                    { label: 'Home', href: '/' },
-                    { label: airport.state, href: stateData ? `/state/${stateData.slug}/` : '/states/' },
-                    { label: airport.icao },
-                ]} />
+                <Breadcrumbs items={crumbs} />
 
                 <div className="detail-header">
                     <div className="detail-icon">✈️</div>
