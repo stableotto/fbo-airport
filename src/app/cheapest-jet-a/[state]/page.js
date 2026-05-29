@@ -129,7 +129,7 @@ export default async function CheapestJetAStatePage({ params }) {
                         <h3>Know a better price in {stateData.name}?</h3>
                         <p>Help fellow pilots save money by reporting current fuel prices.</p>
                     </div>
-                    <a href={`mailto:prices@fboairport.com?subject=Fuel Price Update - ${stateData.name}`} className="btn">Report a Price</a>
+                    <Link href={`/contact/?topic=price&ref=${stateData.slug}`} className="btn">Report a Price</Link>
                 </div>
             </div>
         </div>

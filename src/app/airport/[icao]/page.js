@@ -89,7 +89,7 @@ export default async function AirportPage({ params }) {
                         <LeaderboardTable fbos={rankedFBOs} showState={false} showAirport={false} />
                     ) : (
                         <div style={{ padding: 'var(--space-2xl)', textAlign: 'center', color: 'var(--color-text-tertiary)' }}>
-                            No FBOs listed at this airport yet. <a href="mailto:prices@fboairport.com" style={{ color: 'var(--color-accent)' }}>Submit a listing</a>.
+                            No FBOs listed at this airport yet. <Link href={`/contact/?topic=listing&ref=${airport.icao}`} style={{ color: 'var(--color-accent)' }}>Submit a listing</Link>.
                         </div>
                     )}
                 </div>
@@ -109,7 +109,7 @@ export default async function AirportPage({ params }) {
                         <h3>Know the current price at {airport.icao}?</h3>
                         <p>Help pilots save money by reporting fuel prices.</p>
                     </div>
-                    <a href="mailto:prices@fboairport.com" className="btn">Report a Price</a>
+                    <Link href={`/contact/?topic=price&ref=${airport.icao}`} className="btn">Report a Price</Link>
                 </div>
             </div>
         </div>

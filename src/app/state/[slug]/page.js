@@ -108,7 +108,7 @@ export default async function StatePage({ params }) {
                         <h3>Know a better price in {state.name}?</h3>
                         <p>Help pilots save money by reporting the latest fuel prices.</p>
                     </div>
-                    <a href="mailto:prices@fboairport.com" className="btn">Report a Price</a>
+                    <Link href={`/contact/?topic=price&ref=${state.slug}`} className="btn">Report a Price</Link>
                 </div>
             </div>
         </div>

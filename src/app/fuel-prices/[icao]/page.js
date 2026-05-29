@@ -147,7 +147,7 @@ export default async function FuelPricesAirportPage({ params }) {
                         <h3>Know current fuel prices at {icao}?</h3>
                         <p>Help fellow pilots with accurate, up-to-date pricing information.</p>
                     </div>
-                    <a href={`mailto:prices@fboairport.com?subject=Fuel Price Update - ${icao}`} className="btn">Report a Price</a>
+                    <Link href={`/contact/?topic=price&ref=${icao}`} className="btn">Report a Price</Link>
                 </div>
             </div>
         </div>

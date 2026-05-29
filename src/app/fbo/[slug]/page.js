@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { getAllFBOs, getFBOBySlug, getAirportByCode } from '@/lib/data';
 import { states } from '@/data/seed';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -128,7 +129,7 @@ export default async function FBOPage({ params }) {
                                 <h3>Is this your FBO?</h3>
                                 <p>Claim this listing to update your information, add photos, and respond to reviews.</p>
                             </div>
-                            <a href="mailto:listings@fboairport.com" className="btn">Claim This Listing</a>
+                            <Link href={`/contact/?topic=listing&ref=${fbo.slug}`} className="btn">Claim This Listing</Link>
                         </div>
                     </div>
 

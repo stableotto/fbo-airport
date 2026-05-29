@@ -132,7 +132,7 @@ export default async function SelfServeFuelStatePage({ params }) {
                     <div className="card" style={{ padding: 'var(--space-xl)', textAlign: 'center' }}>
                         <p>No FBOs with self-serve fuel pricing found in {stateData.name}.</p>
                         <p style={{ marginTop: 'var(--space-sm)', fontSize: '0.9rem', color: 'var(--color-text-tertiary)' }}>
-                            Know an FBO with self-serve? <a href="mailto:prices@fboairport.com">Report it</a>.
+                            Know an FBO with self-serve? <Link href={`/contact/?topic=price&ref=${stateData.slug}`}>Report it</Link>.
                         </p>
                     </div>
                 )}
@@ -162,7 +162,7 @@ export default async function SelfServeFuelStatePage({ params }) {
                         <h3>Know a self-serve location in {stateData.name}?</h3>
                         <p>Help fellow pilots find cheaper fuel options.</p>
                     </div>
-                    <a href={`mailto:prices@fboairport.com?subject=Self-Serve Fuel Location - ${stateData.name}`} className="btn">Report a Location</a>
+                    <Link href={`/contact/?topic=price&ref=${stateData.slug}`} className="btn">Report a Location</Link>
                 </div>
             </div>
         </div>
