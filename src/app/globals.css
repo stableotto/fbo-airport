@@ -1,7 +1,7 @@
 /* ===== FBO Airport — Design System ===== */
 /* Inspired by YC Startup Directory: warm, clean, professional */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap');
 
 /* --- CSS Custom Properties --- */
 :root {
@@ -25,7 +25,9 @@
   --color-tag-text: #4A4540;
 
   /* Typography */
-  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* JetBrains Mono drives headings + data (prices, ratings, codes); Inter for body copy. */
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-heading: var(--font-mono);
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Spacing */
@@ -100,11 +102,13 @@ h4 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
+  /* JetBrains Mono runs wide; tighten tracking so display headings read tight. */
+  letter-spacing: -0.03em;
 }
 
 h1 {
   font-size: 3rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
 }
 
 h2 {
@@ -1704,4 +1708,35 @@ p {
   .nav-links a:hover {
     background: var(--color-bg-secondary, rgba(0, 0, 0, 0.04));
   }
+}
+/* ===== Monospace data layer (JetBrains Mono) ===== */
+/* Applies the mono face to numeric / tabular / code-like UI so the data
+   reads like the leaderboard screenshot, while paragraph copy stays Inter. */
+.leaderboard-table,
+.price-stat-value,
+.price-stat-label,
+.fuel-price-value,
+.fuel-price-unit,
+.fuel-price-label,
+.fuel-price-badge,
+.fuel-price-updated,
+.delta-pill,
+.rank-badge,
+.tag,
+.result-count,
+.leaderboard-updated,
+.airport-chip strong,
+.info-card-value,
+.detail-header-subtitle {
+  font-family: var(--font-mono);
+}
+
+/* Tabular figures keep prices and ratings vertically aligned. */
+.leaderboard-table,
+.price-stat-value,
+.fuel-price-value,
+.delta-pill,
+.rank-badge {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
 }
