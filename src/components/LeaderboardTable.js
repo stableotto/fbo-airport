@@ -27,7 +27,6 @@ export default function LeaderboardTable({ fbos, showState = false, showAirport 
                         {showState && <th>Location</th>}
                         <th className="th-price">Jet-A</th>
                         <th className="th-price">100LL</th>
-                        <th className="th-price">Ramp Fee</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -80,11 +79,6 @@ export default function LeaderboardTable({ fbos, showState = false, showAirport 
                                 ) : (
                                     <span className="leaderboard-price price-na">N/A</span>
                                 )}
-                            </td>
-                            <td className="td-price">
-                                <span className={`leaderboard-price ${fbo.rampFee === 0 ? 'price-cheapest' : ''}`}>
-                                    {fbo.rampFee === 0 ? 'Free' : fbo.rampFee ? `$${fbo.rampFee}` : 'N/A'}
-                                </span>
                             </td>
                         </tr>
                     ))}

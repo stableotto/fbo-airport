@@ -30,12 +30,6 @@ export default function InfoSidebar({ fbo, airport }) {
             )}
 
             <div className="info-card-row">
-                <span className="info-card-label">Ramp Fee</span>
-                <span className={`info-card-value ${fbo.rampFee === 0 ? 'status-active' : ''}`}>
-                    {fbo.rampFee === 0 ? 'Free' : `$${fbo.rampFee}`}
-                </span>
-            </div>
-            <div className="info-card-row">
                 <span className="info-card-label">Airport</span>
                 <span className="info-card-value">{fbo.airportCode}</span>
             </div>

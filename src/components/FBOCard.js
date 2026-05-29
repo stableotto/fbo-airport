@@ -15,7 +15,6 @@ export default function FBOCard({ fbo }) {
                     {fbo.fuelTypes.map(f => (
                         <span key={f} className="tag tag--fuel">{f}</span>
                     ))}
-                    {fbo.rampFee === 0 && <span className="tag" style={{ background: '#E8F5E9', color: '#2D6A2E' }}>No Ramp Fee</span>}
                     {fbo.services.includes('Crew Car') && <span className="tag tag--service">Crew Car</span>}
                     {fbo.hours === '24/7' && <span className="tag tag--service">24/7</span>}
                 </div>

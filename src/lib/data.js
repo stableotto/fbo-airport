@@ -78,8 +78,6 @@ for (const [icao, airportData] of Object.entries(fuelPricesData)) {
                 hundredLL: fbo.hundredLL,
                 hundredLLSelfServe: fbo.hundredLLSelfServe || null,
             },
-            rampFee: 0,
-            rampFeeWaived: null,
             priceUpdated: fbo.priceDate || airportData.updated || null,
             serviceType: fbo.serviceType || null,
             source: 'airnav',
