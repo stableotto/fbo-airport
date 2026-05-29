@@ -41,19 +41,6 @@ export default function FuelPriceSection({ fbo }) {
                 )}
             </div>
 
-            {/* Ramp Fee */}
-            <div className="ramp-fee-row">
-                <div>
-                    <span className="ramp-fee-label">Ramp / Handling Fee</span>
-                    {fbo.rampFeeWaived && (
-                        <div className="ramp-fee-waived">✓ {fbo.rampFeeWaived}</div>
-                    )}
-                </div>
-                <span className={`ramp-fee-value ${fbo.rampFee === 0 ? 'ramp-fee-free' : ''}`}>
-                    {fbo.rampFee === 0 ? 'Free' : `$${fbo.rampFee}`}
-                </span>
-            </div>
-
             <div className="fuel-price-updated">
                 Prices last updated: {fbo.priceUpdated || 'Unknown'} · Prices may vary
             </div>

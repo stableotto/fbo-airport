@@ -1,9 +1,11 @@
-import { fbos as seedFBOs, airports as seedAirports, states } from '../data/seed';
+import { airports as seedAirports, states } from '../data/seed';
 import fuelPricesData from '../data/fuel-prices.json';
 import usAirportsDb from '../data/us-airports.json';
 
-// Build comprehensive FBO + airport lists by merging seed data with scraped AirNav data.
-// Scraped data is the primary source for prices; seed data fills in airports not yet scraped.
+// Build FBO + airport lists from scraped AirNav data — the only trusted price source.
+// Seed airport records are kept ONLY for geographic metadata (names, city/state, coords);
+// the previous seed FBO list was fabricated (real brands placed at wrong airports with
+// frozen prices) and is no longer merged in.
 
 // Region code to state name mapping (e.g., 'US-TX' → 'Texas')
 const regionToState = {};
@@ -37,7 +39,7 @@ function buildSlug(name, icao) {
     return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '').replace(/^-+/, '') + '-' + icao.toLowerCase();
 }
 
-// ---- Phase 1: Build FBOs from scraped AirNav data ----
+// ---- Build FBOs from scraped AirNav data ----
 const scrapedFBOs = [];
 const scrapedAirportCodes = new Set();
 
@@ -49,15 +51,10 @@ for (const [icao, airportData] of Object.entries(fuelPricesData)) {
         if (isJunkName(fbo.name)) continue;
         const slug = buildSlug(fbo.name, icao);
 
-        // Check if we have a matching seed FBO for richer data
-        const seedMatch = seedFBOs.find(s =>
-            s.airportCode === icao && s.name.toLowerCase() === fbo.name.toLowerCase()
-        );
-
-        // Resolve city/state: scraped data → seed match → comprehensive airport lookup
+        // Resolve city/state from scraped data, falling back to the airport lookup.
         const airportInfo = airportLookup.get(icao);
-        const city = airportData.city || seedMatch?.city || airportInfo?.city || '';
-        const state = airportData.state || seedMatch?.state || airportInfo?.state || '';
+        const city = airportData.city || airportInfo?.city || '';
+        const state = airportData.state || airportInfo?.state || '';
 
         scrapedFBOs.push({
             slug,
@@ -65,40 +62,26 @@ for (const [icao, airportData] of Object.entries(fuelPricesData)) {
             airportCode: icao,
             state,
             city,
-            services: seedMatch?.services || ['Fuel Service', 'Aircraft Parking'],
+            services: ['Fuel Service', 'Aircraft Parking'],
             fuelTypes: [
                 ...(fbo.jetA ? ['Jet-A'] : []),
                 ...(fbo.hundredLL ? ['100LL'] : []),
             ],
-            phone: seedMatch?.phone || null,
-            website: seedMatch?.website || null,
-            email: seedMatch?.email || null,
-            hours: seedMatch?.hours || null,
-            description: seedMatch?.description || `${fbo.name} is a fixed-base operator at ${icao}${city ? ` in ${city}` : ''}${state ? `, ${state}` : ''}.`,
+            phone: null,
+            website: null,
+            email: null,
+            hours: null,
+            description: `${fbo.name} is a fixed-base operator at ${icao}${city ? ` in ${city}` : ''}${state ? `, ${state}` : ''}.`,
             fuelPrices: {
                 jetA: fbo.jetA,
                 jetASelfServe: fbo.jetASelfServe || null,
                 hundredLL: fbo.hundredLL,
                 hundredLLSelfServe: fbo.hundredLLSelfServe || null,
             },
-            rampFee: seedMatch?.rampFee || 0,
-            rampFeeWaived: seedMatch?.rampFeeWaived || null,
             priceUpdated: fbo.priceDate || airportData.updated || null,
             serviceType: fbo.serviceType || null,
             source: 'airnav',
         });
-    }
-}
-
-// ---- Phase 2: Add ALL seed FBOs that don't already exist in scraped data ----
-// Only skip a seed FBO if scraped data has an exact name match at the same airport
-for (const seedFBO of seedFBOs) {
-    const exactMatch = scrapedFBOs.some(
-        f => f.airportCode === seedFBO.airportCode &&
-            f.name.toLowerCase() === seedFBO.name.toLowerCase()
-    );
-    if (!exactMatch) {
-        scrapedFBOs.push({ ...seedFBO, source: 'seed' });
     }
 }
 

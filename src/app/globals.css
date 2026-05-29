@@ -982,38 +982,6 @@ p {
   margin-top: var(--space-sm);
 }
 
-/* --- Ramp Fee --- */
-.ramp-fee-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--space-md) var(--space-lg);
-  background: var(--color-bg-alt);
-  border-radius: var(--border-radius);
-  margin-top: var(--space-md);
-}
-
-.ramp-fee-label {
-  font-size: 0.9rem;
-  color: var(--color-text-secondary);
-}
-
-.ramp-fee-value {
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--color-text);
-}
-
-.ramp-fee-waived {
-  font-size: 0.8rem;
-  color: var(--color-success);
-  font-weight: 500;
-}
-
-.ramp-fee-free {
-  color: var(--color-success);
-}
-
 /* --- Fuel Comparison Table --- */
 .fuel-table {
   width: 100%;

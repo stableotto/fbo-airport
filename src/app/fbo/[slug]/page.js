@@ -92,27 +92,31 @@ export default async function FBOPage({ params }) {
                             </div>
                         </div>
 
-                        <div className="detail-section">
-                            <h2>Contact Information</h2>
-                            <div className="services-grid">
-                                {fbo.phone && (
-                                    <div className="service-item">
-                                        <span className="contact-label">Phone</span>
-                                        <a href={`tel:${fbo.phone}`}>{fbo.phone}</a>
-                                    </div>
-                                )}
-                                {fbo.website && (
-                                    <div className="service-item">
-                                        <span className="contact-label">Website</span>
-                                        <a href={fbo.website} target="_blank" rel="noopener noreferrer">{fbo.website.replace(/^https?:\/\//, '')}</a>
-                                    </div>
-                                )}
-                                <div className="service-item">
-                                    <span className="contact-label">Hours</span>
-                                    {fbo.hours}
+                        {(fbo.phone || fbo.website || fbo.hours) && (
+                            <div className="detail-section">
+                                <h2>Contact Information</h2>
+                                <div className="services-grid">
+                                    {fbo.phone && (
+                                        <div className="service-item">
+                                            <span className="contact-label">Phone</span>
+                                            <a href={`tel:${fbo.phone}`}>{fbo.phone}</a>
+                                        </div>
+                                    )}
+                                    {fbo.website && (
+                                        <div className="service-item">
+                                            <span className="contact-label">Website</span>
+                                            <a href={fbo.website} target="_blank" rel="noopener noreferrer">{fbo.website.replace(/^https?:\/\//, '')}</a>
+                                        </div>
+                                    )}
+                                    {fbo.hours && (
+                                        <div className="service-item">
+                                            <span className="contact-label">Hours</span>
+                                            {fbo.hours}
+                                        </div>
+                                    )}
                                 </div>
                             </div>
-                        </div>
+                        )}
 
                         <RelatedLinks
                             title="Compare Fuel Prices"
