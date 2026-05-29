@@ -13,6 +13,7 @@ export default function sitemap() {
         { url: `${baseUrl}/fuel-prices/`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
         { url: `${baseUrl}/self-serve-fuel/`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
         { url: `${baseUrl}/about/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
+        { url: `${baseUrl}/contact/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
     ];
 
     const statePages = getAllStates().map(s => ({

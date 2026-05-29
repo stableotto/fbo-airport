@@ -76,7 +76,7 @@ export default function HomePage() {
             <h3>Know a better fuel price?</h3>
             <p>Help pilots save money by reporting the latest fuel prices at your local FBO.</p>
           </div>
-          <a href="mailto:prices@fboairport.com" className="btn">Report a Price</a>
+          <Link href="/contact/?topic=price" className="btn">Report a Price</Link>
         </div>
       </section>
     </div>

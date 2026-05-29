@@ -4,6 +4,8 @@ import { getAllFBOs, getLastUpdated } from '@/lib/data';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeaderboardTable from '@/components/LeaderboardTable';
 import RelatedLinks from '@/components/RelatedLinks';
+import JsonLd from '@/components/JsonLd';
+import { breadcrumbList, fboItemList } from '@/lib/structured-data';
 
 export function generateStaticParams() {
     return states.map(state => ({ state: state.slug }));
@@ -17,9 +19,12 @@ export async function generateMetadata({ params }) {
     return {
         title: `Self-Serve Fuel in ${stateData.name} — Cheapest Self-Service Avgas & Jet-A`,
         description: `Find self-serve fuel prices in ${stateData.name}. Save money with self-service Jet-A and 100LL at FBOs across ${stateData.name}.`,
+        alternates: { canonical: `/self-serve-fuel/${stateData.slug}/` },
         openGraph: {
             title: `Self-Serve Aviation Fuel in ${stateData.name}`,
             description: `Self-service fuel prices at FBOs in ${stateData.name}. Updated daily.`,
+            url: `/self-serve-fuel/${stateData.slug}/`,
+            type: 'website',
         },
     };
 }
@@ -60,17 +65,33 @@ export default async function SelfServeFuelStatePage({ params }) {
         ? (fbosWithBoth.reduce((sum, f) => sum + (f.fuelPrices.jetA - f.fuelPrices.jetASelfServe), 0) / fbosWithBoth.length).toFixed(2)
         : null;
 
+    const crumbs = [
+        { label: 'Home', href: '/' },
+        { label: 'Self-Serve Fuel by State', href: '/self-serve-fuel/' },
+        { label: stateData.name },
+    ];
+
+    const structuredData = [
+        breadcrumbList(crumbs),
+        ...(selfServeFBOs.length
+            ? [
+                  fboItemList({
+                      name: `Self-serve fuel in ${stateData.name}`,
+                      url: `/self-serve-fuel/${stateData.slug}/`,
+                      fbos: selfServeFBOs,
+                  }),
+              ]
+            : []),
+    ];
+
     return (
         <div className="page-content">
+            <JsonLd data={structuredData} />
             <div className="container">
-                <Breadcrumbs items={[
-                    { label: 'Home', href: '/' },
-                    { label: 'Self-Serve Fuel by State', href: '/self-serve-fuel/' },
-                    { label: stateData.name },
-                ]} />
+                <Breadcrumbs items={crumbs} />
 
                 <div className="detail-header" style={{ marginBottom: 'var(--space-xl)' }}>
-                    <div className="detail-icon">⛽</div>
+                    <div className="detail-icon">SS</div>
                     <div className="detail-header-text">
                         <h1>Self-Serve Fuel in {stateData.name}</h1>
                         <p className="detail-header-subtitle">
@@ -111,7 +132,7 @@ export default async function SelfServeFuelStatePage({ params }) {
                     <div className="card" style={{ padding: 'var(--space-xl)', textAlign: 'center' }}>
                         <p>No FBOs with self-serve fuel pricing found in {stateData.name}.</p>
                         <p style={{ marginTop: 'var(--space-sm)', fontSize: '0.9rem', color: 'var(--color-text-tertiary)' }}>
-                            Know an FBO with self-serve? <a href="mailto:prices@fboairport.com">Report it</a>.
+                            Know an FBO with self-serve? <Link href={`/contact/?topic=price&ref=${stateData.slug}`}>Report it</Link>.
                         </p>
                     </div>
                 )}
@@ -141,7 +162,7 @@ export default async function SelfServeFuelStatePage({ params }) {
                         <h3>Know a self-serve location in {stateData.name}?</h3>
                         <p>Help fellow pilots find cheaper fuel options.</p>
                     </div>
-                    <a href={`mailto:prices@fboairport.com?subject=Self-Serve Fuel Location - ${stateData.name}`} className="btn">Report a Location</a>
+                    <Link href={`/contact/?topic=price&ref=${stateData.slug}`} className="btn">Report a Location</Link>
                 </div>
             </div>
         </div>

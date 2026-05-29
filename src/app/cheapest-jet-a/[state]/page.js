@@ -4,6 +4,8 @@ import { getAllFBOs, getLastUpdated } from '@/lib/data';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeaderboardTable from '@/components/LeaderboardTable';
 import RelatedLinks from '@/components/RelatedLinks';
+import JsonLd from '@/components/JsonLd';
+import { breadcrumbList, fboItemList, fuelProducts } from '@/lib/structured-data';
 
 export function generateStaticParams() {
     return states.map(state => ({ state: state.slug }));
@@ -17,9 +19,12 @@ export async function generateMetadata({ params }) {
     return {
         title: `Cheapest Jet-A Fuel in ${stateData.name} — Best Prices ${new Date().getFullYear()}`,
         description: `Find the cheapest Jet-A fuel prices in ${stateData.name}. Compare FBO fuel prices at airports across ${stateData.name} and save money on aviation fuel.`,
+        alternates: { canonical: `/cheapest-jet-a/${stateData.slug}/` },
         openGraph: {
             title: `Cheapest Jet-A Fuel in ${stateData.name}`,
             description: `Compare Jet-A prices at FBOs across ${stateData.name}. Updated daily.`,
+            url: `/cheapest-jet-a/${stateData.slug}/`,
+            type: 'website',
         },
     };
 }
@@ -43,17 +48,34 @@ export default async function CheapestJetAStatePage({ params }) {
         ? (stateFBOs.reduce((sum, f) => sum + (f.fuelPrices?.jetA || 0), 0) / stateFBOs.length).toFixed(2)
         : null;
 
+    const crumbs = [
+        { label: 'Home', href: '/' },
+        { label: 'Cheapest Jet-A by State', href: '/cheapest-jet-a/' },
+        { label: stateData.name },
+    ];
+
+    const structuredData = [
+        breadcrumbList(crumbs),
+        ...(stateFBOs.length
+            ? [
+                  fboItemList({
+                      name: `Cheapest Jet-A in ${stateData.name}`,
+                      url: `/cheapest-jet-a/${stateData.slug}/`,
+                      fbos: stateFBOs,
+                  }),
+                  ...fuelProducts({ contextName: `${stateData.name} (Jet-A)`, url: `/cheapest-jet-a/${stateData.slug}/`, fbos: stateFBOs }),
+              ]
+            : []),
+    ];
+
     return (
         <div className="page-content">
+            <JsonLd data={structuredData} />
             <div className="container">
-                <Breadcrumbs items={[
-                    { label: 'Home', href: '/' },
-                    { label: 'Cheapest Jet-A by State', href: '/cheapest-jet-a/' },
-                    { label: stateData.name },
-                ]} />
+                <Breadcrumbs items={crumbs} />
 
                 <div className="detail-header" style={{ marginBottom: 'var(--space-xl)' }}>
-                    <div className="detail-icon">⛽</div>
+                    <div className="detail-icon">JA</div>
                     <div className="detail-header-text">
                         <h1>Cheapest Jet-A Fuel in {stateData.name}</h1>
                         <p className="detail-header-subtitle">
@@ -107,7 +129,7 @@ export default async function CheapestJetAStatePage({ params }) {
                         <h3>Know a better price in {stateData.name}?</h3>
                         <p>Help fellow pilots save money by reporting current fuel prices.</p>
                     </div>
-                    <a href={`mailto:prices@fboairport.com?subject=Fuel Price Update - ${stateData.name}`} className="btn">Report a Price</a>
+                    <Link href={`/contact/?topic=price&ref=${stateData.slug}`} className="btn">Report a Price</Link>
                 </div>
             </div>
         </div>

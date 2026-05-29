@@ -1,9 +1,12 @@
+import Link from 'next/link';
 import { getAllFBOs, getFBOBySlug, getAirportByCode } from '@/lib/data';
 import { states } from '@/data/seed';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import InfoSidebar from '@/components/InfoSidebar';
 import FuelPriceSection from '@/components/FuelPriceSection';
 import RelatedLinks from '@/components/RelatedLinks';
+import JsonLd from '@/components/JsonLd';
+import { breadcrumbList, fboSchema } from '@/lib/structured-data';
 
 export function generateStaticParams() {
     return getAllFBOs().map(f => ({ slug: f.slug }));
@@ -13,29 +16,14 @@ export async function generateMetadata({ params }) {
     const { slug } = await params;
     const fbo = getFBOBySlug(slug);
     if (!fbo) return {};
+    const title = `${fbo.name} — FBO at ${fbo.airportCode} in ${fbo.city}, ${fbo.state}`;
+    const description = `${fbo.name} is a Fixed Base Operator at ${fbo.airportCode} in ${fbo.city}, ${fbo.state}. Services include ${fbo.services.slice(0, 4).join(', ')}. Fuel: ${fbo.fuelTypes.join(', ')}.`;
     return {
-        title: `${fbo.name} — FBO at ${fbo.airportCode} in ${fbo.city}, ${fbo.state}`,
-        description: `${fbo.name} is a Fixed Base Operator at ${fbo.airportCode} in ${fbo.city}, ${fbo.state}. Services include ${fbo.services.slice(0, 4).join(', ')}. Fuel: ${fbo.fuelTypes.join(', ')}.`,
+        title,
+        description,
+        alternates: { canonical: `/fbo/${fbo.slug}/` },
+        openGraph: { title, description, url: `/fbo/${fbo.slug}/`, type: 'website' },
     };
-}
-
-function FBOJsonLd({ fbo, airport }) {
-    const jsonLd = {
-        '@context': 'https://schema.org',
-        '@type': 'LocalBusiness',
-        name: fbo.name,
-        description: fbo.description,
-        address: {
-            '@type': 'PostalAddress',
-            addressLocality: fbo.city,
-            addressRegion: fbo.state,
-            addressCountry: 'US',
-        },
-        telephone: fbo.phone,
-        url: fbo.website || `https://fboairport.com/fbo/${fbo.slug}/`,
-        ...(airport ? { geo: { '@type': 'GeoCoordinates', latitude: airport.lat, longitude: airport.lng } } : {}),
-    };
-    return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />;
 }
 
 export default async function FBOPage({ params }) {
@@ -47,16 +35,18 @@ export default async function FBOPage({ params }) {
     const stateData = states.find(s => s.name === fbo.state);
     const initials = fbo.name.split(' ').map(w => w[0]).join('').slice(0, 2);
 
+    const crumbs = [
+        { label: 'Home', href: '/' },
+        { label: fbo.state, href: stateData ? `/state/${stateData.slug}/` : '/states/' },
+        { label: fbo.airportCode, href: `/airport/${fbo.airportCode}/` },
+        { label: fbo.name },
+    ];
+
     return (
         <div className="page-content">
-            <FBOJsonLd fbo={fbo} airport={airport} />
+            <JsonLd data={[breadcrumbList(crumbs), fboSchema(fbo, airport)]} />
             <div className="container">
-                <Breadcrumbs items={[
-                    { label: 'Home', href: '/' },
-                    { label: fbo.state, href: stateData ? `/state/${stateData.slug}/` : '/states/' },
-                    { label: fbo.airportCode, href: `/airport/${fbo.airportCode}/` },
-                    { label: fbo.name },
-                ]} />
+                <Breadcrumbs items={crumbs} />
 
                 <div className="detail-layout">
                     <div>
@@ -78,7 +68,7 @@ export default async function FBOPage({ params }) {
                             <a>Services</a>
                             {fbo.website && (
                                 <a href={fbo.website} target="_blank" rel="noopener noreferrer" style={{ marginLeft: 'auto', color: 'var(--color-accent)' }}>
-                                    🔗 {fbo.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+                                    {fbo.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}
                                 </a>
                             )}
                         </div>
@@ -107,19 +97,19 @@ export default async function FBOPage({ params }) {
                             <div className="services-grid">
                                 {fbo.phone && (
                                     <div className="service-item">
-                                        <span>📞</span>
+                                        <span className="contact-label">Phone</span>
                                         <a href={`tel:${fbo.phone}`}>{fbo.phone}</a>
                                     </div>
                                 )}
                                 {fbo.website && (
                                     <div className="service-item">
-                                        <span>🌐</span>
+                                        <span className="contact-label">Website</span>
                                         <a href={fbo.website} target="_blank" rel="noopener noreferrer">{fbo.website.replace(/^https?:\/\//, '')}</a>
                                     </div>
                                 )}
                                 <div className="service-item">
-                                    <span>🕐</span>
-                                    Hours: {fbo.hours}
+                                    <span className="contact-label">Hours</span>
+                                    {fbo.hours}
                                 </div>
                             </div>
                         </div>
@@ -139,7 +129,7 @@ export default async function FBOPage({ params }) {
                                 <h3>Is this your FBO?</h3>
                                 <p>Claim this listing to update your information, add photos, and respond to reviews.</p>
                             </div>
-                            <a href="mailto:listings@fboairport.com" className="btn">Claim This Listing</a>
+                            <Link href={`/contact/?topic=listing&ref=${fbo.slug}`} className="btn">Claim This Listing</Link>
                         </div>
                     </div>
 

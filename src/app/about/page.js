@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
@@ -23,7 +24,7 @@ export default function AboutPage() {
                 </div>
                 <div className="detail-section">
                     <h2>For FBO Owners</h2>
-                    <p>If you own or manage an FBO, you can claim your listing to update your information, add photos, and manage your online presence. Contact us at <a href="mailto:listings@fboairport.com" style={{ color: 'var(--color-accent)' }}>listings@fboairport.com</a>.</p>
+                    <p>If you own or manage an FBO, you can claim your listing to update your information, add photos, and manage your online presence. <Link href="/contact/?topic=listing" style={{ color: 'var(--color-accent)' }}>Claim your listing</Link> to get started.</p>
                 </div>
             </div>
         </div>

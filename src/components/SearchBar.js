@@ -52,7 +52,7 @@ export default function SearchBar({ fbos, airports }) {
                 name: a.icao,
                 sub: `${a.name} · ${a.city}, ${a.state}`,
                 href: `/airport/${a.icao}/`,
-                icon: '✈️',
+                icon: a.icao.slice(1, 3),
                 price: null,
             }));
 

@@ -1,7 +1,7 @@
 /* ===== FBO Airport — Design System ===== */
 /* Inspired by YC Startup Directory: warm, clean, professional */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap');
 
 /* --- CSS Custom Properties --- */
 :root {
@@ -25,7 +25,9 @@
   --color-tag-text: #4A4540;
 
   /* Typography */
-  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* JetBrains Mono drives headings + data (prices, ratings, codes); Inter for body copy. */
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-heading: var(--font-mono);
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Spacing */
@@ -100,11 +102,13 @@ h4 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
+  /* JetBrains Mono runs wide; tighten tracking so display headings read tight. */
+  letter-spacing: -0.03em;
 }
 
 h1 {
   font-size: 3rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
 }
 
 h2 {
@@ -536,14 +540,15 @@ p {
 }
 
 .info-card-link {
-  width: 36px;
   height: 36px;
+  padding: 0 var(--space-md);
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
   color: var(--color-text-secondary);
   transition: all 0.15s;
 }
@@ -873,6 +878,18 @@ p {
   background: var(--color-bg);
   border-radius: var(--border-radius);
   font-size: 0.9rem;
+}
+
+/* Mono label that replaces the old contact emoji (Phone / Website / Hours) */
+.contact-label {
+  flex-shrink: 0;
+  min-width: 64px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-tertiary);
 }
 
 .service-check {
@@ -1704,4 +1721,116 @@ p {
   .nav-links a:hover {
     background: var(--color-bg-secondary, rgba(0, 0, 0, 0.04));
   }
+}
+/* ===== Monospace data layer (JetBrains Mono) ===== */
+/* Applies the mono face to numeric / tabular / code-like UI so the data
+   reads like the leaderboard screenshot, while paragraph copy stays Inter. */
+.leaderboard-table,
+.price-stat-value,
+.price-stat-label,
+.fuel-price-value,
+.fuel-price-unit,
+.fuel-price-label,
+.fuel-price-badge,
+.fuel-price-updated,
+.delta-pill,
+.rank-badge,
+.tag,
+.result-count,
+.leaderboard-updated,
+.airport-chip strong,
+.info-card-value,
+.detail-header-subtitle {
+  font-family: var(--font-mono);
+}
+
+/* Tabular figures keep prices and ratings vertically aligned. */
+.leaderboard-table,
+.price-stat-value,
+.fuel-price-value,
+.delta-pill,
+.rank-badge {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* ===== Contact form ===== */
+.container--narrow {
+  max-width: 720px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  max-width: 560px;
+}
+
+.contact-form .form-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.contact-form label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-tertiary);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background: var(--color-surface);
+  color: var(--color-text);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+}
+
+.contact-form .btn {
+  align-self: flex-start;
+}
+
+.contact-form .btn:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.form-error {
+  color: var(--color-cta);
+  font-size: 0.9rem;
+}
+
+.contact-success {
+  max-width: 560px;
+}
+
+.contact-success h2 {
+  margin-bottom: var(--space-sm);
 }

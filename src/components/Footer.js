@@ -19,13 +19,13 @@ export default function Footer() {
                     <div className="footer-links-group">
                         <h4>Company</h4>
                         <Link href="/about/">About</Link>
-                        <a href="mailto:hello@fboairport.com">Contact</a>
+                        <Link href="/contact/">Contact</Link>
                         <Link href="/privacy/">Privacy Policy</Link>
                     </div>
                     <div className="footer-links-group">
                         <h4>For FBOs</h4>
-                        <a href="mailto:listings@fboairport.com">Claim Your Listing</a>
-                        <a href="mailto:advertise@fboairport.com">Advertise</a>
+                        <Link href="/contact/?topic=listing">Claim Your Listing</Link>
+                        <Link href="/contact/?topic=advertise">Advertise</Link>
                     </div>
                 </div>
                 <div className="footer-bottom">

@@ -4,6 +4,8 @@ import { states } from '@/data/seed';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeaderboardTable from '@/components/LeaderboardTable';
 import RelatedLinks from '@/components/RelatedLinks';
+import JsonLd from '@/components/JsonLd';
+import { breadcrumbList, fboItemList, fuelProducts, airportSchema } from '@/lib/structured-data';
 
 export function generateStaticParams() {
     return getAllAirports().map(airport => ({ icao: airport.icao }));
@@ -17,9 +19,12 @@ export async function generateMetadata({ params }) {
     return {
         title: `Fuel Prices at ${icao} — ${airport.name} Jet-A & 100LL`,
         description: `Current fuel prices at ${airport.name} (${icao}). Compare Jet-A and 100LL prices at all FBOs. Find the cheapest aviation fuel at ${icao}.`,
+        alternates: { canonical: `/fuel-prices/${icao}/` },
         openGraph: {
             title: `Fuel Prices at ${icao} - ${airport.name}`,
             description: `Compare Jet-A and 100LL prices at ${icao}. Updated daily.`,
+            url: `/fuel-prices/${icao}/`,
+            type: 'website',
         },
     };
 }
@@ -44,14 +49,32 @@ export default async function FuelPricesAirportPage({ params }) {
         .filter(f => f.fuelPrices?.hundredLL)
         .sort((a, b) => a.fuelPrices.hundredLL - b.fuelPrices.hundredLL)[0];
 
+    const crumbs = [
+        { label: 'Home', href: '/' },
+        { label: airport.state, href: stateData ? `/state/${stateData.slug}/` : '/states/' },
+        { label: `${icao} Fuel Prices` },
+    ];
+
+    const structuredData = [
+        breadcrumbList(crumbs),
+        airportSchema(airport),
+        ...(airportFBOs.length
+            ? [
+                  fboItemList({
+                      name: `Fuel prices at ${icao} ranked cheapest first`,
+                      url: `/fuel-prices/${icao}/`,
+                      fbos: airportFBOs,
+                  }),
+                  ...fuelProducts({ contextName: `${icao} (${airport.name})`, url: `/fuel-prices/${icao}/`, fbos: airportFBOs }),
+              ]
+            : []),
+    ];
+
     return (
         <div className="page-content">
+            <JsonLd data={structuredData} />
             <div className="container">
-                <Breadcrumbs items={[
-                    { label: 'Home', href: '/' },
-                    { label: airport.state, href: stateData ? `/state/${stateData.slug}/` : '/states/' },
-                    { label: `${icao} Fuel Prices` },
-                ]} />
+                <Breadcrumbs items={crumbs} />
 
                 <div className="detail-header" style={{ marginBottom: 'var(--space-xl)' }}>
                     <div className="detail-icon">{icao.slice(1, 3)}</div>
@@ -124,7 +147,7 @@ export default async function FuelPricesAirportPage({ params }) {
                         <h3>Know current fuel prices at {icao}?</h3>
                         <p>Help fellow pilots with accurate, up-to-date pricing information.</p>
                     </div>
-                    <a href={`mailto:prices@fboairport.com?subject=Fuel Price Update - ${icao}`} className="btn">Report a Price</a>
+                    <Link href={`/contact/?topic=price&ref=${icao}`} className="btn">Report a Price</Link>
                 </div>
             </div>
         </div>

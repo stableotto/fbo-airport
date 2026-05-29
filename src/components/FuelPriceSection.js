@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function FuelPriceSection({ fbo }) {
     if (!fbo.fuelPrices) return null;
     const { jetA, jetASelfServe, hundredLL } = fbo.fuelPrices;
@@ -59,7 +61,7 @@ export default function FuelPriceSection({ fbo }) {
             {/* Report a price CTA */}
             <div className="report-price-banner">
                 <p>Know the current fuel price? Help fellow pilots with accurate data.</p>
-                <a href={`mailto:prices@fboairport.com?subject=Fuel Price Update - ${fbo.name} (${fbo.airportCode})`} className="btn btn-outline">Report a Price</a>
+                <Link href={`/contact/?topic=price&ref=${fbo.slug}`} className="btn btn-outline">Report a Price</Link>
             </div>
         </div>
     );

@@ -58,10 +58,10 @@ export default function InfoSidebar({ fbo, airport }) {
             {(fbo.website || fbo.phone) && (
                 <div className="info-card-links">
                     {fbo.website && (
-                        <a href={fbo.website} target="_blank" rel="noopener noreferrer" className="info-card-link" title="Website">🔗</a>
+                        <a href={fbo.website} target="_blank" rel="noopener noreferrer" className="info-card-link" title="Website">Website</a>
                     )}
                     {fbo.phone && (
-                        <a href={`tel:${fbo.phone}`} className="info-card-link" title="Phone">📞</a>
+                        <a href={`tel:${fbo.phone}`} className="info-card-link" title="Phone">Call</a>
                     )}
                 </div>
             )}
