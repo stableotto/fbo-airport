@@ -47,10 +47,12 @@ export default function InfoSidebar({ fbo, airport }) {
                 <span className="info-card-label">State</span>
                 <span className="info-card-value">{fbo.state}</span>
             </div>
-            <div className="info-card-row">
-                <span className="info-card-label">Hours</span>
-                <span className="info-card-value">{fbo.hours}</span>
-            </div>
+            {fbo.hours && (
+                <div className="info-card-row">
+                    <span className="info-card-label">Hours</span>
+                    <span className="info-card-value">{fbo.hours}</span>
+                </div>
+            )}
             <div className="info-card-row">
                 <span className="info-card-label">Status</span>
                 <span className="info-card-value status-active">● Active</span>
