@@ -2668,15 +2668,15 @@
     "fbos": [
       {
         "name": "Avflight Durango",
-        "jetA": 10.29,
+        "jetA": 10.21,
         "hundredLL": 7.99,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "26-May-2026"
+        "priceDate": "29-May-2026"
       }
     ],
-    "updated": "2026-05-29"
+    "updated": "2026-06-01"
   },
   "KDRT": {
     "name": "Del Rio International Airport",
@@ -2693,7 +2693,7 @@
         "priceDate": "27-May-2026"
       }
     ],
-    "updated": "2026-05-29"
+    "updated": "2026-06-01"
   },
   "KDTS": {
     "name": "Destin Executive Airport",
@@ -2707,7 +2707,7 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "28-May-2026"
+        "priceDate": "01-Jun-2026"
       },
       {
         "name": "850 Maintenance Aircraft Cleaning LLC",
@@ -2728,7 +2728,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-29"
+    "updated": "2026-06-01"
   },
   "KDTW": {
     "name": "Detroit Metro Wayne County Airport",
@@ -2742,10 +2742,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "27-May-2026"
+        "priceDate": "30-May-2026"
       }
     ],
-    "updated": "2026-05-29"
+    "updated": "2026-06-01"
   },
   "KDUA": {
     "name": "Durant Regional Airport - Eaker Field",
@@ -2754,7 +2754,7 @@
     "fbos": [
       {
         "name": "City of Durant (FBO)",
-        "jetA": 6.04,
+        "jetA": 5.67,
         "hundredLL": 5.91,
         "jetASelfServe": 5.46,
         "hundredLLSelfServe": null,
@@ -2762,7 +2762,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-29"
+    "updated": "2026-06-01"
   },
   "KDUG": {
     "name": "Bisbee Douglas International Airport",
@@ -2779,7 +2779,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-29"
+    "updated": "2026-06-01"
   },
   "KDUJ": {
     "name": "Dubois Regional Airport",
@@ -2796,7 +2796,7 @@
         "priceDate": "27-May-2026"
       }
     ],
-    "updated": "2026-05-29"
+    "updated": "2026-06-01"
   },
   "KDVL": {
     "name": "Devils Lake Regional Airport",
@@ -2822,7 +2822,7 @@
         "priceDate": "19-May-2026"
       }
     ],
-    "updated": "2026-05-29"
+    "updated": "2026-06-01"
   },
   "KDXR": {
     "name": "Danbury Municipal Airport",
@@ -13291,7 +13291,7 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "27-May-2026"
+        "priceDate": "30-May-2026"
       },
       {
         "name": "Elliott Aviation",
@@ -13303,7 +13303,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-05-29"
+    "updated": "2026-06-01"
   },
   "KECG": {
     "name": "Elizabeth City Coast Guard Air Station/Regional Airport",
@@ -15273,12 +15273,12 @@
   },
   "_meta": {
     "lastUpdated": "2026-06-01",
-    "lastUpdatedISO": "2026-06-01T12:07:35.843Z",
+    "lastUpdatedISO": "2026-06-01T13:40:01.307Z",
     "source": "airnav.com",
     "totalAirports": 640,
     "totalFBOs": 1128,
     "fbosWithPrices": 839,
-    "errors": 0,
-    "thisRunNew": 261
+    "errors": 191,
+    "thisRunNew": 14
   }
 }
