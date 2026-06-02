@@ -8408,15 +8408,15 @@
     "fbos": [
       {
         "name": "Byerly Aviation",
-        "jetA": 7.69,
-        "hundredLL": 8.55,
+        "jetA": 7.24,
+        "hundredLL": 8.08,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "26-May-2026"
+        "priceDate": "02-Jun-2026"
       }
     ],
-    "updated": "2026-05-30"
+    "updated": "2026-06-02"
   },
   "KPIB": {
     "name": "Hattiesburg/Laurel Regional Airport",
@@ -8433,7 +8433,7 @@
         "priceDate": "26-May-2026"
       }
     ],
-    "updated": "2026-05-30"
+    "updated": "2026-06-02"
   },
   "KPIE": {
     "name": "St Pete-Clearwater International Airport",
@@ -8442,12 +8442,12 @@
     "fbos": [
       {
         "name": "Sheltair",
-        "jetA": 8.17,
-        "hundredLL": 10.26,
+        "jetA": 7.74,
+        "hundredLL": 9.82,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "26-May-2026"
+        "priceDate": "02-Jun-2026"
       },
       {
         "name": "Signature Aviation",
@@ -8456,10 +8456,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "29-May-2026"
+        "priceDate": "02-Jun-2026"
       }
     ],
-    "updated": "2026-05-30"
+    "updated": "2026-06-02"
   },
   "KPIH": {
     "name": "Pocatello Regional Airport",
@@ -8476,7 +8476,7 @@
         "priceDate": "20-May-2026"
       }
     ],
-    "updated": "2026-05-30"
+    "updated": "2026-06-02"
   },
   "KPIR": {
     "name": "Pierre Regional Airport",
@@ -8493,7 +8493,7 @@
         "priceDate": "29-May-2026"
       }
     ],
-    "updated": "2026-05-30"
+    "updated": "2026-06-02"
   },
   "KPIT": {
     "name": "Pittsburgh International Airport",
@@ -8507,10 +8507,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "29-May-2026"
+        "priceDate": "02-Jun-2026"
       }
     ],
-    "updated": "2026-05-30"
+    "updated": "2026-06-02"
   },
   "KPKB": {
     "name": "Mid-Ohio Valley Regional Airport",
@@ -15273,12 +15273,12 @@
   },
   "_meta": {
     "lastUpdated": "2026-06-02",
-    "lastUpdatedISO": "2026-06-02T11:07:10.442Z",
+    "lastUpdatedISO": "2026-06-02T16:49:27.207Z",
     "source": "airnav.com",
     "totalAirports": 640,
     "totalFBOs": 1128,
     "fbosWithPrices": 839,
-    "errors": 0,
-    "thisRunNew": 237
+    "errors": 194,
+    "thisRunNew": 7
   }
 }
