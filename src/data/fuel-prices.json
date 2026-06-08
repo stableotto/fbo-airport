@@ -23,7 +23,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-06-06"
+    "updated": "2026-06-08"
   },
   "KALI": {
     "name": "Alice International Airport",
@@ -240,7 +240,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-06-06"
+    "updated": "2026-06-08"
   },
   "KABY": {
     "name": "Southwest Georgia Regional Airport",
@@ -12426,7 +12426,7 @@
         "priceDate": "05-Jun-2026"
       }
     ],
-    "updated": "2026-06-06"
+    "updated": "2026-06-08"
   },
   "KACT": {
     "name": "Waco Regional Airport",
@@ -15291,12 +15291,12 @@
   },
   "_meta": {
     "lastUpdated": "2026-06-08",
-    "lastUpdatedISO": "2026-06-08T11:17:19.812Z",
+    "lastUpdatedISO": "2026-06-08T17:25:45.621Z",
     "source": "airnav.com",
     "totalAirports": 640,
     "totalFBOs": 1130,
     "fbosWithPrices": 839,
-    "errors": 0,
-    "thisRunNew": 53
+    "errors": 195,
+    "thisRunNew": 6
   }
 }
