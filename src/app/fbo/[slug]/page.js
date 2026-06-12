@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getAllFBOs, getFBOBySlug, getAirportByCode } from '@/lib/data';
+import { getAllFBOs, getFBOBySlug, getAirportByCode, isThinFBO } from '@/lib/data';
 import { states } from '@/data/seed';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import InfoSidebar from '@/components/InfoSidebar';
@@ -23,6 +23,9 @@ export async function generateMetadata({ params }) {
         description,
         alternates: { canonical: `/fbo/${fbo.slug}/` },
         openGraph: { title, description, url: `/fbo/${fbo.slug}/`, type: 'website' },
+        // FBOs scraped with no pricing of any kind are thin stubs (just a name). Keep them
+        // crawlable for link discovery but out of the index until they have real data.
+        ...(isThinFBO(fbo) ? { robots: { index: false, follow: true } } : {}),
     };
 }
 

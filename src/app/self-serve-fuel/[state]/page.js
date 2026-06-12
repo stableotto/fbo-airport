@@ -64,6 +64,9 @@ export default async function SelfServeFuelStatePage({ params }) {
     const avgSavings = fbosWithBoth.length > 0
         ? (fbosWithBoth.reduce((sum, f) => sum + (f.fuelPrices.jetA - f.fuelPrices.jetASelfServe), 0) / fbosWithBoth.length).toFixed(2)
         : null;
+    const selfServeAirports = new Set(selfServeFBOs.map(f => f.airportCode)).size;
+    // Savings on a 50-gallon self-serve fill at the average state discount.
+    const fillSavings = avgSavings ? (Number(avgSavings) * 50).toFixed(0) : null;
 
     const crumbs = [
         { label: 'Home', href: '/' },
@@ -138,12 +141,21 @@ export default async function SelfServeFuelStatePage({ params }) {
                 )}
 
                 <div style={{ marginTop: 'var(--space-2xl)' }}>
-                    <h2>Why Choose Self-Serve Fuel?</h2>
-                    <p style={{ marginTop: 'var(--space-md)', lineHeight: '1.8' }}>
-                        Self-serve fuel stations typically offer savings of $0.30-$1.00+ per gallon compared to full-service.
-                        For a 50-gallon fill-up, that's $15-$50 in savings. Self-serve is available 24/7 at many locations,
-                        making it convenient for early departures or late arrivals. Most self-serve pumps accept major credit cards
-                        and aviation fuel cards.
+                    <h2>Self-Serve Fuel in {stateData.name}</h2>
+                    {selfServeFBOs.length > 0 && (
+                        <p style={{ marginTop: 'var(--space-md)', lineHeight: '1.8' }}>
+                            We list <strong>{selfServeFBOs.length} self-serve {selfServeFBOs.length === 1 ? 'location' : 'locations'}</strong> across{' '}
+                            <strong>{selfServeAirports} {selfServeAirports === 1 ? 'airport' : 'airports'}</strong> in {stateData.name}.
+                            {avgSavings && Number(avgSavings) > 0 && (
+                                <> On average they price <strong>${avgSavings}/gal</strong> below full-service at the same field
+                                {fillSavings && Number(fillSavings) > 0 && <> — about <strong>${Number(fillSavings).toLocaleString()}</strong> on a 50-gallon fill</>}.</>
+                            )}
+                        </p>
+                    )}
+                    <p style={{ marginTop: 'var(--space-md)', lineHeight: '1.8', color: 'var(--color-text-secondary)' }}>
+                        Self-serve pumps let you fuel your own aircraft without an into-plane fee, and many run 24/7 — handy for pre-dawn departures
+                        or late arrivals when the line crew is off. Most accept major credit and aviation fuel cards. The savings are largest on bigger
+                        fills, so self-serve is especially worth seeking out on cross-country legs.
                     </p>
                 </div>
 

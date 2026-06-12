@@ -1,6 +1,7 @@
 import { airports as seedAirports, states } from '../data/seed';
 import fuelPricesData from '../data/fuel-prices.json';
 import usAirportsDb from '../data/us-airports.json';
+import priceHistory from '../data/price-history.json';
 
 // Build FBO + airport lists from scraped AirNav data — the only trusted price source.
 // Seed airport records are kept ONLY for geographic metadata (names, city/state, coords);
@@ -215,6 +216,51 @@ export function getPriceStats(fboList) {
         mostExpensive: Math.max(...prices),
         count: prices.length,
     };
+}
+
+// A scraped FBO with no price of any kind is a thin, near-empty stub (a name pulled from
+// AirNav with no data behind it). These pages add nothing for users or search engines, so
+// callers use this to mark them noindex.
+export function isThinFBO(fbo) {
+    if (!fbo) return true;
+    const p = fbo.fuelPrices || {};
+    return !p.jetA && !p.hundredLL && !p.jetASelfServe && !p.hundredLLSelfServe;
+}
+
+// Distil the recorded price history for one airport into a trend summary. `fuel` is
+// 'jetA' or 'hundredLL'. Returns null when there aren't enough observations to be useful.
+export function getPriceTrend(icao, fuel = 'jetA') {
+    const raw = priceHistory[icao]?.[fuel];
+    if (!raw || raw.length < 2) return null;
+
+    const points = raw.map((p) => ({ date: p.d, value: p.low }));
+    const values = points.map((p) => p.value);
+    const first = points[0].value;
+    const last = points[points.length - 1].value;
+    const min = Math.min(...values);
+    const max = Math.max(...values);
+    const change = +(last - first).toFixed(2);
+    const pct = first ? +((change / first) * 100).toFixed(1) : 0;
+
+    return {
+        fuel,
+        points,
+        first,
+        last,
+        min,
+        max,
+        change,
+        pct,
+        spread: +(max - min).toFixed(2),
+        days: points.length,
+        startDate: points[0].date,
+        endDate: points[points.length - 1].date,
+        direction: change > 0.01 ? 'up' : change < -0.01 ? 'down' : 'flat',
+    };
+}
+
+export function getPriceHistoryMeta() {
+    return priceHistory._meta || { dates: 0 };
 }
 
 export function getStatesWithPrices() {

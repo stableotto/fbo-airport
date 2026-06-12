@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import { getAllAirports, getAirportByCode, getRankedFBOsByAirport, getPriceStats, getLastUpdated } from '@/lib/data';
+import { getAllAirports, getAirportByCode, getRankedFBOsByAirport, getPriceStats, getLastUpdated, getPriceTrend } from '@/lib/data';
 import { states } from '@/data/seed';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeaderboardTable from '@/components/LeaderboardTable';
 import PriceStatsBar from '@/components/PriceStatsBar';
+import PriceTrend from '@/components/PriceTrend';
 import RelatedLinks from '@/components/RelatedLinks';
 import JsonLd from '@/components/JsonLd';
 import { breadcrumbList, fboItemList, fuelProducts, airportSchema } from '@/lib/structured-data';
@@ -25,6 +26,9 @@ export async function generateMetadata({ params }) {
         description,
         alternates: { canonical: `/airport/${airport.icao}/` },
         openGraph: { title, description, url: `/airport/${airport.icao}/`, type: 'website' },
+        // Airports with no FBOs listed yet are empty stubs — keep them out of the index
+        // until the scraper fills them in, so they don't dilute site quality.
+        ...(rankedFBOs.length === 0 ? { robots: { index: false, follow: true } } : {}),
     };
 }
 
@@ -36,6 +40,8 @@ export default async function AirportPage({ params }) {
     const rankedFBOs = getRankedFBOsByAirport(airport.icao);
     const stateData = states.find(s => s.name === airport.state);
     const priceStats = getPriceStats(rankedFBOs);
+    const jetATrend = getPriceTrend(airport.icao, 'jetA');
+    const hundredLLTrend = getPriceTrend(airport.icao, 'hundredLL');
 
     const crumbs = [
         { label: 'Home', href: '/' },
@@ -93,6 +99,13 @@ export default async function AirportPage({ params }) {
                         </div>
                     )}
                 </div>
+
+                {(jetATrend || hundredLLTrend) && (
+                    <div className="trend-grid">
+                        <PriceTrend trend={jetATrend} fuelLabel="Jet-A" icao={airport.icao} />
+                        <PriceTrend trend={hundredLLTrend} fuelLabel="100LL" icao={airport.icao} />
+                    </div>
+                )}
 
                 <RelatedLinks
                     title="Related Fuel Prices"
