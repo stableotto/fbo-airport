@@ -42,7 +42,7 @@ fi
 echo "$(date): Building site..."
 npm run build
 echo "$(date): Build complete. Removing RSC files..."
-find out -type f -name "*.txt" ! -name "robots.txt" -delete
+find out -type f -name "*.txt" ! -name "robots.txt" ! -name "llms.txt" -delete
 echo "$(date): Deploying to Cloudflare..."
 wrangler pages deploy out --project-name fbo-airport --commit-dirty=true
 echo "$(date): Deploy complete."
