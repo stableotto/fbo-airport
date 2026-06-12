@@ -77,6 +77,63 @@ export function fuelProducts({ contextName, url, fbos }) {
     return products;
 }
 
+// FAQPage — a list of { q, a } pairs. Answer engines (and Google AI Overviews) lift
+// these directly, so the answers must be specific, factual, and match the visible text.
+export function faqPage(items) {
+    if (!items || !items.length) return null;
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: items.map(it => ({
+            '@type': 'Question',
+            name: it.q,
+            acceptedAnswer: { '@type': 'Answer', text: it.a },
+        })),
+    };
+}
+
+// Organization — sitewide publisher identity for entity recognition.
+export function organization() {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'FBO Airport',
+        url: SITE,
+        logo: absUrl('/icon.svg'),
+        description: 'Daily-updated directory of U.S. aviation fuel prices (Jet-A and 100LL) at fixed-base operators.',
+    };
+}
+
+// WebSite — sitewide site identity.
+export function website() {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'FBO Airport',
+        url: SITE,
+        description: 'Compare Jet-A and 100LL aviation fuel prices at FBOs across the United States.',
+        publisher: { '@type': 'Organization', name: 'FBO Airport', url: SITE },
+    };
+}
+
+// Dataset — declares the fuel-price data as a citable, free, regularly-updated dataset,
+// which helps AI systems treat the site as a primary source rather than a thin copy.
+export function fuelDataset(stats, historyMeta) {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'Dataset',
+        name: 'U.S. FBO Aviation Fuel Prices (Jet-A & 100LL)',
+        description: `Daily-updated Jet-A and 100LL fuel prices at ${stats.totalFBOs.toLocaleString()} FBOs across ${stats.totalAirports.toLocaleString()} U.S. airports in ${stats.totalStates} states, ranked cheapest first, sourced from AirNav.`,
+        url: SITE,
+        creator: { '@type': 'Organization', name: 'FBO Airport', url: SITE },
+        isAccessibleForFree: true,
+        license: absUrl('/about/'),
+        keywords: ['aviation fuel prices', 'Jet-A price', '100LL price', 'avgas price', 'FBO fuel', 'cheapest aviation fuel'],
+        ...(historyMeta?.dates > 1 ? { temporalCoverage: '2026-05-20/..' } : {}),
+        measurementTechnique: 'Aggregated from FBO-reported pricing on AirNav, refreshed daily.',
+    };
+}
+
 // Airport schema — identifies the airport as a place.
 export function airportSchema(airport) {
     const hasGeo = airport.lat && airport.lng;

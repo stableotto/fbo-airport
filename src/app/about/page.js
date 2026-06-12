@@ -47,7 +47,7 @@ export default function AboutPage() {
                     {history?.dates > 1 && (
                         <> We also retain a price history — currently <strong>{history.dates} days</strong> of daily
                         observations — so you can see whether fuel at a given airport is trending up or down instead of
-                        just today's snapshot.</>
+                        just a single-day snapshot.</>
                     )}</p>
                 </div>
 

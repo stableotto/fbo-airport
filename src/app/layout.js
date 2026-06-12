@@ -3,6 +3,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import CloudflareAnalytics from '@/components/CloudflareAnalytics';
+import JsonLd from '@/components/JsonLd';
+import { organization, website } from '@/lib/structured-data';
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 const CF_BEACON_TOKEN = process.env.NEXT_PUBLIC_CF_BEACON_TOKEN;
@@ -33,6 +35,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <JsonLd data={[organization(), website()]} />
         <GoogleAnalytics gaId={GA_ID} />
         <CloudflareAnalytics token={CF_BEACON_TOKEN} />
         <Navbar />

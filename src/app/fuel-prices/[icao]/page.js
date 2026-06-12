@@ -4,6 +4,7 @@ import { states } from '@/data/seed';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeaderboardTable from '@/components/LeaderboardTable';
 import PriceTrend from '@/components/PriceTrend';
+import FAQ from '@/components/FAQ';
 import RelatedLinks from '@/components/RelatedLinks';
 import JsonLd from '@/components/JsonLd';
 import { breadcrumbList, fboItemList, fuelProducts, airportSchema } from '@/lib/structured-data';
@@ -54,6 +55,38 @@ export default async function FuelPricesAirportPage({ params }) {
     const cheapest100LL = airportFBOs
         .filter(f => f.fuelPrices?.hundredLL)
         .sort((a, b) => a.fuelPrices.hundredLL - b.fuelPrices.hundredLL)[0];
+
+    const jetAPrices = airportFBOs.map(f => f.fuelPrices?.jetA).filter(p => p > 0);
+    const llPrices = airportFBOs.map(f => f.fuelPrices?.hundredLL).filter(p => p > 0);
+    const updatedLabel = new Date(getLastUpdated() + 'T00:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    const trendSentence = (t, label) => t && (
+        t.direction === 'flat'
+            ? `Over the past ${t.days} days the cheapest ${label} at ${icao} has held steady near $${t.last.toFixed(2)}/gal.`
+            : `Over the past ${t.days} days the cheapest ${label} at ${icao} has ${t.direction === 'up' ? 'risen' : 'fallen'} ${Math.abs(t.pct).toFixed(1)}% to $${t.last.toFixed(2)}/gal (ranging $${t.min.toFixed(2)}–$${t.max.toFixed(2)}).`
+    );
+
+    const faqItems = [
+        cheapestJetA && {
+            q: `How much does Jet-A fuel cost at ${icao}?`,
+            a: `The cheapest Jet-A at ${airport.name} (${icao}) is $${cheapestJetA.fuelPrices.jetA.toFixed(2)}/gal at ${cheapestJetA.name}. ${jetAPrices.length} ${jetAPrices.length === 1 ? 'FBO reports' : 'FBOs report'} Jet-A here${jetAPrices.length > 1 ? `, ranging from $${Math.min(...jetAPrices).toFixed(2)} to $${Math.max(...jetAPrices).toFixed(2)}/gal` : ''}. Last updated ${updatedLabel}.`,
+        },
+        cheapest100LL && {
+            q: `How much does 100LL avgas cost at ${icao}?`,
+            a: `The cheapest 100LL at ${airport.name} (${icao}) is $${cheapest100LL.fuelPrices.hundredLL.toFixed(2)}/gal at ${cheapest100LL.name}${llPrices.length > 1 ? `, with prices ranging $${Math.min(...llPrices).toFixed(2)}–$${Math.max(...llPrices).toFixed(2)}/gal across ${llPrices.length} FBOs` : ''}. Last updated ${updatedLabel}.`,
+        },
+        airportFBOs.length > 0 && {
+            q: `How many FBOs are at ${icao}?`,
+            a: `${airport.name} (${icao}) in ${airport.city}, ${airport.state} has ${airportFBOs.length} ${airportFBOs.length === 1 ? 'FBO' : 'FBOs'} listed${jetAPrices.length ? `, ${jetAPrices.length} of which currently report fuel prices` : ''}.`,
+        },
+        jetATrend && {
+            q: `Are fuel prices at ${icao} going up or down?`,
+            a: trendSentence(jetATrend, 'Jet-A'),
+        },
+        {
+            q: `How often are ${icao} fuel prices updated?`,
+            a: `Fuel prices at ${icao} are refreshed daily from AirNav FBO reports. The latest update was ${updatedLabel}. Always confirm with the FBO before fueling, as posted prices can change.`,
+        },
+    ].filter(Boolean);
 
     const crumbs = [
         { label: 'Home', href: '/' },
@@ -144,6 +177,8 @@ export default async function FuelPricesAirportPage({ params }) {
                         Prices are updated daily and may vary.
                     </p>
                 </div>
+
+                <FAQ items={faqItems} heading={`${icao} Fuel Price FAQ`} />
 
                 <RelatedLinks
                     title="Compare Prices"

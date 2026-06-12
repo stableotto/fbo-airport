@@ -3,6 +3,7 @@ import { states } from '@/data/seed';
 import { getAllFBOs, getLastUpdated } from '@/lib/data';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeaderboardTable from '@/components/LeaderboardTable';
+import FAQ from '@/components/FAQ';
 import RelatedLinks from '@/components/RelatedLinks';
 import JsonLd from '@/components/JsonLd';
 import { breadcrumbList, fboItemList } from '@/lib/structured-data';
@@ -67,6 +68,22 @@ export default async function SelfServeFuelStatePage({ params }) {
     const selfServeAirports = new Set(selfServeFBOs.map(f => f.airportCode)).size;
     // Savings on a 50-gallon self-serve fill at the average state discount.
     const fillSavings = avgSavings ? (Number(avgSavings) * 50).toFixed(0) : null;
+
+    const updatedLabel = new Date(getLastUpdated() + 'T00:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    const faqItems = cheapest ? [
+        {
+            q: `Where can I find the cheapest self-serve fuel in ${stateData.name}?`,
+            a: `The cheapest self-serve fuel in ${stateData.name} is $${cheapest.fuelPrices.jetA.toFixed(2)}/gal at ${cheapest.name} (${cheapest.airportCode})${cheapest.city ? ` in ${cheapest.city}` : ''}, as of ${updatedLabel}.`,
+        },
+        avgSavings && Number(avgSavings) > 0 && {
+            q: `How much can self-serve fuel save in ${stateData.name}?`,
+            a: `Self-serve pumps in ${stateData.name} average $${avgSavings}/gal below full-service at the same airport${fillSavings && Number(fillSavings) > 0 ? ` — about $${Number(fillSavings).toLocaleString()} on a 50-gallon fill` : ''}, since self-serve avoids the into-plane fee.`,
+        },
+        {
+            q: `How many self-serve fuel locations are in ${stateData.name}?`,
+            a: `We list ${selfServeFBOs.length} self-serve ${selfServeFBOs.length === 1 ? 'location' : 'locations'} across ${selfServeAirports} ${selfServeAirports === 1 ? 'airport' : 'airports'} in ${stateData.name}, updated daily from AirNav.`,
+        },
+    ].filter(Boolean) : [];
 
     const crumbs = [
         { label: 'Home', href: '/' },
@@ -158,6 +175,8 @@ export default async function SelfServeFuelStatePage({ params }) {
                         fills, so self-serve is especially worth seeking out on cross-country legs.
                     </p>
                 </div>
+
+                <FAQ items={faqItems} heading={`Self-Serve Fuel in ${stateData.name}: FAQ`} />
 
                 <RelatedLinks
                     title="More Fuel Prices"
