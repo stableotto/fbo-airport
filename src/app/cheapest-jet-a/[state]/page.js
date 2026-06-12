@@ -3,6 +3,7 @@ import { states } from '@/data/seed';
 import { getAllFBOs, getLastUpdated } from '@/lib/data';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeaderboardTable from '@/components/LeaderboardTable';
+import FAQ from '@/components/FAQ';
 import RelatedLinks from '@/components/RelatedLinks';
 import JsonLd from '@/components/JsonLd';
 import { breadcrumbList, fboItemList, fuelProducts } from '@/lib/structured-data';
@@ -54,6 +55,26 @@ export default async function CheapestJetAStatePage({ params }) {
     const airportCount = new Set(stateFBOs.map(f => f.airportCode)).size;
     // Savings on a typical 180-gallon turbine top-off, cheapest vs. state average.
     const fillSavings = avgNum != null ? ((avgNum - cheapest.fuelPrices.jetA) * 180).toFixed(0) : null;
+
+    const updatedLabel = new Date(getLastUpdated() + 'T00:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    const faqItems = cheapest ? [
+        {
+            q: `What is the cheapest Jet-A fuel in ${stateData.name}?`,
+            a: `The cheapest Jet-A in ${stateData.name} is $${cheapest.fuelPrices.jetA.toFixed(2)}/gal at ${cheapest.name} (${cheapest.airportCode})${cheapest.city ? ` in ${cheapest.city}` : ''}, as of ${updatedLabel}.`,
+        },
+        average && {
+            q: `What is the average Jet-A price in ${stateData.name}?`,
+            a: `Across ${stateFBOs.length} FBOs reporting Jet-A in ${stateData.name}, the average price is $${average}/gal${spread ? `, spanning $${cheapest.fuelPrices.jetA.toFixed(2)} to $${priciest.fuelPrices.jetA.toFixed(2)}/gal` : ''}.`,
+        },
+        {
+            q: `Where is Jet-A cheapest in ${stateData.name}?`,
+            a: `${cheapest.city || cheapest.airportCode} (${cheapest.airportCode}) currently has the lowest Jet-A in ${stateData.name} at $${cheapest.fuelPrices.jetA.toFixed(2)}/gal. ${belowAvg} of ${stateFBOs.length} FBOs price below the state average.`,
+        },
+        {
+            q: `How often are ${stateData.name} Jet-A prices updated?`,
+            a: `Jet-A prices in ${stateData.name} are refreshed daily from AirNav FBO reports; the most recent update was ${updatedLabel}. Confirm with the FBO before fueling.`,
+        },
+    ].filter(Boolean) : [];
 
     const crumbs = [
         { label: 'Home', href: '/' },
@@ -132,6 +153,8 @@ export default async function CheapestJetAStatePage({ params }) {
                         </p>
                     </div>
                 )}
+
+                <FAQ items={faqItems} heading={`Cheapest Jet-A in ${stateData.name}: FAQ`} />
 
                 <RelatedLinks
                     title="More Fuel Prices"

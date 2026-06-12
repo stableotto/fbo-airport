@@ -3,6 +3,7 @@ import { states } from '@/data/seed';
 import { getAllFBOs, getLastUpdated } from '@/lib/data';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeaderboardTable from '@/components/LeaderboardTable';
+import FAQ from '@/components/FAQ';
 import RelatedLinks from '@/components/RelatedLinks';
 import JsonLd from '@/components/JsonLd';
 import { breadcrumbList, fboItemList, fuelProducts } from '@/lib/structured-data';
@@ -54,6 +55,26 @@ export default async function Cheapest100LLStatePage({ params }) {
     const airportCount = new Set(stateFBOs.map(f => f.airportCode)).size;
     // Savings on a typical 50-gallon piston top-off, cheapest vs. state average.
     const fillSavings = avgNum != null ? ((avgNum - cheapest.fuelPrices.hundredLL) * 50).toFixed(0) : null;
+
+    const updatedLabel = new Date(getLastUpdated() + 'T00:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    const faqItems = cheapest ? [
+        {
+            q: `What is the cheapest 100LL avgas in ${stateData.name}?`,
+            a: `The cheapest 100LL in ${stateData.name} is $${cheapest.fuelPrices.hundredLL.toFixed(2)}/gal at ${cheapest.name} (${cheapest.airportCode})${cheapest.city ? ` in ${cheapest.city}` : ''}, as of ${updatedLabel}.`,
+        },
+        average && {
+            q: `What is the average 100LL price in ${stateData.name}?`,
+            a: `Across ${stateFBOs.length} FBOs reporting 100LL in ${stateData.name}, the average is $${average}/gal${spread ? `, ranging $${cheapest.fuelPrices.hundredLL.toFixed(2)} to $${priciest.fuelPrices.hundredLL.toFixed(2)}/gal` : ''}.`,
+        },
+        {
+            q: `Where is 100LL cheapest for piston aircraft in ${stateData.name}?`,
+            a: `${cheapest.city || cheapest.airportCode} (${cheapest.airportCode}) has the lowest 100LL in ${stateData.name} at $${cheapest.fuelPrices.hundredLL.toFixed(2)}/gal. ${belowAvg} of ${stateFBOs.length} FBOs price below the state average.`,
+        },
+        {
+            q: `How often are ${stateData.name} 100LL prices updated?`,
+            a: `100LL avgas prices in ${stateData.name} are refreshed daily from AirNav FBO reports; the most recent update was ${updatedLabel}. Confirm with the FBO before fueling.`,
+        },
+    ].filter(Boolean) : [];
 
     const crumbs = [
         { label: 'Home', href: '/' },
@@ -138,6 +159,8 @@ export default async function Cheapest100LLStatePage({ params }) {
                         </p>
                     </div>
                 )}
+
+                <FAQ items={faqItems} heading={`Cheapest 100LL in ${stateData.name}: FAQ`} />
 
                 <RelatedLinks
                     title="More Fuel Prices"

@@ -1,7 +1,9 @@
 import Link from 'next/link';
-import { getStats, getAllFBOs, getAllAirports, getRankedFBOs, getPriceStats, getStatesWithPrices, getLastUpdated } from '@/lib/data';
+import { getStats, getAllFBOs, getAllAirports, getRankedFBOs, getPriceStats, getStatesWithPrices, getLastUpdated, getPriceHistoryMeta } from '@/lib/data';
 import SearchBar from '@/components/SearchBar';
 import LeaderboardTable from '@/components/LeaderboardTable';
+import JsonLd from '@/components/JsonLd';
+import { fuelDataset } from '@/lib/structured-data';
 
 export default function HomePage() {
   const stats = getStats();
@@ -14,6 +16,7 @@ export default function HomePage() {
 
   return (
     <div className="page-content">
+      <JsonLd data={fuelDataset(stats, getPriceHistoryMeta())} />
       {/* Hero */}
       <section className="hero">
         <div className="container">
