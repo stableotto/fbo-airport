@@ -44,9 +44,16 @@ export default async function CheapestJetAStatePage({ params }) {
         .map((fbo, idx) => ({ ...fbo, rank: idx + 1 }));
 
     const cheapest = stateFBOs[0];
-    const average = stateFBOs.length > 0
-        ? (stateFBOs.reduce((sum, f) => sum + (f.fuelPrices?.jetA || 0), 0) / stateFBOs.length).toFixed(2)
+    const priciest = stateFBOs[stateFBOs.length - 1];
+    const avgNum = stateFBOs.length > 0
+        ? stateFBOs.reduce((sum, f) => sum + (f.fuelPrices?.jetA || 0), 0) / stateFBOs.length
         : null;
+    const average = avgNum != null ? avgNum.toFixed(2) : null;
+    const spread = stateFBOs.length > 1 ? (priciest.fuelPrices.jetA - cheapest.fuelPrices.jetA).toFixed(2) : null;
+    const belowAvg = avgNum != null ? stateFBOs.filter(f => f.fuelPrices.jetA < avgNum).length : 0;
+    const airportCount = new Set(stateFBOs.map(f => f.airportCode)).size;
+    // Savings on a typical 180-gallon turbine top-off, cheapest vs. state average.
+    const fillSavings = avgNum != null ? ((avgNum - cheapest.fuelPrices.jetA) * 180).toFixed(0) : null;
 
     const crumbs = [
         { label: 'Home', href: '/' },
@@ -104,15 +111,27 @@ export default async function CheapestJetAStatePage({ params }) {
                 <p className="leaderboard-updated">Prices updated daily · Last updated {new Date(getLastUpdated() + 'T00:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
                 <LeaderboardTable fbos={stateFBOs} showState={false} showAirport={true} />
 
-                <div style={{ marginTop: 'var(--space-2xl)' }}>
-                    <h2>About Jet-A Fuel Prices in {stateData.name}</h2>
-                    <p style={{ marginTop: 'var(--space-md)', lineHeight: '1.8' }}>
-                        Jet-A fuel prices in {stateData.name} vary significantly between FBOs and airports.
-                        Factors affecting price include location, competition, fuel supplier contracts, and volume discounts.
-                        Self-serve fuel is typically cheaper than full-service, and some FBOs waive ramp fees with fuel purchases.
-                        Prices are updated daily from FBO reports and may vary based on current market conditions.
-                    </p>
-                </div>
+                {stateFBOs.length > 1 && (
+                    <div style={{ marginTop: 'var(--space-2xl)' }}>
+                        <h2>Jet-A Market Analysis in {stateData.name}</h2>
+                        <p style={{ marginTop: 'var(--space-md)', lineHeight: '1.8' }}>
+                            We track Jet-A pricing at <strong>{stateFBOs.length} FBOs</strong> across{' '}
+                            <strong>{airportCount} {airportCount === 1 ? 'airport' : 'airports'}</strong> in {stateData.name}.
+                            The cheapest Jet-A is <strong>${cheapest.fuelPrices.jetA.toFixed(2)}/gal</strong> at {cheapest.name} ({cheapest.airportCode}),
+                            while the most expensive runs <strong>${priciest.fuelPrices.jetA.toFixed(2)}/gal</strong> at {priciest.airportCode}
+                            {spread && <> — a spread of <strong>${spread}/gal</strong></>}.
+                            {' '}{belowAvg} {belowAvg === 1 ? 'FBO is' : 'FBOs are'} priced below the state average of ${average}/gal.
+                            {fillSavings && Number(fillSavings) > 0 && (
+                                <> On a typical 180-gallon turbine top-off, fueling at the cheapest FBO instead of the state average saves about <strong>${Number(fillSavings).toLocaleString()}</strong>.</>
+                            )}
+                        </p>
+                        <p style={{ marginTop: 'var(--space-md)', lineHeight: '1.8', color: 'var(--color-text-secondary)' }}>
+                            Jet-A prices move with crude markets, supplier contracts, airport competition, and volume discounts. Full-service fueling
+                            carries an into-plane fee that self-serve avoids, so comparing both is worthwhile on longer fills. Rankings update daily from
+                            AirNav FBO reports.
+                        </p>
+                    </div>
+                )}
 
                 <RelatedLinks
                     title="More Fuel Prices"

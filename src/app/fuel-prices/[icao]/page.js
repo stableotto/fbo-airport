@@ -1,8 +1,9 @@
 import Link from 'next/link';
-import { getAllAirports, getAllFBOs, getAirportByCode, getLastUpdated } from '@/lib/data';
+import { getAllAirports, getAllFBOs, getAirportByCode, getLastUpdated, getPriceTrend } from '@/lib/data';
 import { states } from '@/data/seed';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeaderboardTable from '@/components/LeaderboardTable';
+import PriceTrend from '@/components/PriceTrend';
 import RelatedLinks from '@/components/RelatedLinks';
 import JsonLd from '@/components/JsonLd';
 import { breadcrumbList, fboItemList, fuelProducts, airportSchema } from '@/lib/structured-data';
@@ -15,6 +16,7 @@ export async function generateMetadata({ params }) {
     const { icao } = await params;
     const airport = getAirportByCode(icao);
     if (!airport) return {};
+    const hasFBOs = getAllFBOs().some(fbo => fbo.airportCode === icao);
 
     return {
         title: `Fuel Prices at ${icao} — ${airport.name} Jet-A & 100LL`,
@@ -26,6 +28,8 @@ export async function generateMetadata({ params }) {
             url: `/fuel-prices/${icao}/`,
             type: 'website',
         },
+        // Don't index airports with no FBOs yet — empty stubs hurt overall quality.
+        ...(hasFBOs ? {} : { robots: { index: false, follow: true } }),
     };
 }
 
@@ -44,6 +48,8 @@ export default async function FuelPricesAirportPage({ params }) {
         .map((fbo, idx) => ({ ...fbo, rank: fbo.fuelPrices?.jetA ? idx + 1 : null }));
 
     const stateData = states.find(s => s.name === airport.state);
+    const jetATrend = getPriceTrend(icao, 'jetA');
+    const hundredLLTrend = getPriceTrend(icao, 'hundredLL');
     const cheapestJetA = airportFBOs.find(f => f.fuelPrices?.jetA);
     const cheapest100LL = airportFBOs
         .filter(f => f.fuelPrices?.hundredLL)
@@ -120,6 +126,13 @@ export default async function FuelPricesAirportPage({ params }) {
                     <LeaderboardTable fbos={airportFBOs} showState={false} showAirport={false} />
                 ) : (
                     <p>No FBOs found at {icao}.</p>
+                )}
+
+                {(jetATrend || hundredLLTrend) && (
+                    <div className="trend-grid" style={{ marginTop: 'var(--space-2xl)' }}>
+                        <PriceTrend trend={jetATrend} fuelLabel="Jet-A" icao={icao} />
+                        <PriceTrend trend={hundredLLTrend} fuelLabel="100LL" icao={icao} />
+                    </div>
                 )}
 
                 <div style={{ marginTop: 'var(--space-2xl)' }}>

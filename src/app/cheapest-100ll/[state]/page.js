@@ -44,9 +44,16 @@ export default async function Cheapest100LLStatePage({ params }) {
         .map((fbo, idx) => ({ ...fbo, rank: idx + 1 }));
 
     const cheapest = stateFBOs[0];
-    const average = stateFBOs.length > 0
-        ? (stateFBOs.reduce((sum, f) => sum + (f.fuelPrices?.hundredLL || 0), 0) / stateFBOs.length).toFixed(2)
+    const priciest = stateFBOs[stateFBOs.length - 1];
+    const avgNum = stateFBOs.length > 0
+        ? stateFBOs.reduce((sum, f) => sum + (f.fuelPrices?.hundredLL || 0), 0) / stateFBOs.length
         : null;
+    const average = avgNum != null ? avgNum.toFixed(2) : null;
+    const spread = stateFBOs.length > 1 ? (priciest.fuelPrices.hundredLL - cheapest.fuelPrices.hundredLL).toFixed(2) : null;
+    const belowAvg = avgNum != null ? stateFBOs.filter(f => f.fuelPrices.hundredLL < avgNum).length : 0;
+    const airportCount = new Set(stateFBOs.map(f => f.airportCode)).size;
+    // Savings on a typical 50-gallon piston top-off, cheapest vs. state average.
+    const fillSavings = avgNum != null ? ((avgNum - cheapest.fuelPrices.hundredLL) * 50).toFixed(0) : null;
 
     const crumbs = [
         { label: 'Home', href: '/' },
@@ -110,15 +117,27 @@ export default async function Cheapest100LLStatePage({ params }) {
                     <p>No FBOs with 100LL pricing found in {stateData.name}.</p>
                 )}
 
-                <div style={{ marginTop: 'var(--space-2xl)' }}>
-                    <h2>About 100LL Avgas Prices in {stateData.name}</h2>
-                    <p style={{ marginTop: 'var(--space-md)', lineHeight: '1.8' }}>
-                        100LL (low-lead aviation gasoline) is the standard fuel for piston-engine aircraft.
-                        Prices in {stateData.name} vary based on location, competition, and supplier contracts.
-                        Self-serve pumps typically offer lower prices than full-service fueling.
-                        Prices are updated daily and may vary based on current market conditions.
-                    </p>
-                </div>
+                {stateFBOs.length > 1 && (
+                    <div style={{ marginTop: 'var(--space-2xl)' }}>
+                        <h2>100LL Avgas Market Analysis in {stateData.name}</h2>
+                        <p style={{ marginTop: 'var(--space-md)', lineHeight: '1.8' }}>
+                            We track 100LL avgas at <strong>{stateFBOs.length} FBOs</strong> across{' '}
+                            <strong>{airportCount} {airportCount === 1 ? 'airport' : 'airports'}</strong> in {stateData.name}.
+                            The cheapest 100LL is <strong>${cheapest.fuelPrices.hundredLL.toFixed(2)}/gal</strong> at {cheapest.name} ({cheapest.airportCode}),
+                            and the highest is <strong>${priciest.fuelPrices.hundredLL.toFixed(2)}/gal</strong>
+                            {spread && <> — a <strong>${spread}/gal</strong> difference depending on where you stop</>}.
+                            {' '}{belowAvg} {belowAvg === 1 ? 'FBO is' : 'FBOs are'} below the ${average}/gal state average.
+                            {fillSavings && Number(fillSavings) > 0 && (
+                                <> For a typical 50-gallon piston top-off, the cheapest stop saves roughly <strong>${Number(fillSavings).toLocaleString()}</strong> versus the average.</>
+                            )}
+                        </p>
+                        <p style={{ marginTop: 'var(--space-md)', lineHeight: '1.8', color: 'var(--color-text-secondary)' }}>
+                            100LL is the standard fuel for most piston-engine aircraft. Because avgas volumes are smaller than Jet-A, prices are especially
+                            sensitive to local supplier logistics and airport traffic. Self-serve pumps usually undercut full-service by a wide margin and are
+                            often available 24/7. Figures update daily from AirNav reports.
+                        </p>
+                    </div>
+                )}
 
                 <RelatedLinks
                     title="More Fuel Prices"

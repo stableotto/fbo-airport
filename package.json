@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/build-price-history.mjs",
     "build": "next build",
-    "build:cloudflare": "next build && find out -name '*.txt' -delete && rm -rf .next node_modules",
+    "build:cloudflare": "node scripts/build-price-history.mjs && next build && find out -name '*.txt' -delete && rm -rf .next node_modules",
     "start": "next start",
     "lint": "eslint"
   },
