@@ -5780,15 +5780,15 @@
     "fbos": [
       {
         "name": "Purdue Aviation",
-        "jetA": 6.29,
-        "hundredLL": 7.29,
+        "jetA": 6.25,
+        "hundredLL": 7.04,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "04-Jun-2026"
+        "priceDate": "18-Jun-2026"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-06-19"
   },
   "KLAL": {
     "name": "Lakeland Linder International Airport",
@@ -5797,21 +5797,21 @@
     "fbos": [
       {
         "name": "Aero Center Lakeland",
-        "jetA": 7.76,
-        "hundredLL": 7.5,
-        "jetASelfServe": 6,
+        "jetA": 7.54,
+        "hundredLL": 7.45,
+        "jetASelfServe": 5.95,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
         "priceDate": null
       },
       {
         "name": "Aero Center East (Formerly Sheltair)",
-        "jetA": 7.76,
-        "hundredLL": 7.5,
-        "jetASelfServe": 6,
+        "jetA": 7.54,
+        "hundredLL": 7.45,
+        "jetASelfServe": 5.95,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "09-Jun-2026"
+        "priceDate": "16-Jun-2026"
       },
       {
         "name": "Double M Aviation, LLC",
@@ -5841,7 +5841,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-06-19"
   },
   "KLAN": {
     "name": "Capital Region International Airport",
@@ -5881,10 +5881,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "09-Jun-2026"
+        "priceDate": "17-Jun-2026"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-06-19"
   },
   "KLAS": {
     "name": "Harry Reid International Airport",
@@ -5893,12 +5893,12 @@
     "fbos": [
       {
         "name": "Atlantic Aviation",
-        "jetA": 9.82,
+        "jetA": 9.53,
         "hundredLL": 9.89,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "16-Jun-2026"
+        "priceDate": "19-Jun-2026"
       },
       {
         "name": "Signature Aviation",
@@ -5907,10 +5907,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "16-Jun-2026"
+        "priceDate": "17-Jun-2026"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-06-19"
   },
   "KLAW": {
     "name": "Lawton-Fort Sill Regional Airport",
@@ -5919,7 +5919,7 @@
     "fbos": [
       {
         "name": "Lawton Aviation Services",
-        "jetA": 6.89,
+        "jetA": 5.99,
         "hundredLL": 7.19,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
@@ -5927,7 +5927,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-06-19"
   },
   "KLBE": {
     "name": "Arnold Palmer Regional Airport",
@@ -5936,9 +5936,9 @@
     "fbos": [
       {
         "name": "Laurel Highlands Jet Center",
-        "jetA": 6.85,
-        "hundredLL": 8.41,
-        "jetASelfServe": 8.11,
+        "jetA": 6.51,
+        "hundredLL": 8.33,
+        "jetASelfServe": 8.03,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
         "priceDate": null
@@ -5953,7 +5953,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-06-19"
   },
   "KLBF": {
     "name": "North Platte Regional Airport/Lee Bird Field",
@@ -5962,7 +5962,7 @@
     "fbos": [
       {
         "name": "Trego/Dugan Aviation",
-        "jetA": 6.99,
+        "jetA": 6.7,
         "hundredLL": 6.35,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
@@ -5970,7 +5970,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-06-19"
   },
   "KLBT": {
     "name": "Lumberton Regional Airport",
@@ -13911,7 +13911,7 @@
         "jetASelfServe": 6.26,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "05-Jun-2026"
+        "priceDate": "18-Jun-2026"
       },
       {
         "name": "Allen Aviation",
@@ -13923,7 +13923,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-06-19"
   },
   "KLAX": {
     "name": "Los Angeles International Airport",
@@ -13933,23 +13933,23 @@
       {
         "name": "Atlantic Aviation",
         "jetA": 14.73,
-        "hundredLL": 12.06,
+        "hundredLL": 11.74,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "16-Jun-2026"
+        "priceDate": "19-Jun-2026"
       },
       {
         "name": "Signature Aviation",
         "jetA": 14.78,
-        "hundredLL": 11.59,
+        "hundredLL": 11.82,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "11-Jun-2026"
+        "priceDate": "18-Jun-2026"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-06-19"
   },
   "KLBB": {
     "name": "Lubbock Preston Smith International Airport",
@@ -13966,7 +13966,7 @@
         "priceDate": "12-Jun-2026"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-06-19"
   },
   "KLBL": {
     "name": "Liberal Mid-America Regional Airport",
@@ -15291,12 +15291,12 @@
   },
   "_meta": {
     "lastUpdated": "2026-06-19",
-    "lastUpdatedISO": "2026-06-19T11:07:40.114Z",
+    "lastUpdatedISO": "2026-06-19T16:44:19.213Z",
     "source": "airnav.com",
     "totalAirports": 640,
     "totalFBOs": 1130,
     "fbosWithPrices": 839,
-    "errors": 0,
-    "thisRunNew": 282
+    "errors": 190,
+    "thisRunNew": 18
   }
 }
