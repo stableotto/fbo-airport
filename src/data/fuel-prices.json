@@ -8365,7 +8365,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-06-28"
+    "updated": "2026-07-01"
   },
   "KPHF": {
     "name": "Newport News/Williamsburg International Airport",
@@ -8379,19 +8379,19 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "22-Jun-2026"
+        "priceDate": "01-Jul-2026"
       },
       {
         "name": "Atlantic Aviation",
-        "jetA": 8.72,
+        "jetA": 8.04,
         "hundredLL": 7.2,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "27-Jun-2026"
+        "priceDate": "01-Jul-2026"
       }
     ],
-    "updated": "2026-06-28"
+    "updated": "2026-07-01"
   },
   "KPHL": {
     "name": "Philadelphia International Airport",
@@ -8400,15 +8400,15 @@
     "fbos": [
       {
         "name": "Atlantic Aviation",
-        "jetA": 8.97,
+        "jetA": 8.98,
         "hundredLL": 8.61,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "27-Jun-2026"
+        "priceDate": "01-Jul-2026"
       }
     ],
-    "updated": "2026-06-28"
+    "updated": "2026-07-01"
   },
   "KPIA": {
     "name": "General Downing - Peoria International Airport",
@@ -8499,10 +8499,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "15-Jun-2026"
+        "priceDate": "01-Jul-2026"
       }
     ],
-    "updated": "2026-06-28"
+    "updated": "2026-07-01"
   },
   "KPIT": {
     "name": "Pittsburgh International Airport",
@@ -8511,15 +8511,15 @@
     "fbos": [
       {
         "name": "Atlantic Aviation",
-        "jetA": 8.36,
+        "jetA": 8.37,
         "hundredLL": 9.89,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "27-Jun-2026"
+        "priceDate": "01-Jul-2026"
       }
     ],
-    "updated": "2026-06-28"
+    "updated": "2026-07-01"
   },
   "KPKB": {
     "name": "Mid-Ohio Valley Regional Airport",
@@ -8528,12 +8528,12 @@
     "fbos": [
       {
         "name": "Mid-Ohio Valley Regional Airport",
-        "jetA": 7.05,
+        "jetA": 7,
         "hundredLL": 7.12,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "18-Jun-2026"
+        "priceDate": "29-Jun-2026"
       },
       {
         "name": "River Town Aviation LLC",
@@ -8545,7 +8545,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-06-28"
+    "updated": "2026-07-01"
   },
   "KPNE": {
     "name": "Northeast Philadelphia Airport",
@@ -14500,7 +14500,7 @@
       },
       {
         "name": "Jackson Jet Center",
-        "jetA": 9.55,
+        "jetA": 9.35,
         "hundredLL": 7.75,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
@@ -14508,7 +14508,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-06-28"
+    "updated": "2026-07-01"
   },
   "KPNA": {
     "name": "Ralph Wenz Field Airport",
@@ -15318,12 +15318,12 @@
   },
   "_meta": {
     "lastUpdated": "2026-07-01",
-    "lastUpdatedISO": "2026-07-01T10:20:48.492Z",
+    "lastUpdatedISO": "2026-07-01T18:12:26.021Z",
     "source": "airnav.com",
     "totalAirports": 640,
     "totalFBOs": 1133,
     "fbosWithPrices": 840,
-    "errors": 0,
-    "thisRunNew": 239
+    "errors": 192,
+    "thisRunNew": 10
   }
 }
