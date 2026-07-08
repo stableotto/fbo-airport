@@ -14086,10 +14086,10 @@
     "fbos": [
       {
         "name": "HighNote Aviation",
-        "jetA": 5.89,
-        "hundredLL": 5.49,
+        "jetA": 5.75,
+        "hundredLL": 5.65,
         "jetASelfServe": 4.99,
-        "hundredLLSelfServe": null,
+        "hundredLLSelfServe": 5.15,
         "serviceType": "FS",
         "priceDate": null
       }
