@@ -5797,7 +5797,7 @@
         "priceDate": "30-Jun-2026"
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-08"
   },
   "KLAL": {
     "name": "Lakeland Linder International Airport",
@@ -5876,7 +5876,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-08"
   },
   "KLAR": {
     "name": "Laramie Regional Airport",
@@ -13923,7 +13923,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-07-06"
+    "updated": "2026-07-08"
   },
   "KLAX": {
     "name": "Los Angeles International Airport",
@@ -15309,12 +15309,12 @@
   },
   "_meta": {
     "lastUpdated": "2026-07-08",
-    "lastUpdatedISO": "2026-07-08T08:58:39.534Z",
+    "lastUpdatedISO": "2026-07-08T16:42:58.207Z",
     "source": "airnav.com",
     "totalAirports": 640,
     "totalFBOs": 1132,
     "fbosWithPrices": 839,
-    "errors": 0,
-    "thisRunNew": 283
+    "errors": 197,
+    "thisRunNew": 5
   }
 }
