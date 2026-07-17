@@ -9866,7 +9866,7 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "14-Jul-2026"
+        "priceDate": "16-Jul-2026"
       },
       {
         "name": "Big Island Jet Center",
@@ -9879,15 +9879,15 @@
       },
       {
         "name": "Signature Aviation",
-        "jetA": 8.82,
+        "jetA": 8.48,
         "hundredLL": null,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "11-Jul-2026"
+        "priceDate": "16-Jul-2026"
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "PHLI": {
     "name": "Lihue Airport",
@@ -9896,12 +9896,12 @@
     "fbos": [
       {
         "name": "Atlantic Aviation",
-        "jetA": 11.12,
+        "jetA": 10.13,
         "hundredLL": 11.87,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "14-Jul-2026"
+        "priceDate": "16-Jul-2026"
       },
       {
         "name": "Signature Aviation",
@@ -9910,10 +9910,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "11-Jul-2026"
+        "priceDate": "16-Jul-2026"
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "PHNL": {
     "name": "Daniel K Inouye International Airport",
@@ -9931,12 +9931,12 @@
       },
       {
         "name": "Atlantic Aviation",
-        "jetA": 10.6,
+        "jetA": 9.6,
         "hundredLL": 11.57,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "14-Jul-2026"
+        "priceDate": "16-Jul-2026"
       },
       {
         "name": "Signature Aviation",
@@ -9945,10 +9945,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "11-Jul-2026"
+        "priceDate": "16-Jul-2026"
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "PHNY": {
     "name": "Lanai Airport",
@@ -9957,12 +9957,12 @@
     "fbos": [
       {
         "name": "Atlantic Aviation",
-        "jetA": 11.34,
+        "jetA": 10.35,
         "hundredLL": null,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "14-Jul-2026"
+        "priceDate": "16-Jul-2026"
       },
       {
         "name": "Signature Aviation",
@@ -9974,7 +9974,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "PHOG": {
     "name": "Kahului Airport",
@@ -9988,7 +9988,7 @@
         "jetASelfServe": 11.83,
         "hundredLLSelfServe": null,
         "serviceType": null,
-        "priceDate": "14-Jul-2026"
+        "priceDate": "16-Jul-2026"
       },
       {
         "name": "Signature Aviation",
@@ -9997,7 +9997,7 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "11-Jul-2026"
+        "priceDate": "16-Jul-2026"
       },
       {
         "name": "Maui Aviators",
@@ -10009,7 +10009,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "PHTO": {
     "name": "Hilo International Airport",
@@ -10018,12 +10018,12 @@
     "fbos": [
       {
         "name": "Atlantic Aviation",
-        "jetA": 10.38,
+        "jetA": 9.38,
         "hundredLL": 11.92,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "14-Jul-2026"
+        "priceDate": "16-Jul-2026"
       },
       {
         "name": "Signature Aviation",
@@ -10032,10 +10032,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "11-Jul-2026"
+        "priceDate": "16-Jul-2026"
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "KCEW": {
     "name": "Bob Sikes Airport",
@@ -11798,7 +11798,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-07-16"
+    "updated": "2026-07-17"
   },
   "KWMC": {
     "name": "Winnemucca Municipal Airport",
@@ -11815,7 +11815,7 @@
         "priceDate": "13-Jul-2026"
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "KWST": {
     "name": "Westerly State Airport",
@@ -11841,7 +11841,7 @@
         "priceDate": "01-Jul-2026"
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "KWYS": {
     "name": "Yellowstone Airport",
@@ -11867,7 +11867,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "KXNA": {
     "name": "Northwest Arkansas National Airport",
@@ -11884,7 +11884,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "KXWA": {
     "name": "Williston Basin International Airport",
@@ -11901,7 +11901,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "KYKM": {
     "name": "Yakima Air Terminal/McAllister Field",
@@ -11936,7 +11936,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "KYKN": {
     "name": "Chan Gurney Municipal Airport",
@@ -11948,12 +11948,12 @@
         "jetA": null,
         "hundredLL": null,
         "jetASelfServe": 5.6,
-        "hundredLLSelfServe": 6.7,
+        "hundredLLSelfServe": 6.2,
         "serviceType": null,
-        "priceDate": "02-Jul-2026"
+        "priceDate": "16-Jul-2026"
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "KYNG": {
     "name": "Youngstown/Warren Regional Airport",
@@ -11979,7 +11979,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "PAAQ": {
     "name": "Warren \"Bud\" Woods Palmer Municipal Airport",
@@ -12005,7 +12005,7 @@
         "priceDate": "09-Jul-2026"
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "PAFA": {
     "name": "Fairbanks International Airport",
@@ -12023,12 +12023,12 @@
       },
       {
         "name": "Atlantic Aviation",
-        "jetA": 8.55,
+        "jetA": 8.8,
         "hundredLL": 8.92,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "14-Jul-2026"
+        "priceDate": "16-Jul-2026"
       },
       {
         "name": "Clear Skies",
@@ -12040,7 +12040,7 @@
         "priceDate": "09-Jul-2026"
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "PAGS": {
     "name": "Gustavus Airport",
@@ -12057,7 +12057,7 @@
         "priceDate": "19-Jun-2026"
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "PAJN": {
     "name": "Juneau International Airport",
@@ -12071,10 +12071,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "14-Jul-2026"
+        "priceDate": "16-Jul-2026"
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "PAKT": {
     "name": "Ketchikan International Airport",
@@ -12097,10 +12097,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "14-Jul-2026"
+        "priceDate": "16-Jul-2026"
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "PAMC": {
     "name": "Mc Grath Airport",
@@ -12117,7 +12117,7 @@
         "priceDate": "09-Jul-2026"
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "PANC": {
     "name": "Ted Stevens Anchorage International Airport",
@@ -12126,33 +12126,33 @@
     "fbos": [
       {
         "name": "Atlantic Aviation",
-        "jetA": 8.32,
+        "jetA": 8.56,
         "hundredLL": null,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "14-Jul-2026"
+        "priceDate": "16-Jul-2026"
       },
       {
         "name": "Signature Aviation",
-        "jetA": 8.1,
+        "jetA": 8.35,
         "hundredLL": null,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "11-Jul-2026"
+        "priceDate": "16-Jul-2026"
       },
       {
         "name": "Great Circle Flight Services",
-        "jetA": 6,
+        "jetA": 5.9,
         "hundredLL": 8.65,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "03-Jul-2026"
+        "priceDate": "15-Jul-2026"
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "PANN": {
     "name": "Nenana Municipal Airport",
@@ -12163,13 +12163,13 @@
         "name": "Alaska Aerofuel",
         "jetA": null,
         "hundredLL": null,
-        "jetASelfServe": 8.55,
-        "hundredLLSelfServe": 8.89,
+        "jetASelfServe": 8.8,
+        "hundredLLSelfServe": 8.92,
         "serviceType": null,
-        "priceDate": "23-Jun-2026"
+        "priceDate": "15-Jul-2026"
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "PASC": {
     "name": "Deadhorse Airport",
@@ -12178,15 +12178,15 @@
     "fbos": [
       {
         "name": "Colville Inc.",
-        "jetA": 7.59,
-        "hundredLL": 10.11,
+        "jetA": 7.14,
+        "hundredLL": 10.1,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "08-Jun-2026"
+        "priceDate": "15-Jul-2026"
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "PASI": {
     "name": "Sitka Rocky Gutierrez Airport",
@@ -12200,10 +12200,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "14-Jul-2026"
+        "priceDate": "16-Jul-2026"
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "PAWS": {
     "name": "Wasilla Airport",
@@ -12220,7 +12220,7 @@
         "priceDate": "09-Jul-2026"
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "PAYA": {
     "name": "Yakutat Airport",
@@ -12237,7 +12237,7 @@
         "priceDate": "09-Jul-2026"
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "KFLL": {
     "name": "Fort Lauderdale/Hollywood International Airport",
@@ -15247,7 +15247,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "KYIP": {
     "name": "Willow Run Airport",
@@ -15265,15 +15265,15 @@
       },
       {
         "name": "Velocity Aviation Detroit",
-        "jetA": 6.99,
-        "hundredLL": 6.98,
+        "jetA": 7.09,
+        "hundredLL": 7.15,
         "jetASelfServe": 6.88,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
         "priceDate": null
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "PAIL": {
     "name": "Iliamna Airport",
@@ -15290,7 +15290,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "PHJR": {
     "name": "Kalaeloa Airport (John Rodgers Field)",
@@ -15307,7 +15307,7 @@
         "priceDate": "07-Jul-2026"
       }
     ],
-    "updated": "2026-07-14"
+    "updated": "2026-07-17"
   },
   "KRME": {
     "name": "Griffiss International Airport",
@@ -15344,13 +15344,13 @@
     "updated": "2026-07-16"
   },
   "_meta": {
-    "lastUpdated": "2026-07-16",
-    "lastUpdatedISO": "2026-07-16T21:30:07.115Z",
+    "lastUpdated": "2026-07-17",
+    "lastUpdatedISO": "2026-07-17T08:28:30.955Z",
     "source": "airnav.com",
     "totalAirports": 640,
     "totalFBOs": 1136,
     "fbosWithPrices": 839,
     "errors": 0,
-    "thisRunNew": 290
+    "thisRunNew": 53
   }
 }
