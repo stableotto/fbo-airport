@@ -5971,7 +5971,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-07-16"
+    "updated": "2026-07-18"
   },
   "KLBF": {
     "name": "North Platte Regional Airport/Lee Bird Field",
@@ -5988,7 +5988,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-07-16"
+    "updated": "2026-07-18"
   },
   "KLBT": {
     "name": "Lumberton Regional Airport",
@@ -6005,7 +6005,7 @@
         "priceDate": "09-Jul-2026"
       }
     ],
-    "updated": "2026-07-16"
+    "updated": "2026-07-18"
   },
   "KLCK": {
     "name": "Rickenbacker International Airport",
@@ -6031,7 +6031,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-07-16"
+    "updated": "2026-07-18"
   },
   "KLEB": {
     "name": "Lebanon Municipal Airport",
@@ -6057,7 +6057,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-07-16"
+    "updated": "2026-07-18"
   },
   "KLEE": {
     "name": "Leesburg International Airport",
@@ -13947,7 +13947,7 @@
         "jetASelfServe": 6.26,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "01-Jul-2026"
+        "priceDate": "17-Jul-2026"
       },
       {
         "name": "Allen Aviation",
@@ -13959,7 +13959,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-07-16"
+    "updated": "2026-07-18"
   },
   "KLAX": {
     "name": "Los Angeles International Airport",
@@ -14019,7 +14019,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-07-16"
+    "updated": "2026-07-18"
   },
   "KLBX": {
     "name": "Texas Gulf Coast Regional Airport",
@@ -14053,7 +14053,7 @@
         "priceDate": "14-Jul-2026"
       }
     ],
-    "updated": "2026-07-16"
+    "updated": "2026-07-18"
   },
   "KLVM": {
     "name": "Mission Field Airport",
@@ -15345,12 +15345,12 @@
   },
   "_meta": {
     "lastUpdated": "2026-07-18",
-    "lastUpdatedISO": "2026-07-18T08:21:53.223Z",
+    "lastUpdatedISO": "2026-07-18T20:35:39.391Z",
     "source": "airnav.com",
     "totalAirports": 640,
     "totalFBOs": 1136,
     "fbosWithPrices": 839,
-    "errors": 0,
-    "thisRunNew": 284
+    "errors": 191,
+    "thisRunNew": 12
   }
 }
