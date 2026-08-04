@@ -6,12 +6,12 @@
     "fbos": [
       {
         "name": "Freeman Jet Center-ABI",
-        "jetA": 7.67,
+        "jetA": 7.71,
         "hundredLL": 8.18,
         "jetASelfServe": 7.18,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "28-Jul-2026"
+        "priceDate": "04-Aug-2026"
       },
       {
         "name": "Blevins Enterprises",
@@ -23,7 +23,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-08-02"
+    "updated": "2026-08-04"
   },
   "KALI": {
     "name": "Alice International Airport",
@@ -193,7 +193,7 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "01-Aug-2026"
+        "priceDate": "04-Aug-2026"
       },
       {
         "name": "Bode Aviation",
@@ -205,7 +205,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-08-02"
+    "updated": "2026-08-04"
   },
   "KABR": {
     "name": "Aberdeen Regional Airport",
@@ -224,11 +224,11 @@
       {
         "name": "Quest Aviation",
         "jetA": 6.75,
-        "hundredLL": 7.7,
+        "hundredLL": 8.1,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "27-Jul-2026"
+        "priceDate": "03-Aug-2026"
       },
       {
         "name": "Hangar 9 Inc",
@@ -240,7 +240,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-08-02"
+    "updated": "2026-08-04"
   },
   "KABY": {
     "name": "Southwest Georgia Regional Airport",
@@ -12462,7 +12462,7 @@
         "priceDate": "29-Jul-2026"
       }
     ],
-    "updated": "2026-08-02"
+    "updated": "2026-08-04"
   },
   "KACT": {
     "name": "Waco Regional Airport",
@@ -15363,12 +15363,12 @@
   },
   "_meta": {
     "lastUpdated": "2026-08-04",
-    "lastUpdatedISO": "2026-08-04T08:55:58.841Z",
+    "lastUpdatedISO": "2026-08-04T17:37:20.186Z",
     "source": "airnav.com",
     "totalAirports": 640,
     "totalFBOs": 1138,
     "fbosWithPrices": 839,
-    "errors": 0,
-    "thisRunNew": 53
+    "errors": 194,
+    "thisRunNew": 9
   }
 }
