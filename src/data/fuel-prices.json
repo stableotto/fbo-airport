@@ -2686,15 +2686,15 @@
     "fbos": [
       {
         "name": "Avflight Durango",
-        "jetA": 10.24,
+        "jetA": 9.98,
         "hundredLL": 7.99,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "07-Aug-2026"
+        "priceDate": "11-Aug-2026"
       }
     ],
-    "updated": "2026-08-10"
+    "updated": "2026-08-12"
   },
   "KDRT": {
     "name": "Del Rio International Airport",
@@ -2711,7 +2711,7 @@
         "priceDate": "04-Aug-2026"
       }
     ],
-    "updated": "2026-08-10"
+    "updated": "2026-08-12"
   },
   "KDTS": {
     "name": "Destin Executive Airport",
@@ -2797,7 +2797,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-08-10"
+    "updated": "2026-08-12"
   },
   "KDUJ": {
     "name": "Dubois Regional Airport",
@@ -2814,7 +2814,7 @@
         "priceDate": "29-Jul-2026"
       }
     ],
-    "updated": "2026-08-10"
+    "updated": "2026-08-12"
   },
   "KDVL": {
     "name": "Devils Lake Regional Airport",
@@ -2840,7 +2840,7 @@
         "priceDate": "30-Jul-2026"
       }
     ],
-    "updated": "2026-08-10"
+    "updated": "2026-08-12"
   },
   "KDXR": {
     "name": "Danbury Municipal Airport",
@@ -13313,12 +13313,12 @@
     "fbos": [
       {
         "name": "Modern Aviation",
-        "jetA": 8.39,
+        "jetA": 8.19,
         "hundredLL": 8.45,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "04-Aug-2026"
+        "priceDate": "11-Aug-2026"
       },
       {
         "name": "Signature Aviation",
@@ -13327,7 +13327,7 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "08-Aug-2026"
+        "priceDate": "12-Aug-2026"
       },
       {
         "name": "Elliott Aviation",
@@ -13339,7 +13339,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-08-10"
+    "updated": "2026-08-12"
   },
   "KECG": {
     "name": "Elizabeth City Coast Guard Air Station/Regional Airport",
@@ -15354,12 +15354,12 @@
   },
   "_meta": {
     "lastUpdated": "2026-08-12",
-    "lastUpdatedISO": "2026-08-12T08:01:35.490Z",
+    "lastUpdatedISO": "2026-08-12T17:10:06.376Z",
     "source": "airnav.com",
     "totalAirports": 640,
     "totalFBOs": 1137,
     "fbosWithPrices": 838,
-    "errors": 0,
-    "thisRunNew": 263
+    "errors": 193,
+    "thisRunNew": 9
   }
 }
