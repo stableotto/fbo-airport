@@ -8397,10 +8397,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "15-Aug-2026"
+        "priceDate": "18-Aug-2026"
       }
     ],
-    "updated": "2026-08-16"
+    "updated": "2026-08-18"
   },
   "KPHL": {
     "name": "Philadelphia International Airport",
@@ -8414,10 +8414,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "15-Aug-2026"
+        "priceDate": "18-Aug-2026"
       }
     ],
-    "updated": "2026-08-16"
+    "updated": "2026-08-18"
   },
   "KPIA": {
     "name": "General Downing - Peoria International Airport",
@@ -8426,15 +8426,15 @@
     "fbos": [
       {
         "name": "Byerly Aviation",
-        "jetA": 7.46,
-        "hundredLL": 7.92,
+        "jetA": 7.81,
+        "hundredLL": 8.12,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "11-Aug-2026"
+        "priceDate": "18-Aug-2026"
       }
     ],
-    "updated": "2026-08-16"
+    "updated": "2026-08-18"
   },
   "KPIB": {
     "name": "Hattiesburg/Laurel Regional Airport",
@@ -8460,24 +8460,24 @@
     "fbos": [
       {
         "name": "Sheltair",
-        "jetA": 7.92,
-        "hundredLL": 9.68,
+        "jetA": 8.24,
+        "hundredLL": 9.87,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "11-Aug-2026"
+        "priceDate": "18-Aug-2026"
       },
       {
         "name": "Signature Aviation",
         "jetA": 8.36,
-        "hundredLL": 9.88,
+        "hundredLL": 10,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "14-Aug-2026"
+        "priceDate": "18-Aug-2026"
       }
     ],
-    "updated": "2026-08-16"
+    "updated": "2026-08-18"
   },
   "KPIH": {
     "name": "Pocatello Regional Airport",
@@ -8494,7 +8494,7 @@
         "priceDate": "07-Aug-2026"
       }
     ],
-    "updated": "2026-08-16"
+    "updated": "2026-08-18"
   },
   "KPIR": {
     "name": "Pierre Regional Airport",
@@ -15345,12 +15345,12 @@
   },
   "_meta": {
     "lastUpdated": "2026-08-18",
-    "lastUpdatedISO": "2026-08-18T07:13:27.323Z",
+    "lastUpdatedISO": "2026-08-18T17:57:29.680Z",
     "source": "airnav.com",
     "totalAirports": 640,
     "totalFBOs": 1136,
     "fbosWithPrices": 838,
-    "errors": 0,
-    "thisRunNew": 232
+    "errors": 193,
+    "thisRunNew": 7
   }
 }
