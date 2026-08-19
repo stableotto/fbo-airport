@@ -682,15 +682,15 @@
     "fbos": [
       {
         "name": "Atlantic Aviation",
-        "jetA": 10.81,
+        "jetA": 11.29,
         "hundredLL": 8.69,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "16-Aug-2026"
+        "priceDate": "19-Aug-2026"
       }
     ],
-    "updated": "2026-08-17"
+    "updated": "2026-08-19"
   },
   "KATL": {
     "name": "Hartsfield/Jackson Atlanta International Airport",
@@ -15345,12 +15345,12 @@
   },
   "_meta": {
     "lastUpdated": "2026-08-19",
-    "lastUpdatedISO": "2026-08-19T07:02:20.100Z",
+    "lastUpdatedISO": "2026-08-19T19:55:36.544Z",
     "source": "airnav.com",
     "totalAirports": 640,
     "totalFBOs": 1136,
     "fbosWithPrices": 838,
-    "errors": 0,
-    "thisRunNew": 53
+    "errors": 199,
+    "thisRunNew": 1
   }
 }
