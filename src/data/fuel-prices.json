@@ -5797,21 +5797,21 @@
     "fbos": [
       {
         "name": "Aero Center Lakeland",
-        "jetA": 8.08,
-        "hundredLL": 7.79,
-        "jetASelfServe": 6.29,
+        "jetA": 8.45,
+        "hundredLL": 8.02,
+        "jetASelfServe": 6.52,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "01-Sep-2026"
+        "priceDate": "08-Sep-2026"
       },
       {
         "name": "Aero Center East (Formerly Sheltair)",
-        "jetA": 8.08,
-        "hundredLL": 7.79,
-        "jetASelfServe": 6.29,
+        "jetA": 8.45,
+        "hundredLL": 8.02,
+        "jetASelfServe": 6.52,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "01-Sep-2026"
+        "priceDate": "08-Sep-2026"
       },
       {
         "name": "Double M Aviation, LLC",
@@ -5841,7 +5841,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-09-06"
+    "updated": "2026-09-08"
   },
   "KLAN": {
     "name": "Capital Region International Airport",
@@ -5867,7 +5867,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-09-06"
+    "updated": "2026-09-08"
   },
   "KLAR": {
     "name": "Laramie Regional Airport",
@@ -5884,7 +5884,7 @@
         "priceDate": "04-Sep-2026"
       }
     ],
-    "updated": "2026-09-06"
+    "updated": "2026-09-08"
   },
   "KLAS": {
     "name": "Harry Reid International Airport",
@@ -5927,7 +5927,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-09-06"
+    "updated": "2026-09-08"
   },
   "KLBE": {
     "name": "Arnold Palmer Regional Airport",
@@ -13955,7 +13955,7 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "05-Sep-2026"
+        "priceDate": "08-Sep-2026"
       },
       {
         "name": "Signature Aviation",
@@ -13967,7 +13967,7 @@
         "priceDate": "05-Sep-2026"
       }
     ],
-    "updated": "2026-09-06"
+    "updated": "2026-09-08"
   },
   "KLBB": {
     "name": "Lubbock Preston Smith International Airport",
@@ -13984,7 +13984,7 @@
         "priceDate": "01-Sep-2026"
       }
     ],
-    "updated": "2026-09-06"
+    "updated": "2026-09-08"
   },
   "KLBL": {
     "name": "Liberal Mid-America Regional Airport",
@@ -15379,12 +15379,12 @@
   },
   "_meta": {
     "lastUpdated": "2026-09-08",
-    "lastUpdatedISO": "2026-09-08T11:19:08.481Z",
+    "lastUpdatedISO": "2026-09-08T16:59:04.912Z",
     "source": "airnav.com",
     "totalAirports": 642,
     "totalFBOs": 1138,
     "fbosWithPrices": 838,
-    "errors": 0,
-    "thisRunNew": 278
+    "errors": 194,
+    "thisRunNew": 12
   }
 }
