@@ -2685,15 +2685,15 @@
     "fbos": [
       {
         "name": "Pico Aviation",
-        "jetA": 7.12,
-        "hundredLL": 7.59,
-        "jetASelfServe": 6.99,
+        "jetA": 7.32,
+        "hundredLL": 7.68,
+        "jetASelfServe": 7.08,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "24-Aug-2026"
+        "priceDate": "08-Sep-2026"
       }
     ],
-    "updated": "2026-09-08"
+    "updated": "2026-09-10"
   },
   "KDTS": {
     "name": "Destin Executive Airport",
@@ -13300,16 +13300,16 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "01-Sep-2026"
+        "priceDate": "08-Sep-2026"
       },
       {
         "name": "Signature Aviation",
-        "jetA": 8.85,
+        "jetA": 9.08,
         "hundredLL": 8.45,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "05-Sep-2026"
+        "priceDate": "09-Sep-2026"
       },
       {
         "name": "Elliott Aviation",
@@ -13321,7 +13321,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-09-08"
+    "updated": "2026-09-10"
   },
   "KECG": {
     "name": "Elizabeth City Coast Guard Air Station/Regional Airport",
@@ -15379,12 +15379,12 @@
   },
   "_meta": {
     "lastUpdated": "2026-09-10",
-    "lastUpdatedISO": "2026-09-10T11:20:32.813Z",
+    "lastUpdatedISO": "2026-09-10T16:49:57.295Z",
     "source": "airnav.com",
     "totalAirports": 642,
     "totalFBOs": 1138,
     "fbosWithPrices": 838,
-    "errors": 0,
-    "thisRunNew": 262
+    "errors": 198,
+    "thisRunNew": 4
   }
 }
