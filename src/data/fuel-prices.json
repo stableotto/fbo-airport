@@ -2668,15 +2668,15 @@
     "fbos": [
       {
         "name": "Avflight Durango",
-        "jetA": 10.7,
+        "jetA": 10.91,
         "hundredLL": 7.99,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "08-Sep-2026"
+        "priceDate": "17-Sep-2026"
       }
     ],
-    "updated": "2026-09-16"
+    "updated": "2026-09-18"
   },
   "KDRT": {
     "name": "Del Rio International Airport",
@@ -2693,7 +2693,7 @@
         "priceDate": "14-Sep-2026"
       }
     ],
-    "updated": "2026-09-16"
+    "updated": "2026-09-18"
   },
   "KDTS": {
     "name": "Destin Executive Airport",
@@ -2762,7 +2762,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-09-16"
+    "updated": "2026-09-18"
   },
   "KDUG": {
     "name": "Bisbee Douglas International Airport",
@@ -2779,7 +2779,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-09-16"
+    "updated": "2026-09-18"
   },
   "KDUJ": {
     "name": "Dubois Regional Airport",
@@ -2788,21 +2788,30 @@
     "fbos": [
       {
         "name": "Clearfield-Jefferson Counties Regional Airport Authority",
-        "jetA": 7.39,
-        "hundredLL": 7.49,
+        "jetA": 7.89,
+        "hundredLL": 7.99,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "02-Sep-2026"
+        "priceDate": "17-Sep-2026"
       }
     ],
-    "updated": "2026-09-16"
+    "updated": "2026-09-18"
   },
   "KDVL": {
     "name": "Devils Lake Regional Airport",
     "city": "Devils Lake",
     "state": "",
     "fbos": [
+      {
+        "name": "Foss & Meier Flight Service",
+        "jetA": 7.5,
+        "hundredLL": 7,
+        "jetASelfServe": null,
+        "hundredLLSelfServe": null,
+        "serviceType": "FS",
+        "priceDate": "18-Sep-2026"
+      },
       {
         "name": "Devils Lake Aero Service",
         "jetA": null,
@@ -2811,18 +2820,9 @@
         "hundredLLSelfServe": null,
         "serviceType": null,
         "priceDate": "11-Sep-2026"
-      },
-      {
-        "name": "Foss & Meier Flight Service",
-        "jetA": 7.5,
-        "hundredLL": 7,
-        "jetASelfServe": null,
-        "hundredLLSelfServe": null,
-        "serviceType": "FS",
-        "priceDate": "27-Aug-2026"
       }
     ],
-    "updated": "2026-09-16"
+    "updated": "2026-09-18"
   },
   "KDXR": {
     "name": "Danbury Municipal Airport",
@@ -2854,7 +2854,7 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "04-Sep-2026"
+        "priceDate": "18-Sep-2026"
       },
       {
         "name": "Arrow Aviation LLC",
@@ -2866,7 +2866,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-09-16"
+    "updated": "2026-09-18"
   },
   "KEAR": {
     "name": "Kearney Regional Airport",
@@ -15352,12 +15352,12 @@
   },
   "_meta": {
     "lastUpdated": "2026-09-18",
-    "lastUpdatedISO": "2026-09-18T11:16:05.532Z",
+    "lastUpdatedISO": "2026-09-18T16:44:07.731Z",
     "source": "airnav.com",
     "totalAirports": 642,
     "totalFBOs": 1135,
     "fbosWithPrices": 838,
-    "errors": 0,
-    "thisRunNew": 262
+    "errors": 193,
+    "thisRunNew": 11
   }
 }
