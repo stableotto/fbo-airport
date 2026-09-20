@@ -228,7 +228,7 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "04-Sep-2026"
+        "priceDate": "18-Sep-2026"
       },
       {
         "name": "Hangar 9 Inc",
@@ -240,7 +240,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-09-18"
+    "updated": "2026-09-20"
   },
   "KABY": {
     "name": "Southwest Georgia Regional Airport",
@@ -297,10 +297,10 @@
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "17-Sep-2026"
+        "priceDate": "18-Sep-2026"
       }
     ],
-    "updated": "2026-09-18"
+    "updated": "2026-09-20"
   },
   "KADH": {
     "name": "Ada Regional Airport",
@@ -317,7 +317,7 @@
         "priceDate": "11-Sep-2026"
       }
     ],
-    "updated": "2026-09-18"
+    "updated": "2026-09-20"
   },
   "KAEG": {
     "name": "Double Eagle II Airport",
@@ -12408,7 +12408,7 @@
         "priceDate": "17-Sep-2026"
       }
     ],
-    "updated": "2026-09-18"
+    "updated": "2026-09-20"
   },
   "KACT": {
     "name": "Waco Regional Airport",
@@ -12425,7 +12425,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-09-18"
+    "updated": "2026-09-20"
   },
   "KAEX": {
     "name": "Alexandria International Airport",
@@ -15352,12 +15352,12 @@
   },
   "_meta": {
     "lastUpdated": "2026-09-20",
-    "lastUpdatedISO": "2026-09-20T11:11:20.102Z",
+    "lastUpdatedISO": "2026-09-20T18:51:31.454Z",
     "source": "airnav.com",
     "totalAirports": 642,
     "totalFBOs": 1135,
     "fbosWithPrices": 838,
-    "errors": 0,
-    "thisRunNew": 54
+    "errors": 192,
+    "thisRunNew": 7
   }
 }
