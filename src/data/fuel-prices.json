@@ -6,15 +6,15 @@
     "fbos": [
       {
         "name": "Freeman Jet Center-ABI",
-        "jetA": 8.46,
+        "jetA": 8.42,
         "hundredLL": 8.88,
-        "jetASelfServe": 7.88,
+        "jetASelfServe": 6.13,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "13-Oct-2026"
+        "priceDate": "20-Oct-2026"
       }
     ],
-    "updated": "2026-10-19"
+    "updated": "2026-10-21"
   },
   "KALI": {
     "name": "Alice International Airport",
@@ -170,7 +170,7 @@
     "fbos": [
       {
         "name": "Cutter Aviation",
-        "jetA": 10.75,
+        "jetA": 11.1,
         "hundredLL": 7.1,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
@@ -179,12 +179,12 @@
       },
       {
         "name": "Atlantic Aviation",
-        "jetA": 11.16,
+        "jetA": 11.27,
         "hundredLL": 7.1,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "19-Oct-2026"
+        "priceDate": "21-Oct-2026"
       },
       {
         "name": "Bode Aviation",
@@ -196,7 +196,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-10-19"
+    "updated": "2026-10-21"
   },
   "KABR": {
     "name": "Aberdeen Regional Airport",
@@ -205,12 +205,12 @@
     "fbos": [
       {
         "name": "Aberdeen Flying Service",
-        "jetA": 8.15,
+        "jetA": 8.45,
         "hundredLL": 7.95,
         "jetASelfServe": 7.65,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
-        "priceDate": "12-Oct-2026"
+        "priceDate": "19-Oct-2026"
       },
       {
         "name": "Quest Aviation",
@@ -231,7 +231,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-10-19"
+    "updated": "2026-10-21"
   },
   "KABY": {
     "name": "Southwest Georgia Regional Airport",
@@ -248,7 +248,7 @@
         "priceDate": null
       }
     ],
-    "updated": "2026-10-19"
+    "updated": "2026-10-21"
   },
   "KACK": {
     "name": "Nantucket Memorial Airport",
@@ -12444,7 +12444,7 @@
         "priceDate": "13-Oct-2026"
       }
     ],
-    "updated": "2026-10-19"
+    "updated": "2026-10-21"
   },
   "KACT": {
     "name": "Waco Regional Airport",
@@ -12454,14 +12454,14 @@
       {
         "name": "Freeman Jet Center - Waco",
         "jetA": 8.87,
-        "hundredLL": 8.57,
+        "hundredLL": 7.17,
         "jetASelfServe": null,
         "hundredLLSelfServe": null,
         "serviceType": "FS",
         "priceDate": null
       }
     ],
-    "updated": "2026-10-19"
+    "updated": "2026-10-21"
   },
   "KAEX": {
     "name": "Alexandria International Airport",
@@ -15422,12 +15422,12 @@
   },
   "_meta": {
     "lastUpdated": "2026-10-21",
-    "lastUpdatedISO": "2026-10-21T11:38:51.931Z",
+    "lastUpdatedISO": "2026-10-21T16:24:12.115Z",
     "source": "airnav.com",
     "totalAirports": 644,
     "totalFBOs": 1141,
     "fbosWithPrices": 837,
-    "errors": 0,
-    "thisRunNew": 54
+    "errors": 192,
+    "thisRunNew": 10
   }
 }
